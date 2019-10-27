@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/riseupdemo/static/css/main.66e3547d.chunk.css",
+    "main.js": "/riseupdemo/static/js/main.be17a955.chunk.js",
+    "main.js.map": "/riseupdemo/static/js/main.be17a955.chunk.js.map",
+    "runtime-main.js": "/riseupdemo/static/js/runtime-main.06bdc944.js",
+    "runtime-main.js.map": "/riseupdemo/static/js/runtime-main.06bdc944.js.map",
+    "static/js/2.31dc4e41.chunk.js": "/riseupdemo/static/js/2.31dc4e41.chunk.js",
+    "static/js/2.31dc4e41.chunk.js.map": "/riseupdemo/static/js/2.31dc4e41.chunk.js.map",
+    "index.html": "/riseupdemo/index.html",
+    "precache-manifest.bccf4b623b2e5e5a581235009c3b8206.js": "/riseupdemo/precache-manifest.bccf4b623b2e5e5a581235009c3b8206.js",
+    "service-worker.js": "/riseupdemo/service-worker.js",
+    "static/css/main.66e3547d.chunk.css.map": "/riseupdemo/static/css/main.66e3547d.chunk.css.map",
+    "static/media/app.jpg": "/riseupdemo/static/media/app.91c3435e.jpg",
+    "static/media/event.jpg": "/riseupdemo/static/media/event.38204da8.jpg",
+    "static/media/all.min.css": "/riseupdemo/static/media/fa-solid-900.f4e2aa6a.svg",
+    "static/media/intechnic.mp4": "/riseupdemo/static/media/intechnic.9fe6b1ec.mp4",
+    "static/media/intechnic.jpg": "/riseupdemo/static/media/intechnic.c6d6ce7e.jpg",
+    "static/media/intro.jpg": "/riseupdemo/static/media/intro.fdba0eb5.jpg",
+    "static/media/national-father.png": "/riseupdemo/static/media/national-father.447f411d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.06bdc944.js",
+    "static/js/2.31dc4e41.chunk.js",
+    "static/css/main.66e3547d.chunk.css",
+    "static/js/main.be17a955.chunk.js"
+  ]
+}
