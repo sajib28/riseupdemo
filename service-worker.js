@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/riseupdemo/precache-manifest.bccf4b623b2e5e5a581235009c3b8206.js"
+  "/riseupdemo/precache-manifest.0947f55722b019f42ca7442608bf497f.js"
 );
 
 self.addEventListener('message', (event) => {

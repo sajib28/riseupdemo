@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "43331a9808fcceb655b3eae8d92577b8",
+    "revision": "1c2be5d0f6d24e9f6f945d45994d8e4e",
     "url": "/riseupdemo/index.html"
   },
   {
-    "revision": "0dc403ef757df7e7d093",
+    "revision": "13d0bf12b125076c7c83",
     "url": "/riseupdemo/static/css/main.66e3547d.chunk.css"
   },
   {
-    "revision": "acfb4effa6c193b5763f",
-    "url": "/riseupdemo/static/js/2.31dc4e41.chunk.js"
+    "revision": "107ad60f57c7c375ba42",
+    "url": "/riseupdemo/static/js/2.a8dfd1ff.chunk.js"
   },
   {
-    "revision": "0dc403ef757df7e7d093",
-    "url": "/riseupdemo/static/js/main.be17a955.chunk.js"
+    "revision": "13d0bf12b125076c7c83",
+    "url": "/riseupdemo/static/js/main.482f2528.chunk.js"
   },
   {
     "revision": "c47475a7b26128fae732",
