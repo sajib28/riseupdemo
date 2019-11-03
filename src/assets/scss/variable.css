@@ -1,2 +1,49 @@
-@import url("https://fonts.googleapis.com/css?family=Play:400,700|Roboto:400,700,900&display=swap");
+@font-face {
+  font-family: 'rawlinesemibold';
+  src: url("../fonts/rawline-600.ttf") format("ttf"), url("../fonts/rawline-600-webfont.woff2") format("woff2"), url("../fonts/rawline-600-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "rawlinebold";
+  src: url("../fonts/rawline-700.ttf") format("ttf"), url("../fonts/rawline-700-webfont.woff2") format("woff2"), url("../fonts/rawline-700-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rawlineextrabold';
+  src: url("../fonts/rawline-800.ttf") format("ttf"), url("../fonts/rawline-800-webfont.woff2") format("woff2"), url("../fonts/rawline-800-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "rawlineblack";
+  src: url("../fonts/rawline-900.ttf") format("ttf"), url("../fonts/rawline-900-webfont.woff2") format("woff2"), url("../fonts/rawline-900-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima_novathin";
+  src: url("../fonts/Proxima-Nova-Thin.ttf") format("ttf"), url("../fonts/proxima_nova_thin-webfont.woff2") format("woff2"), url("../fonts/proxima_nova_thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima_novabold";
+  src: url("../fonts/Proxima-Nova-Bold.ttf") format("ttf"), url("../fonts/proxima_nova_bold-webfont.woff2") format("woff2"), url("../fonts/proxima_nova_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima_novaregular";
+  src: url("../fonts/ProximaNova-Regular.ttf") format("ttf"), url("../fonts/proximanova-regular-webfont.woff2") format("woff2"), url("../fonts/proximanova-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /*# sourceMappingURL=variable.css.map */

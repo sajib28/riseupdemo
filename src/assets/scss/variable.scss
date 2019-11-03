@@ -1,11 +1,77 @@
+// Font Setup
 
-@import url('https://fonts.googleapis.com/css?family=Play:400,700|Roboto:400,700,900&display=swap');
-// font-family: 'Play', sans-serif;
-// font-family: 'Roboto', sans-serif;
-$headingFont:'Roboto',
-sans-serif;
-$body:'Play',
-sans-serif;
-$red:#FF0000;
-$white:#ffffff;
-$black-light:#222;
+@font-face {
+  font-family: 'rawlinesemibold';
+  src: url('../fonts/rawline-600.ttf') format('ttf'),
+  url('../fonts/rawline-600-webfont.woff2') format('woff2'),
+       url('../fonts/rawline-600-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: "rawlinebold";
+  src: url("../fonts/rawline-700.ttf") format("ttf"), url("../fonts/rawline-700-webfont.woff2") format("woff2"),
+    url("../fonts/rawline-700-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rawlineextrabold';
+  src: url('../fonts/rawline-800.ttf') format('ttf'),
+  url('../fonts/rawline-800-webfont.woff2') format('woff2'),
+       url('../fonts/rawline-800-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: "rawlineblack";
+  src: url("../fonts/rawline-900.ttf") format("ttf"), url("../fonts/rawline-900-webfont.woff2") format("woff2"),
+    url("../fonts/rawline-900-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima_novathin";
+  src: url("../fonts/Proxima-Nova-Thin.ttf") format("ttf"),
+    url("../fonts/proxima_nova_thin-webfont.woff2") format("woff2"),
+    url("../fonts/proxima_nova_thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima_novabold";
+  src: url("../fonts/Proxima-Nova-Bold.ttf") format("ttf"),
+    url("../fonts/proxima_nova_bold-webfont.woff2") format("woff2"),
+    url("../fonts/proxima_nova_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima_novaregular";
+  src: url("../fonts/ProximaNova-Regular.ttf") format("ttf"),
+    url("../fonts/proximanova-regular-webfont.woff2") format("woff2"),
+    url("../fonts/proximanova-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+// End Font Setup
+$proximaBold: "proxima_novabold";
+$proximaThin: "proxima_novathin";
+$proximaRegular: "proxima_novaregular";
+$rawlineSemiBold:'rawlinesemibold';
+$rawlineBold: "rawlinebold";
+$rawlineExtraBold: 'rawlineextrabold';
+$rawlineBlack:"rawlineblack"; 
+$red: #ff0000;
+$white: #ffffff;
+$white-grey: #7d7d7d;
+$black-light: #222;
+$black: #000000;
+$black-grey: #221f1f;
+$yellow: #f26a11;

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Nav from '../../commonTools/Nav';
 import Footer from '../../commonTools/Footer';
 import Banner from '../../commonTools/Banner';
+import BackgroundImage from '../../../assets/img/event.jpg';
 // import { Link } from "react-router-dom";
 import $ from 'jquery';
 // import Accordion from '../../commonTools/Accordion';
@@ -21,12 +22,12 @@ class CareerForm extends Component {
     }
     render() {
         return (
-            <div className="page career">
+            <div className="page career-form">
                 <Nav />
-                <Banner />
+                <Banner id="careerForm" title="Our Expertice Makes Headline" backgroundImage={BackgroundImage} />
                 <section className="cv-form">
                     <div className="container">
-                        <form>
+                        <form method="post">
                             <div className="row">
                                 <div className="col-lg-3">
                                     <h3>Demo Title</h3>
@@ -65,7 +66,7 @@ class CareerForm extends Component {
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group">
-                                                <label>Photo</label>
+                                                <label>Add File</label>
                                                 <input type="file" className="form-control-file" id="exampleFormControlFile1" />
                                             </div>
                                         </div>
@@ -82,7 +83,6 @@ class CareerForm extends Component {
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group">
-                                                <label>Example label</label>
                                                 <textarea className="form-control"></textarea>
                                             </div>
                                         </div>
@@ -91,7 +91,7 @@ class CareerForm extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-lg-12 d-block text-center">
-                                    <button type="submit" className="rul-btn">Submit Application</button>
+                                    <button type="submit" className="cus-btn">Submit Application</button>
                                 </div>
                             </div>
                         </form>

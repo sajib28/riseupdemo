@@ -7,7 +7,7 @@ import Accordion from './Accordion';
 class Career extends Component {
     render() {
         return (
-            <div className="career">
+            <div className="page career">
                 <Nav />
                 <Banner id="careerBanner" backgroundImage={BackgroundImage} />
                 <section className="career-position">
