@@ -10703,7 +10703,7 @@ section {
   padding: 10px 20px;
   background: #ffffff;
   text-decoration: none;
-  border-radius: 15px;
+  border-radius: 10px;
   -webkit-box-shadow: 0 5px 20px #ddd;
   -ms-box-shadow: 0 5px 20px #ddd;
   -o-box-shadow: 0 5px 20px #ddd;
@@ -10715,6 +10715,11 @@ section {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   text-decoration: none;
+}
+
+.cus-btn i {
+  padding-left: 10px;
+  font-size: 16px;
 }
 
 .container {
@@ -10822,13 +10827,6 @@ section {
   padding-top: 5px;
 }
 
-.modal-open #mainMenu {
-  position: relative;
-  opacity: 0;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-
 .banner {
   position: relative;
 }
@@ -10928,6 +10926,7 @@ section {
 
 .project {
   background: #221f1f;
+  padding-bottom: 180px;
 }
 
 .project .section-title h2 {
@@ -10962,6 +10961,7 @@ section {
   position: relative;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  overflow: hidden;
 }
 
 .project .app-list .list-items:hover {
@@ -10984,7 +10984,7 @@ section {
 }
 
 .project .app-list .list-items .item-bg:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -11035,11 +11035,64 @@ section {
   text-transform: capitalize;
   border-radius: 10px;
   padding: 8px 30px;
+  position: absolute;
+  bottom: -50px;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .project .app-list .list-items .item-body a i {
   padding-left: 10px;
   font-size: 16px;
+}
+
+.project .app-list .list-items:hover a {
+  bottom: 60px;
+  -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  opacity: 1;
+}
+
+.project .details {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-top: 20px;
+  display: inline-block;
+  font-family: "proxima_novabold";
+  font-size: 22px;
+  color: #f26a11;
+}
+
+.company-short-info {
+  background: #fff;
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 1px 13px rgba(0, 0, 0, 0.13);
+  -ms-box-shadow: 0 1px 13px rgba(0, 0, 0, 0.13);
+  -o-box-shadow: 0 1px 13px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 1px 13px rgba(0, 0, 0, 0.13);
+  margin: -100px auto 60px;
+}
+
+.company-short-info .counter {
+  padding: 56px 0;
+}
+
+.company-short-info .counter .CountUp {
+  color: #f26a11;
+  font-size: 64px;
+  font-family: "proxima_novabold";
+  line-height: 78px;
+}
+
+.company-short-info .counter p {
+  text-align: center;
+  font-size: 44px;
+  font-family: "proxima_novaregular";
+  line-height: 54px;
 }
 
 /* ----------- End Common css----------- */
@@ -11487,13 +11540,22 @@ section {
           align-items: flex-start;
 }
 
+.home .company-enterpreneurs {
+  padding-top: 0px;
+  position: relative;
+}
+
+.home .company-enterpreneurs .section-title p {
+  margin-top: 35px;
+}
+
 .home .company-logo ul li {
   width: 25%;
   display: inline-block;
 }
 
 .home .company-logo ul li a img {
-  width: 100%;
+  margin: 15px 0;
 }
 
 .home .home-work {
@@ -11513,11 +11575,16 @@ section {
   color: #000000;
 }
 
-.home .home-work img {
+.home .home-work .image-block {
+  max-width: 430px;
+}
+
+.home .home-work .image-block img {
   -webkit-box-shadow: 3px 12px 46px rgba(246, 239, 239, 0.26);
   -ms-box-shadow: 3px 12px 46px rgba(246, 239, 239, 0.26);
   -o-box-shadow: 3px 12px 46px rgba(246, 239, 239, 0.26);
   box-shadow: 3px 12px 46px rgba(246, 239, 239, 0.26);
+  width: 100%;
 }
 
 .home .home-work .content-block h2 {
@@ -11563,7 +11630,7 @@ section {
   transform: rotate(-33deg);
 }
 
-.home .home-work .swap-items.reverse-items .image-block img {
+.home .home-work .swap-items.reverse-items .image-block {
   float: right;
 }
 

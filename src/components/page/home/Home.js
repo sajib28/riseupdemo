@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import src1 from '../../../assets/media/intechnic.mp4';
 import poster from '../../../assets/img/intechnic.jpg';
 import Nav from '../../commonTools/Nav';
-import Footer from '../../commonTools/Footer';
+import CompanySummary from '../../commonTools/CompanySummary';
 import CompanyLogo from '../../commonTools/CompanyLogo';
 import ContactForm from '../../commonTools/ContactForm';
-import project1 from '../../../assets/img/meet-meena.png';
-import project2 from '../../../assets/img/adolescent-app.png';
-import project3 from '../../../assets/img/language-movement.png';
-import project4 from '../../../assets/img/meena-game.png';
+import Footer from '../../commonTools/Footer';
+import project1 from '../../../assets/img/project/meet-meena.png';
+import project2 from '../../../assets/img/project/adolescent-app.png';
+import project3 from '../../../assets/img/project/language-movement.png';
+import project4 from '../../../assets/img/project/meena-game.png';
 import appdev1 from '../../../assets/img/app-development.png';
 import appdev2 from '../../../assets/img/game-development.png';
 import appdev3 from '../../../assets/img/web-development.png';
@@ -21,20 +22,17 @@ import $ from 'jquery';
 class Home extends Component {
     componentDidMount() {
         $(document).ready(function () {
-            // var Menuheight = $("#mainMenu").height();
+            var Menuheight = $("#mainMenu").height();
             $('.service-menu a').bind('click', function (e) {
                 // alert("Test");
                 e.preventDefault(); // prevent hard jump, the default behavior
 
-                var target = $(this).attr("href"); // Set the target as variable
+                // var target = $(this).attr("href"); // Set the target as variable
 
                 // perform animated scrolling by getting top-position of target-element and set it as scroll target
                 $('html, body').stop().animate({
-                    scrollTop: $(target).offset().top
-                }, 600, function () {
-                    window.location.hash = target; //attach the hash (#jumptarget) to the pageurl
-                });
-
+                    scrollTop: $($(this).attr('href')).offset().top - Menuheight
+                }, 500);
                 return false;
             });
         });
@@ -57,26 +55,8 @@ class Home extends Component {
                     $('.service-menu a').eq(i).addClass('active');
                 }
             });
-            // var sideBarMenu = $('.service-menu').position();
-
-            //    alert(sideBarMenu.top);
         }).scroll();
-        // function scrollNav() {
-        //     var Menuheight = $("#mainMenu").height()
-        //     $('.service-menu a').click(function () {
-        //         //Toggle Class
-        //         $(".active").removeClass("active");
-        //         $(this).closest('li').addClass("active");
-        //         // //Animate
-        //         $('html, body').stop().animate({
-        //             scrollTop: $($(this).attr('href')).offset().top - Menuheight
-        //         }, 500);
-        //         return false;
-        //     });
-        // }
-        // scrollNav();
         $(".service-block:even").addClass('reverse-items');
-
         // fixed Sidebar Menu
 
         window.onscroll = function () { sideBarFixed() };
@@ -144,9 +124,9 @@ class Home extends Component {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="apps-wrapper">
-                                    <h2>Apps Development</h2>
+                                    <h2 className="parallax-title">Apps Development</h2>
                                     <figure>
-                                        <img src={appdev1} alt="" />
+                                        <img className="parallax-content" src={appdev1} alt="" />
                                     </figure>
                                     <div className="apps-content">
                                         <div className="row">
@@ -162,8 +142,8 @@ class Home extends Component {
                                                 </div>
                                                 <div className="col-lg-8">
                                                     <div className="apps-description">
-                                                        <p>We offer design, development, and solution for apps across a range of devices. We have developed many commercially successful apps for Apple App Store, Google Play Store and for some other platform.<br/><br/>
-                                                        We have millions of active users on those mobile apps. Some of our apps were also being featured by Apple for our unique creativity, design innovation & user feedback.
+                                                        <p>We offer design, development, and solution for apps across a range of devices. We have developed many commercially successful apps for Apple App Store, Google Play Store and for some other platform.<br /><br />
+                                                            We have millions of active users on those mobile apps. Some of our apps were also being featured by Apple for our unique creativity, design innovation & user feedback.
                                                         </p>
                                                         <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
                                                     </div>
@@ -180,35 +160,35 @@ class Home extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                            <div className="apps-wrapper">
-                                <h2>Games Development</h2>
-                                <figure>
-                                    <img src={appdev2} alt="" />
-                                </figure>
-                                <div className="apps-content">
-                                    <div className="row">
-                                        <div className="swap-apps">
+                                <div className="apps-wrapper">
+                                    <h2>Games Development</h2>
+                                    <figure>
+                                        <img src={appdev2} alt="" />
+                                    </figure>
+                                    <div className="apps-content">
+                                        <div className="row">
+                                            <div className="swap-apps">
 
-                                            <div className="col-lg-4">
-                                                <div className="apps-details">
-                                                    <ul className="apps-info list-unstyled">
-                                                        <li><i className="fab fa-apple"></i>ios</li>
-                                                        <li><i className="fab fa-android"></i>Android</li>
-                                                        <li><i className="fab fa-windows"></i>Windows Mobile</li>
-                                                        <li><i className="fab fa-facebook"></i>Facebook Game</li>
-                                                        <li><i className="fab fa-react"></i>React Native</li>
-                                                    </ul>
+                                                <div className="col-lg-4">
+                                                    <div className="apps-details">
+                                                        <ul className="apps-info list-unstyled">
+                                                            <li><i className="fab fa-apple"></i>ios</li>
+                                                            <li><i className="fab fa-android"></i>Android</li>
+                                                            <li><i className="fab fa-windows"></i>Windows Mobile</li>
+                                                            <li><i className="fab fa-facebook"></i>Facebook Game</li>
+                                                            <li><i className="fab fa-react"></i>React Native</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-8">
-                                                <div className="apps-description">
-                                                    <p>We have worked on many successful games, like- Tap Tap Ants, Tap Tap Ants: Battlefield, Highway Chase, Rooftop Frenzy, Brain Boss, iWarehouse, Bubble Attack, Shoot The Monkey, etc.<br/><br/>
-                                                    We are the first game developer team in Bangladesh, who developed games for multi-platforms.
+                                                <div className="col-lg-8">
+                                                    <div className="apps-description">
+                                                        <p>We have worked on many successful games, like- Tap Tap Ants, Tap Tap Ants: Battlefield, Highway Chase, Rooftop Frenzy, Brain Boss, iWarehouse, Bubble Attack, Shoot The Monkey, etc.<br /><br />
+                                                            We are the first game developer team in Bangladesh, who developed games for multi-platforms.
                                                     </p>
-                                                    <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                        <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -220,29 +200,29 @@ class Home extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                            <div className="apps-wrapper">
-                                <h2 className="apps-title">Web System</h2>
-                                <figure>
-                                    <img src={appdev3} alt="" />
-                                </figure>
-                                <div className="apps-content">
-                                    <div className="row">
-                                        <div className="swap-apps">
-                                            <div className="col-lg-4">
-                                                <div className="apps-details">
-                                                    <ul className="apps-info list-unstyled">
-                                                        <li><i className="fas fa-laptop"></i>Digital Platform</li>
-                                                        <li><i className="fas fa-globe"></i>Web Portal</li>
-                                                        <li><i className="fa fa-shopping-cart"></i>E-Commerce Solutions</li>
-                                                    </ul>
+                                <div className="apps-wrapper">
+                                    <h2 className="apps-title">Web System</h2>
+                                    <figure>
+                                        <img src={appdev3} alt="" />
+                                    </figure>
+                                    <div className="apps-content">
+                                        <div className="row">
+                                            <div className="swap-apps">
+                                                <div className="col-lg-4">
+                                                    <div className="apps-details">
+                                                        <ul className="apps-info list-unstyled">
+                                                            <li><i className="fas fa-laptop"></i>Digital Platform</li>
+                                                            <li><i className="fas fa-globe"></i>Web Portal</li>
+                                                            <li><i className="fa fa-shopping-cart"></i>E-Commerce Solutions</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-8">
-                                                <div className="apps-description">
-                                                    <p>We provide web-based solutions that can improve user impressions over the interactive experiences and increase the retention period of consumers with content management, cloud storage solutions, communication and marketing solutions, and interactive report presentation.</p>
-                                                    <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                <div className="col-lg-8">
+                                                    <div className="apps-description">
+                                                        <p>We provide web-based solutions that can improve user impressions over the interactive experiences and increase the retention period of consumers with content management, cloud storage solutions, communication and marketing solutions, and interactive report presentation.</p>
+                                                        <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -255,31 +235,31 @@ class Home extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                            <div className="apps-wrapper">
-                                <h2>XR Solution</h2>
-                                <figure>
-                                    <img src={appdev4} alt="" />
-                                </figure>
-                                <div className="apps-content">
-                                    <div className="row">
-                                        <div className="swap-apps">
-                                            <div className="col-lg-4">
-                                                <div className="apps-details">
-                                                    <ul className="apps-info list-unstyled">
-                                                        <li><span>AR</span>Augmented reality</li>
-                                                        <li><span>VR</span>Virtual reality</li>
-                                                        <li><span>MR</span>Mixed reality</li>
-                                                    </ul>
+                                <div className="apps-wrapper">
+                                    <h2>XR Solution</h2>
+                                    <figure>
+                                        <img src={appdev4} alt="" />
+                                    </figure>
+                                    <div className="apps-content">
+                                        <div className="row">
+                                            <div className="swap-apps">
+                                                <div className="col-lg-4">
+                                                    <div className="apps-details">
+                                                        <ul className="apps-info list-unstyled">
+                                                            <li><span>AR</span>Augmented reality</li>
+                                                            <li><span>VR</span>Virtual reality</li>
+                                                            <li><span>MR</span>Mixed reality</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-8">
-                                                <div className="apps-description">
-                                                    <p>Extended reality is the most updated and trending technology around the world, where users interact with the virtual world in seemingly real situations or physical action. AR, VR, MR interactive experiences are the digital version of older technologies, e.g.</p>
-                                                    <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                <div className="col-lg-8">
+                                                    <div className="apps-description">
+                                                        <p>Extended reality is the most updated and trending technology around the world, where users interact with the virtual world in seemingly real situations or physical action. AR, VR, MR interactive experiences are the digital version of older technologies, e.g.</p>
+                                                        <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -290,29 +270,29 @@ class Home extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                            <div className="apps-wrapper">
-                                <h2>IETS</h2>
-                                <figure>
-                                    <img src={appdev5} alt="" />
-                                </figure>
-                                <div className="apps-content">
-                                    <div className="row">
-                                        <div className="swap-apps">
-                                            <div className="col-lg-4">
-                                                <div className="apps-details">
-                                                    <ul className="apps-info list-unstyled">
-                                                        <li><i className="fab fa-apple"></i>HR Service</li>
-                                                        <li><i className="fab fa-android"></i>Development</li>
-                                                    </ul>
+                                <div className="apps-wrapper">
+                                    <h2>IETS</h2>
+                                    <figure>
+                                        <img src={appdev5} alt="" />
+                                    </figure>
+                                    <div className="apps-content">
+                                        <div className="row">
+                                            <div className="swap-apps">
+                                                <div className="col-lg-4">
+                                                    <div className="apps-details">
+                                                        <ul className="apps-info list-unstyled">
+                                                            <li><i className="fab fa-apple"></i>HR Service</li>
+                                                            <li><i className="fab fa-android"></i>Development</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-8">
+                                                    <div className="apps-description">
+                                                        <p>Riseup is one of the emerging leaders as the premier IT/ITES service provider, serving its customers and delivering IT & ITES Solutions to a diverse set of clients in several countries across the globe. The company is backed up with a management team which brings in over 10 years of software development and consultancy experience spread all across the world, specializing in small to enterprise level of system development, implementation and integration services. </p>
+                                                        <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-8">
-                                                <div className="apps-description">
-                                                    <p>Riseup is one of the emerging leaders as the premier IT/ITES service provider, serving its customers and delivering IT & ITES Solutions to a diverse set of clients in several countries across the globe. The company is backed up with a management team which brings in over 10 years of software development and consultancy experience spread all across the world, specializing in small to enterprise level of system development, implementation and integration services. </p>
-                                                    <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
-                                                </div>
-                                            </div>
-                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -374,15 +354,21 @@ class Home extends Component {
                                         </div>
                                         <div className="item-body">
                                             <p>A tool to simplify the lives of landlords, property managers and tenants. It allows tenants to make mobile rent payments; send messages; store important documents; and make maintenance requests.</p>
-                                           <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <a href="/" className="cus-btn details">View more<i className="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section className="company-enterpreneurs">
+                    <CompanySummary />
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
@@ -418,7 +404,7 @@ class Home extends Component {
                             <div className="swap-items">
                                 <div className="col-lg-6">
                                     <div className="image-block">
-                                        <img src={require('../../../assets/img/home-work-1.png')} alt={alt} />
+                                        <img src={require('../../../assets/img/work/home-work-1.png')} alt={alt} />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -438,7 +424,7 @@ class Home extends Component {
 
                                 <div className="col-lg-6">
                                     <div className="image-block">
-                                        <img src={require('../../../assets/img/home-work-2.png')} alt={alt} />
+                                        <img src={require('../../../assets/img/work/home-work-2.png')} alt={alt} />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -455,7 +441,7 @@ class Home extends Component {
 
                                 <div className="col-lg-6">
                                     <div className="image-block">
-                                        <img src={require('../../../assets/img/home-work-3.png')} alt={alt} />
+                                        <img src={require('../../../assets/img/work/home-work-3.png')} alt={alt} />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -471,7 +457,7 @@ class Home extends Component {
 
                                 <div className="col-lg-6">
                                     <div className="image-block">
-                                        <img src={require('../../../assets/img/home-work-4.png')} alt={alt} />
+                                        <img src={require('../../../assets/img/work/home-work-4.png')} alt={alt} />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -488,7 +474,7 @@ class Home extends Component {
 
                                 <div className="col-lg-6">
                                     <div className="image-block">
-                                        <img src={require('../../../assets/img/home-work-5.png')} alt={alt} />
+                                        <img src={require('../../../assets/img/work/home-work-5.png')} alt={alt} />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">

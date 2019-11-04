@@ -82,12 +82,16 @@ section {
   padding: 10px 20px;
   background: $white;
   text-decoration: none;
-  @include border-radius(15px);
+  @include border-radius(10px);
   @include box-shadow(0, 5px, 20px, #ddd);
   &:hover {
     color: $black;
     @include transition(all 0.3s ease);
     text-decoration: none;
+  }
+  i {
+    padding-left: 10px;
+    font-size: 16px;
   }
 }
 .container {
@@ -191,12 +195,7 @@ section {
   }
 }
 .modal-open {
-  #mainMenu {
-    // padding-right: 16px;
-    position: relative;
-    opacity: 0;
-    @include transition(all 0.3s linear);
-  }
+
 }
 .banner {
   position: relative;
@@ -282,8 +281,9 @@ section {
 }
 .project {
   background: $black-grey;
-  .section-title{
-    h2{
+  padding-bottom: 180px;
+  .section-title {
+    h2 {
       color: $white;
     }
   }
@@ -303,6 +303,7 @@ section {
       height: 460px;
       position: relative;
       @include transition(all 0.5s ease);
+      overflow: hidden;
       &:hover {
         transform: scale(0.97);
       }
@@ -320,13 +321,13 @@ section {
         @include border-radius(10px);
 
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           bottom: 0;
           right: 0;
           left: 0;
-          background: rgba($black,.15);
+          background: rgba($black, 0.15);
         }
       }
       .item-body {
@@ -344,7 +345,7 @@ section {
           font-size: 18px;
           line-height: 25px;
           color: $white;
-          @include text-shadow(0,3px,6px,rgba($black,.39));
+          @include text-shadow(0, 3px, 6px, rgba($black, 0.39));
         }
         a {
           background: $white;
@@ -354,12 +355,53 @@ section {
           text-transform: capitalize;
           @include border-radius(10px);
           padding: 8px 30px;
+          position: absolute;
+          bottom: -50px;
+          opacity: 0;
+          @include transition(all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s);
           i {
             padding-left: 10px;
             font-size: 16px;
           }
         }
       }
+      &:hover a{
+          bottom: 60px;
+          @include transition(all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s);
+          opacity: 1;
+        
+      }
+    }
+  }
+  .details {
+    box-shadow: none;
+    margin-top: 20px;
+    display: inline-block;
+    font-family: $proximaBold;
+    font-size: 22px;
+    color: $yellow;
+  }
+}
+.company-short-info {
+  background: #fff;
+  max-width: 1280px;
+  @include flexbox();
+  @include box-shadow(0, 1px, 13px, rgba($black, 0.13));
+  margin: -100px auto 60px;
+
+  .counter {
+    padding: 56px 0;
+    .CountUp {
+      color: $yellow;
+      font-size: 64px;
+      font-family: $proximaBold;
+      line-height: 78px;
+    }
+    p {
+      text-align: center;
+      font-size: 44px;
+      font-family: $proximaRegular;
+      line-height: 54px;
     }
   }
 }
@@ -746,8 +788,11 @@ section {
     }
   }
   .company-enterpreneurs {
+    padding-top: 0px;
+    position: relative;
     .section-title {
       p {
+        margin-top: 35px;
       }
     }
   }
@@ -758,7 +803,7 @@ section {
         display: inline-block;
         a {
           img {
-            width: 100%;
+            margin: 15px 0;
           }
         }
       }
@@ -780,9 +825,11 @@ section {
       }
     }
     .image-block {
-    }
-    img {
-      @include box-shadow(3px, 12px, 46px, rgba(246, 239, 239, 0.26));
+      max-width: 430px;
+      img {
+        @include box-shadow(3px, 12px, 46px, rgba(246, 239, 239, 0.26));
+        width: 100%;
+      }
     }
     .content-block {
       h2 {
@@ -827,8 +874,8 @@ section {
           transform: rotate(-33deg);
         }
         .image-block {
+          float: right;
           img {
-            float: right;
           }
         }
       }

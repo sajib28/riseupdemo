@@ -25,11 +25,9 @@ import EventDetails from './page/press/EventDetails';
 import '../assets/scss/main.scss';
 class App extends Component {
     componentDidMount() {
-        // var image = document.getElementsByClassName('thumbnail');
+        // var image = document.getElementsByClassName('parallax-content');
         // new simpleParallax(image, {
-        //   scale: 1.5
         // });
-
         // Scrollbar.init(document.querySelector('#my-scrollbar'));
 
     }
