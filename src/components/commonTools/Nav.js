@@ -27,12 +27,16 @@ class Nav extends Component {
     });
     // dropdown menu
     $(document).ready(function () {
+      //dropdown menu
       $('.dropdown').on('show.bs.dropdown', function () {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideDown(150);
+        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
       });
+
+      // Add slideUp animation to Bootstrap dropdown when collapsing.
       $('.dropdown').on('hide.bs.dropdown', function () {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideUp(150);
+        $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
       });
+      //dropdown menu
     });
 
     // Back to top
@@ -89,10 +93,10 @@ class Nav extends Component {
                 <li className="nav-item">
                   <NavLink activeClassName="active" className="nav-link" to="/career">Contact</NavLink>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link openMenu" to="/" data-toggle="modal" data-target="#fullscreenMenu"><img src={menubar} alt="" /></Link>
-                </li>
               </ul>
+            </div>
+            <div className="topMenuIcon">
+              <Link className="nav-link openMenu" to="/" data-toggle="modal" data-target="#fullscreenMenu"><img src={menubar} alt="" /></Link>
             </div>
           </div>
         </nav>
@@ -112,62 +116,64 @@ class Nav extends Component {
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-6">
-                      <ul className="list-unstyled left-menu">
-                        <li className="nav-item">
-                          <NavLink className="nav-link" to="/">Home</NavLink>
-                        </li>
-                        {/* <li className="nav-item">
+                      <div className="navbar">
+                        <ul className="list-unstyled left-menu navbar-nav">
+                          <li className="nav-item">
+                            <NavLink className="nav-link" to="/">Home</NavLink>
+                          </li>
+                          {/* <li className="nav-item">
                           <NavLink activeClassName="active" className="nav-link" to="/service">Our Services</NavLink>
                         </li> */}
-                        <li className="nav-item dropdown">
-                          <Link to="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Services <span className="caret"></span></Link>
-                          <ul className="dropdown-menu">
-                            <li className="nav-item">
-                              <NavLink activeClassName="active" className="nav-link" to="/iets">Apps Development</NavLink>
-                            </li>
-                            <li className="nav-item">
-                              <NavLink activeClassName="active" className="nav-link" to="/iets">Game Development</NavLink>
-                            </li>
-                            <li className="nav-item">
-                              <NavLink activeClassName="active" className="nav-link" to="/iets">Web System</NavLink>
-                            </li>
-                            <li className="nav-item">
-                              <NavLink activeClassName="active" className="nav-link" to="/iets">XR Solution</NavLink>
-                            </li>
-                            <li className="nav-item">
-                              <NavLink activeClassName="active" className="nav-link" to="/iets">Iets</NavLink>
-                            </li>
-                          </ul>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/service">Our Process</NavLink>
-                        </li>
+                          <li className="nav-item dropdown">
+                            <Link to="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Services <span className="caret"></span></Link>
+                            <ul className="dropdown-menu">
+                              <li className="nav-item">
+                                <NavLink activeClassName="active" className="nav-link" to="/iets">Apps Development</NavLink>
+                              </li>
+                              <li className="nav-item">
+                                <NavLink activeClassName="active" className="nav-link" to="/iets">Game Development</NavLink>
+                              </li>
+                              <li className="nav-item">
+                                <NavLink activeClassName="active" className="nav-link" to="/iets">Web System</NavLink>
+                              </li>
+                              <li className="nav-item">
+                                <NavLink activeClassName="active" className="nav-link" to="/iets">XR Solution</NavLink>
+                              </li>
+                              <li className="nav-item">
+                                <NavLink activeClassName="active" className="nav-link" to="/iets">Iets</NavLink>
+                              </li>
+                            </ul>
+                          </li>
+                          <li className="nav-item">
+                            <NavLink activeClassName="active" className="nav-link" to="/service">Our Process</NavLink>
+                          </li>
 
-                        <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/work">Our Work</NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/about">About Us</NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/about">Our clients</NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/blog">Blog</NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/career">Career</NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/press">Press Kit</NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/press">Contact</NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/apps">Apps</NavLink>
-                        </li>
-                      </ul>
+                          <li className="nav-item">
+                            <NavLink activeClassName="active" className="nav-link" to="/work">Our Work</NavLink>
+                          </li>
+                          <li className="nav-item">
+                            <NavLink activeClassName="active" className="nav-link" to="/about">About Us</NavLink>
+                          </li>
+                          <li className="nav-item">
+                            <NavLink activeClassName="active" className="nav-link" to="/about">Our clients</NavLink>
+                          </li>
+                          <li className="nav-item">
+                            <NavLink activeClassName="active" className="nav-link" to="/blog">Blog</NavLink>
+                          </li>
+                          <li className="nav-item">
+                            <NavLink activeClassName="active" className="nav-link" to="/career">Career</NavLink>
+                          </li>
+                          <li className="nav-item">
+                            <NavLink activeClassName="active" className="nav-link" to="/press">Press Kit</NavLink>
+                          </li>
+                          <li className="nav-item">
+                            <NavLink activeClassName="active" className="nav-link" to="/press">Contact</NavLink>
+                          </li>
+                          <li className="nav-item">
+                            <NavLink activeClassName="active" className="nav-link" to="/apps">Apps</NavLink>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="company-info">

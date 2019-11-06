@@ -41,7 +41,13 @@
   transform: -ms-translate($args);
   transform: -o-translate($args);
 }
-
+@mixin linear-gradient($direction, $start-color, $end-color) {
+  background: -webkit-linear-gradient($direction, $start-color, $end-color);
+  background: -moz-linear-gradient($direction, $start-color, $end-color);
+  background: -ms-linear-gradient($direction, $start-color, $end-color);
+  background: -o-linear-gradient($direction, $start-color, $end-color);
+  background: linear-gradient($direction, $start-color, $end-color);
+}
 @mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;

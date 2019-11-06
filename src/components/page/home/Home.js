@@ -55,21 +55,39 @@ class Home extends Component {
                     $('.service-menu a').eq(i).addClass('active');
                 }
             });
+            var homeHerviceTop = $(".home-service").offset().top;
+            var projectBottom = $(".home-service").offset().top;
+            // if ($(this).scrollTop() >= projectBottom) {
+            //     $('#SideBarMenu').hide();
+            // }
+            if ($(this).scrollTop() >= homeHerviceTop) {
+                $('#SideBarMenu').show();
+                // $('#SideBarMenu').addClass('sidebarfixed');
+            }
+            if ($(this).scrollTop() >= projectBottom) {
+                $('#SideBarMenu').hide();
+                // $('#SideBarMenu').addClass('sidebarfixed');
+            }
+
+            else {
+                $('#SideBarMenu').removeClass('sidebarfixed');
+                $('#SideBarMenu').hide();
+            }
+
         }).scroll();
         $(".service-block:even").addClass('reverse-items');
         // fixed Sidebar Menu
+        // window.onscroll = function () { sideBarFixed() };
+        // let header = document.getElementById("SideBarMenu");
 
-        window.onscroll = function () { sideBarFixed() };
-        let header = document.getElementById("SideBarMenu");
-        // let sticky = header.offsetTop;
-        let introHeight = $(".intro").height();
-        function sideBarFixed() {
-            if (window.pageYOffset > introHeight) {
-                header.classList.add("sidebarfixed");
-            } else {
-                header.classList.remove("sidebarfixed");
-            }
-        }
+        // let introHeight = $(".intro").height();
+        // function sideBarFixed() {
+        //     if (window.pageYOffset > introHeight) {
+        //         header.classList.add("sidebarfixed");
+        //     } else {
+        //         header.classList.remove("sidebarfixed");
+        //     }
+        // }
         //End fixed Sidebar Menu
 
         $(".swap-items:odd").addClass('reverse-items');
@@ -80,7 +98,7 @@ class Home extends Component {
         return (
             <div className="home">
                 <Nav />
-                <section className="intro">
+                <section className="intro" data-ui="light">
                     <div className="background-cover">
                         <video autoPlay muted loop playsInline preload="none" poster={poster}>
                             <source src={src1} type="video/mp4" />
@@ -96,7 +114,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="home-service">
+                <section className="home-service" data-ui="light">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
@@ -109,43 +127,44 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                </section>
-                <section id="riseupApps" className="service-block">
-                    <div className="container">
-                        <nav className="service-menu d-block" id="SideBarMenu">
-                            <ul className="list-unstyled">
-                                <li className="nav-item"><a className="nav-link active" href="#riseupApps">Apps</a></li>
-                                <li className="nav-item"><a className="nav-link" href="#riseupGames">Games</a></li>
-                                <li className="nav-item"><a className="nav-link" href="#riseupXr">X-R</a></li>
-                                <li className="nav-item"><a className="nav-link" href="#riseupWeb">Web</a></li>
-                                <li className="nav-item"><a className="nav-link" href="#riseupIets">IETS</a></li>
-                            </ul>
-                        </nav>
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="apps-wrapper">
-                                    <h2 className="parallax-title">Apps Development</h2>
-                                    <figure>
-                                        <img className="parallax-content" src={appdev1} alt="" />
-                                    </figure>
-                                    <div className="apps-content">
-                                        <div className="row">
-                                            <div className="swap-apps">
-                                                <div className="col-lg-4">
-                                                    <div className="apps-details">
-                                                        <ul className="apps-info list-unstyled">
-                                                            <li><i className="fab fa-apple"></i>ios</li>
-                                                            <li><i className="fab fa-android"></i>Android</li>
-                                                            <li><i className="fab fa-windows"></i>Windows Mobile</li>
-                                                        </ul>
+                    <div id="riseupApps" className="service-block" data-ui="light">
+                        <div className="container">
+                            <nav className="service-menu ui-light" id="SideBarMenu">
+                                <ul className="list-unstyled">
+                                    <li className="nav-item"><a className="nav-link active" href="#riseupApps">Apps</a></li>
+                                    <li className="nav-item"><a className="nav-link" href="#riseupGames">Games</a></li>
+                                    <li className="nav-item"><a className="nav-link" href="#riseupWeb">Web</a></li>
+                                    <li className="nav-item"><a className="nav-link" href="#riseupXr">X-R</a></li>
+                                    <li className="nav-item"><a className="nav-link" href="#riseupIets">IETS</a></li>
+                                </ul>
+                            </nav>
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="apps-wrapper">
+                                        <h2 className="parallax-title">Apps Development</h2>
+                                        <figure>
+                                            <img className="parallax-content" src={appdev1} alt="" />
+                                            <div className="img-overlay"></div>
+                                        </figure>
+                                        <div className="apps-content">
+                                            <div className="row">
+                                                <div className="swap-apps">
+                                                    <div className="col-lg-4">
+                                                        <div className="apps-details">
+                                                            <ul className="apps-info list-unstyled">
+                                                                <li><i className="fab fa-apple"></i>ios</li>
+                                                                <li><i className="fab fa-android"></i>Android</li>
+                                                                <li><i className="fab fa-windows"></i>Windows Mobile</li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-lg-8">
-                                                    <div className="apps-description">
-                                                        <p>We offer design, development, and solution for apps across a range of devices. We have developed many commercially successful apps for Apple App Store, Google Play Store and for some other platform.<br /><br />
-                                                            We have millions of active users on those mobile apps. Some of our apps were also being featured by Apple for our unique creativity, design innovation & user feedback.
+                                                    <div className="col-lg-8">
+                                                        <div className="apps-description">
+                                                            <p>We offer design, development, and solution for apps across a range of devices. We have developed many commercially successful apps for Apple App Store, Google Play Store and for some other platform.<br /><br />
+                                                                We have millions of active users on those mobile apps. Some of our apps were also being featured by Apple for our unique creativity, design innovation & user feedback.
                                                         </p>
-                                                        <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                            <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,37 +174,145 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                </section>
-                <section id="riseupGames" className="service-block">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="apps-wrapper">
-                                    <h2>Games Development</h2>
-                                    <figure>
-                                        <img src={appdev2} alt="" />
-                                    </figure>
-                                    <div className="apps-content">
-                                        <div className="row">
-                                            <div className="swap-apps">
+                    <div id="riseupGames" className="service-block" data-ui="light">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="apps-wrapper">
+                                        <h2>Games Development</h2>
+                                        <figure>
+                                            <img src={appdev2} alt="" />
+                                            <div className="img-overlay"></div>
+                                        </figure>
+                                        <div className="apps-content">
+                                            <div className="row">
+                                                <div className="swap-apps">
 
-                                                <div className="col-lg-4">
-                                                    <div className="apps-details">
-                                                        <ul className="apps-info list-unstyled">
-                                                            <li><i className="fab fa-apple"></i>ios</li>
-                                                            <li><i className="fab fa-android"></i>Android</li>
-                                                            <li><i className="fab fa-windows"></i>Windows Mobile</li>
-                                                            <li><i className="fab fa-facebook"></i>Facebook Game</li>
-                                                            <li><i className="fab fa-react"></i>React Native</li>
-                                                        </ul>
+                                                    <div className="col-lg-4">
+                                                        <div className="apps-details">
+                                                            <ul className="apps-info list-unstyled">
+                                                                <li><i className="fab fa-apple"></i>ios</li>
+                                                                <li><i className="fab fa-android"></i>Android</li>
+                                                                <li><i className="fab fa-windows"></i>Windows Mobile</li>
+                                                                <li><i className="fab fa-facebook"></i>Facebook Game</li>
+                                                                <li><i className="fab fa-react"></i>React Native</li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-lg-8">
-                                                    <div className="apps-description">
-                                                        <p>We have worked on many successful games, like- Tap Tap Ants, Tap Tap Ants: Battlefield, Highway Chase, Rooftop Frenzy, Brain Boss, iWarehouse, Bubble Attack, Shoot The Monkey, etc.<br /><br />
-                                                            We are the first game developer team in Bangladesh, who developed games for multi-platforms.
+                                                    <div className="col-lg-8">
+                                                        <div className="apps-description">
+                                                            <p>We have worked on many successful games, like- Tap Tap Ants, Tap Tap Ants: Battlefield, Highway Chase, Rooftop Frenzy, Brain Boss, iWarehouse, Bubble Attack, Shoot The Monkey, etc.<br /><br />
+                                                                We are the first game developer team in Bangladesh, who developed games for multi-platforms.
                                                     </p>
-                                                        <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                            <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="riseupWeb" className="service-block" data-ui="light">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="apps-wrapper">
+                                        <h2 className="apps-title">Web System</h2>
+                                        <figure>
+                                            <img src={appdev3} alt="" />
+                                            <div className="img-overlay"></div>
+                                        </figure>
+                                        <div className="apps-content">
+                                            <div className="row">
+                                                <div className="swap-apps">
+                                                    <div className="col-lg-4">
+                                                        <div className="apps-details">
+                                                            <ul className="apps-info list-unstyled">
+                                                                <li><i className="fas fa-laptop"></i>Digital Platform</li>
+                                                                <li><i className="fas fa-globe"></i>Web Portal</li>
+                                                                <li><i className="fa fa-shopping-cart"></i>E-Commerce Solutions</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-lg-8">
+                                                        <div className="apps-description">
+                                                            <p>We provide web-based solutions that can improve user impressions over the interactive experiences and increase the retention period of consumers with content management, cloud storage solutions, communication and marketing solutions, and interactive report presentation.</p>
+                                                            <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="riseupXr" className="service-block" data-ui="light">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="apps-wrapper">
+                                        <h2>XR Solution</h2>
+                                        <figure>
+                                            <img src={appdev4} alt="" />
+                                            <div className="img-overlay"></div>
+                                        </figure>
+                                        <div className="apps-content">
+                                            <div className="row">
+                                                <div className="swap-apps">
+                                                    <div className="col-lg-4">
+                                                        <div className="apps-details">
+                                                            <ul className="apps-info list-unstyled">
+                                                                <li><span>AR</span>Augmented reality</li>
+                                                                <li><span>VR</span>Virtual reality</li>
+                                                                <li><span>MR</span>Mixed reality</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-lg-8">
+                                                        <div className="apps-description">
+                                                            <p>Extended reality is the most updated and trending technology around the world, where users interact with the virtual world in seemingly real situations or physical action. AR, VR, MR interactive experiences are the digital version of older technologies, e.g.</p>
+                                                            <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="riseupIets" className="service-block" data-ui="light">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="apps-wrapper">
+                                        <h2>IETS</h2>
+                                        <figure>
+                                            <img src={appdev5} alt="" />
+                                            <div className="img-overlay"></div>
+                                        </figure>
+                                        <div className="apps-content">
+                                            <div className="row">
+                                                <div className="swap-apps">
+                                                    <div className="col-lg-4">
+                                                        <div className="apps-details">
+                                                            <ul className="apps-info list-unstyled">
+                                                                <li><i className="fab fa-apple"></i>HR Service</li>
+                                                                <li><i className="fab fa-android"></i>Development</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-lg-8">
+                                                        <div className="apps-description">
+                                                            <p>Riseup is one of the emerging leaders as the premier IT/ITES service provider, serving its customers and delivering IT & ITES Solutions to a diverse set of clients in several countries across the globe. The company is backed up with a management team which brings in over 10 years of software development and consultancy experience spread all across the world, specializing in small to enterprise level of system development, implementation and integration services. </p>
+                                                            <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -196,111 +323,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
-                <section id="riseupWeb" className="service-block">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="apps-wrapper">
-                                    <h2 className="apps-title">Web System</h2>
-                                    <figure>
-                                        <img src={appdev3} alt="" />
-                                    </figure>
-                                    <div className="apps-content">
-                                        <div className="row">
-                                            <div className="swap-apps">
-                                                <div className="col-lg-4">
-                                                    <div className="apps-details">
-                                                        <ul className="apps-info list-unstyled">
-                                                            <li><i className="fas fa-laptop"></i>Digital Platform</li>
-                                                            <li><i className="fas fa-globe"></i>Web Portal</li>
-                                                            <li><i className="fa fa-shopping-cart"></i>E-Commerce Solutions</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-8">
-                                                    <div className="apps-description">
-                                                        <p>We provide web-based solutions that can improve user impressions over the interactive experiences and increase the retention period of consumers with content management, cloud storage solutions, communication and marketing solutions, and interactive report presentation.</p>
-                                                        <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="riseupXr" className="service-block">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="apps-wrapper">
-                                    <h2>XR Solution</h2>
-                                    <figure>
-                                        <img src={appdev4} alt="" />
-                                    </figure>
-                                    <div className="apps-content">
-                                        <div className="row">
-                                            <div className="swap-apps">
-                                                <div className="col-lg-4">
-                                                    <div className="apps-details">
-                                                        <ul className="apps-info list-unstyled">
-                                                            <li><span>AR</span>Augmented reality</li>
-                                                            <li><span>VR</span>Virtual reality</li>
-                                                            <li><span>MR</span>Mixed reality</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-8">
-                                                    <div className="apps-description">
-                                                        <p>Extended reality is the most updated and trending technology around the world, where users interact with the virtual world in seemingly real situations or physical action. AR, VR, MR interactive experiences are the digital version of older technologies, e.g.</p>
-                                                        <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="riseupIets" className="service-block">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="apps-wrapper">
-                                    <h2>IETS</h2>
-                                    <figure>
-                                        <img src={appdev5} alt="" />
-                                    </figure>
-                                    <div className="apps-content">
-                                        <div className="row">
-                                            <div className="swap-apps">
-                                                <div className="col-lg-4">
-                                                    <div className="apps-details">
-                                                        <ul className="apps-info list-unstyled">
-                                                            <li><i className="fab fa-apple"></i>HR Service</li>
-                                                            <li><i className="fab fa-android"></i>Development</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-8">
-                                                    <div className="apps-description">
-                                                        <p>Riseup is one of the emerging leaders as the premier IT/ITES service provider, serving its customers and delivering IT & ITES Solutions to a diverse set of clients in several countries across the globe. The company is backed up with a management team which brings in over 10 years of software development and consultancy experience spread all across the world, specializing in small to enterprise level of system development, implementation and integration services. </p>
-                                                        <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="home-project project">
+                <section className="home-project project" data-ui="dark">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
@@ -367,7 +390,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="company-enterpreneurs">
+                <section className="company-enterpreneurs" data-ui="light">
                     <CompanySummary />
                     <div className="container">
                         <div className="row">
@@ -387,7 +410,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="home-work">
+                <section className="home-work" data-ui="dark">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">

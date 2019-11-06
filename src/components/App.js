@@ -23,8 +23,16 @@ import EventDetails from './page/press/EventDetails';
 // import simpleParallax from 'simple-parallax-js';
 // import Scrollbar from 'smooth-scrollbar';
 import '../assets/scss/main.scss';
+import $ from 'jquery';
 class App extends Component {
     componentDidMount() {
+        $(window).scroll(function() {
+            // sectionTop = $('section[data-ui="dark"]').offset().top;
+            // if(sectionTop){
+            //     $('.service-menu').addClass("ui-dark");
+            // }
+           
+          });
         // var image = document.getElementsByClassName('parallax-content');
         // new simpleParallax(image, {
         // });

@@ -3,23 +3,11 @@
   .fullscreen-menu {
     .dropdown {
         .dropdown-menu{
-            background: none;
-            border: none;
-            transform:none !important;
-            position: static !important;
-            float: left;
+          
         }
       &.show {
         .dropdown-menu {
-            position: static !important;
-            float: left;
-            width: 100%;
-            margin-top: 0;
-            background-color: transparent;
-            border: 0;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            transform:none !important;
+           
         }
       }
     }
@@ -36,6 +24,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
 }
 
 @media (min-width: 481px) and (max-width: 767px) {

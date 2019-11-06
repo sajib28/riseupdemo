@@ -94,9 +94,6 @@ section {
     font-size: 16px;
   }
 }
-.container {
-  max-width: 1170px;
-}
 
 .swap-items {
   display: -webkit-box;
@@ -191,11 +188,11 @@ section {
     }
   }
   .openMenu {
-    padding-top: 5px;
+    padding-top: 8px;
+    margin-left: 15px;
   }
 }
 .modal-open {
-
 }
 .banner {
   position: relative;
@@ -365,11 +362,10 @@ section {
           }
         }
       }
-      &:hover a{
-          bottom: 60px;
-          @include transition(all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s);
-          opacity: 1;
-        
+      &:hover a {
+        bottom: 60px;
+        @include transition(all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s);
+        opacity: 1;
       }
     }
   }
@@ -454,7 +450,14 @@ section {
             color: $white;
             font-size: 26px;
             font-weight: bold;
+            &:hover{
+              @include transition(all 0.3s linear);
+              color: $yellow;
+            }
           }
+        }
+        .dropdown-menu{
+          background: none;
         }
       }
 
@@ -785,6 +788,86 @@ section {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
+    }
+  }
+  #riseupApps {
+    figure {
+      position: relative;
+      img{
+        @include box-shadow(0,20px,60px,rgba($red,.25));
+      }
+      .img-overlay {
+        @include linear-gradient(-30deg,rgba(#FAE8E8,0.1),rgba(#CE0000,.60));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+  #riseupGames {
+    figure {
+      position: relative;
+      img{
+        @include box-shadow(0,20px,60px,rgba(#0007CE,.25));
+      }
+      .img-overlay {
+        @include linear-gradient(-30deg,rgba(#FAE8E8,0.1),rgba(#0007CE,.60));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+  #riseupWeb {
+    figure {
+      position: relative;
+      img{
+        @include box-shadow(0,20px,60px,rgba(#00ADB9,.25));
+      }
+      .img-overlay {
+        @include linear-gradient(-30deg,rgba(#FAE8E8,0.1),rgba(#00ADB9,.60));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+  #riseupXr {
+    figure {
+      position: relative;
+      img{
+        @include box-shadow(0,20px,60px,rgba(#208B00,.25));
+      }
+      .img-overlay {
+        @include linear-gradient(-30deg,rgba(#FAE8E8,0.1),rgba(#208B00,.60));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+  #riseupIets {
+    figure {
+      position: relative;
+      img{
+        @include box-shadow(0,20px,60px,rgba(#9A8F00,.25));
+      }
+      .img-overlay {
+        @include linear-gradient(-30deg,rgba(#FAE8E8,0.1),rgba(#9A8F00,.60));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
     }
   }
   .company-enterpreneurs {
@@ -1177,7 +1260,8 @@ footer {
     .input-group-text {
       background: $yellow;
       border: 1px solid $yellow;
-      padding: 0 20px;
+      padding: 0 30px;
+      @include border-radius(11px);
       cursor: pointer;
       i {
         color: $white;
@@ -1186,8 +1270,10 @@ footer {
   }
   .social-media {
     margin: 50px 0 20px;
+    text-align: center;
   }
   .term-condition {
+    text-align: center;
     span {
       font-size: 14px;
       color: $white-grey;
