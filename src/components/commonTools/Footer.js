@@ -12,7 +12,7 @@ class Footer extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-lg-2 col-md-2">
+                        <div className="col-lg-2 col-md-4">
                             <h3>Goto</h3>
                             <ul className="list-unstyled">
                                 <li><a href="/" rel="noopener noreferrer">Home</a></li>
@@ -25,7 +25,7 @@ class Footer extends Component {
                                 <li><a href="/" rel="noopener noreferrer">Contact</a></li>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-3">
+                        <div className="col-lg-3 col-md-4">
                             <h3>Our Services</h3>
                             <ul className="list-unstyled">
                                 <li><a href="/" rel="noopener noreferrer">Apps Development</a></li>
@@ -35,7 +35,7 @@ class Footer extends Component {
                                 <li><a href="/" rel="noopener noreferrer">IETS</a></li>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-3">
+                        <div className="col-lg-3 col-md-4">
                             <h3>Our Enterprise</h3>
                             <ul className="list-unstyled">
                                 <li><a href="/" rel="noopener noreferrer">Appilian</a></li>
@@ -51,7 +51,7 @@ class Footer extends Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-4">
+                        <div className="col-lg-4 col-md-12">
                             <h3>Be Future-Ready</h3>
                             <p>Subscribe now for free to get instant updates on what's happening at the company & in everything details!</p>
                             <div className="newsletter">

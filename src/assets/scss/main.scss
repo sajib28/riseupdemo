@@ -4,7 +4,6 @@
 /* ----------- End  All Variable ----------- */
 /* ----------- Supported All Cross browsers mixins ----------- */
 @import "./mixin.scss";
-@import "./responsive.scss";
 /* ----------- End  Supported All Cross browsers mixins ----------- */
 /* ----------- Suppoted Maximum mobile, Tablet and Desktop ----------- */
 // @import './responsive.scss';
@@ -290,7 +289,7 @@ section {
       display: flex;
       align-items: center;
       width: 100%;
-      padding: 25px 0;
+      padding: 15px 0;
       &:nth-child(even) {
         flex-direction: row-reverse;
       }
@@ -442,7 +441,7 @@ section {
         color: $white-grey;
         font-size: 26px;
         font-weight: bold;
-        line-height: 32px;
+        line-height: 37px;
       }
       .left-menu {
         li {
@@ -491,7 +490,7 @@ section {
       display: inline-block;
       margin: 0 10px;
       &:first-child {
-        margin: 0;
+        margin-left: 0;
       }
       a {
         color: $white-grey;
@@ -524,6 +523,8 @@ section {
   a {
     outline: 0;
     text-decoration: none;
+    display: block;
+    cursor: pointer;
     &:hover {
       outline: 0;
       text-decoration: none;
@@ -554,6 +555,8 @@ section {
   a {
     outline: 0;
     text-decoration: none;
+    display: block;
+    cursor: pointer;
     &:hover {
       outline: 0;
       text-decoration: none;
@@ -578,7 +581,6 @@ section {
 
 /*------------End Go to scroll Top or Bottom Css-------*/
 /* ----------- Home Page css----------- */
-.home {
   #mainMenu {
     background: transparent;
 
@@ -1022,7 +1024,7 @@ section {
       font-size: 16px;
     }
   }
-}
+
 
 /* ----------- End Home page css----------- */
 /*Start Work Page*/
@@ -1281,6 +1283,7 @@ footer {
     }
     ul {
       color: $white-grey;
+      margin-bottom: 0;
       li {
         display: inline-block;
         padding: 0 10px;
@@ -1295,3 +1298,4 @@ footer {
 }
 
 /* ----------- End Footer css----------- */
+@import "./responsive.scss";

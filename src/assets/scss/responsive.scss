@@ -1,35 +1,683 @@
 /* ----------- Suppoted Maximum mobile, Tablet and Desktop ----------- */
 @media (min-width: 320px) {
   .fullscreen-menu {
-    .dropdown {
-        .dropdown-menu{
-          
-        }
-      &.show {
-        .dropdown-menu {
-           
-        }
-      }
-    }
   }
 }
 
 @media (min-width: 1367px) and (max-width: 1600px) {
+  /*Navigation Css*/
+  #mainMenu {
+    .navbar-brand {
+      margin-left: 0;
+    }
+  }
+  /*End Navigation Css*/
 }
 
 @media (min-width: 1201px) and (max-width: 1366px) {
+  /*Navigation Css*/
+  #mainMenu {
+    .navbar-brand {
+      margin-left: 0;
+    }
+  }
+  /*End Navigation Css*/
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+  /*Common css for whole site*/
+  section {
+    padding: 60px 0;
+  }
+  .section-title {
+    h2 {
+      font-size: 60px;
+      line-height: 50px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  /*End Common css for whole site*/
+  /*Navigation Css*/
+  #mainMenu {
+    .navbar-brand {
+      margin-left: 0;
+    }
+  }
+  /*End Navigation Css*/
+  /*Intro home css*/
+  .intro {
+    .inroText {
+      padding: 40px;
+      h1 {
+        font-size: 50px;
+        line-height: 70px;
+        .text-color {
+          font-size: 60px;
+          line-height: 70px;
+        }
+      }
+    }
+  }
+  /*End intro Css*/
+  /*Home Service*/
+  .home-service {
+    padding: 40px 0;
+    .service-block {
+      padding: 20px 0;
+      h2 {
+        font-size: 40px;
+        line-height: 45px;
+      }
+      .apps-wrapper {
+        .apps-content {
+          .swap-apps {
+            ul {
+              li {
+                font-size: 18px;
+                i {
+                  font-size: 20px;
+                }
+              }
+            }
+            .apps-description {
+              a {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*End Home Service*/
+  /*Company Short Info*/
+  .company-short-info {
+    .counter {
+      .CountUp {
+        font-size: 50px;
+      }
+      p {
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+  }
+
+  /*End Company short Info*/
+  /*Company Logo*/
+  .company-logo {
+    ul {
+      li {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  /*Company Logo*/
+
+  /*home work css*/
+  .home-work {
+    .section-title {
+      h2 {
+        font-size: 40px;
+        line-height: 50px;
+      }
+    }
+    .swap-items {
+      &::before {
+        @include transform(rotate(50deg));
+      }
+      &.reverse-items {
+        &::before {
+          @include transform(rotate(-75deg));
+        }
+      }
+      .content-block {
+        h2 {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  /*End home work css*/
+  /*contact form css*/
+
+  .contact-from {
+    .section-title {
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+  /*End contact form css*/
+
+  /*footer css*/
+  footer {
+    .newsletter {
+      .input-group-text {
+        padding: 0 15px;
+      }
+    }
+
+    .social-media {
+      ul {
+        li {
+          margin: 0 6px;
+
+          a {
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            i {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*End Footer Css*/
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  /*Common css for whole site*/
+  section {
+    padding: 60px 0;
+  }
+  .section-title {
+    h2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  /*End Common css for whole site*/
+  /*Navigation Css*/
+  #mainMenu {
+    .navbar-brand {
+      margin-left: 5px;
+    }
+  }
+  /*End Navigation Css*/
+  /*Intro home css*/
+  .intro {
+    .inroText {
+      padding: 40px;
+      h1 {
+        font-size: 50px;
+        line-height: 70px;
+        .text-color {
+          font-size: 60px;
+          line-height: 70px;
+        }
+      }
+    }
+  }
+  /*End intro Css*/
+  /*Home Service*/
+  .home-service {
+    padding: 40px 0;
+    .service-block {
+      padding: 20px 0;
+      h2 {
+        font-size: 35px;
+        line-height: 45px;
+      }
+      .apps-wrapper {
+        .apps-content {
+          .swap-apps {
+            display: block;
+            ul {
+              position: static;
+              margin: -40px auto 0px;
+              padding: 20px 30px;
+              min-width: 500px;
+              li {
+                font-size: 18px;
+                i {
+                  font-size: 20px;
+                }
+              }
+            }
+            .apps-description {
+              padding: 30px 15px 0px 15px;
+              a {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*End Home Service*/
+  /*Company Short Info*/
+  .company-short-info {
+    max-width: 100%;
+    .counter {
+      .CountUp {
+        font-size: 50px;
+      }
+      p {
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+  }
 
+  /*End Company short Info*/
+  /*Company Logo*/
+  .company-logo {
+    ul {
+      li {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  /*Company Logo*/
+  /*Start Project css*/
+  .project {
+    .app-list {
+      .items {
+        .list-items {
+          .item-body {
+            padding: 30px;
+          }
+        }
+      }
+    }
+  }
+  /*End Project css*/
+  /*home work css*/
+  .home-work {
+    .section-title {
+      h2 {
+        font-size: 40px;
+        line-height: 50px;
+      }
+    }
+    .swap-items {
+      &::before {
+        @include transform(rotate(50deg));
+      }
+      &.reverse-items {
+        &::before {
+          @include transform(rotate(-75deg));
+        }
+      }
+      .content-block {
+        h2 {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  /*End home work css*/
+  /*contact form css*/
+
+  .contact-from {
+    .section-title {
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+  /*End contact form css*/
+  /*footer css*/
+  footer {
+    padding: 60px 0;
+    .footer-contact {
+      margin-top: 0;
+    }
+  }
+  /*End Footer Css*/
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+  /*Navigation Css*/
+  #mainMenu {
+    .navbar-brand {
+      margin-left: 5px;
+    }
+  }
+  .fullscreen-menu {
+    .modal-content {
+      .modal-body {
+        padding: 0;
+        .left-menu {
+          li {
+            a {
+              font-size: 18px;
+            }
+          }
+        }
+        .company-info {
+          img{
+            max-width: 140px
+          }
+          .contact-info {
+            li {
+              a {
+                font-size: 18px;
+              }
+            }
+          }
+          .company-address {
+            p {
+              font-size: 20px;
+              line-height: 30px;
+            }
+          }
+          .social-media {
+            ul {
+              li {
+                margin: 0 3px;
+                a {
+                  width: 40px;
+                  height: 40px;
+                  line-height: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*End Navigation Css*/
+
+  /*Intro home css*/
+  .intro {
+    .inroText {
+      h1 {
+        font-size: 50px;
+        line-height: 45px;
+        .text-color {
+          font-size: 60px;
+          line-height: 70px;
+        }
+      }
+    }
+  }
+  /*End intro Css*/
+  /*Home Service*/
+  .home-service {
+    padding: 40px 0;
+    .service-block {
+      padding: 20px 0;
+      h2 {
+        font-size: 35px;
+        line-height: 45px;
+      }
+      .apps-wrapper {
+        .apps-content {
+          .swap-apps {
+            display: block;
+            ul {
+              position: static;
+              margin: -40px auto 0px;
+              padding: 20px 30px;
+              li {
+                font-size: 18px;
+                i {
+                  font-size: 20px;
+                }
+              }
+            }
+            .apps-description {
+              padding: 30px 15px 0px 15px;
+              a {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*End Home Service*/
+  /*footer css*/
+  footer {
+    padding: 40px 0;
+    .footer-contact {
+      margin-top: 0;
+    }
+  }
+  /*End Footer Css*/
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
+  /*Common css for whole site*/
+  section {
+    padding: 40px 0;
+  }
+  .section-title {
+    h2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  /*End Common css for whole site*/
+  /*Navigation Css*/
+  #mainMenu {
+    .navbar-brand {
+      margin-left: 5px;
+    }
+  }
+  .fullscreen-menu {
+    .modal-content {
+      .modal-body {
+        padding: 0;
+        .left-menu {
+          li {
+            a {
+              font-size: 20px;
+            }
+          }
+        }
+        .company-info {
+          .contact-info {
+            li {
+              a {
+                font-size: 20px;
+              }
+            }
+          }
+          .company-address {
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*End Navigation Css*/
+  /*Intro home css*/
+  .intro {
+    .inroText {
+      h1 {
+        font-size: 35px;
+        line-height: 45px;
+        .text-color {
+          font-size: 50px;
+          line-height: 70px;
+        }
+      }
+    }
+  }
+  /*End intro Css*/
+  /*Home Service*/
+  .home-service {
+    padding: 40px 0;
+    .service-block {
+      padding: 20px 0;
+      h2 {
+        font-size: 35px;
+        line-height: 45px;
+      }
+      .apps-wrapper {
+        .apps-content {
+          .swap-apps {
+            display: block;
+            ul {
+              position: static;
+              margin: -40px auto 0px;
+              padding: 20px 30px;
+              li {
+                font-size: 18px;
+                i {
+                  font-size: 20px;
+                }
+              }
+            }
+            .apps-description {
+              padding: 30px 15px 0px 15px;
+              a {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*End Home Service*/
+
+  /*Start Project css*/
+  .project {
+    padding-bottom: 60px;
+    .app-list {
+      .items {
+        display: block;
+        padding: 0;
+        .list-items {
+          margin: 20px 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  /*End Project css*/
+  /*Counter info css*/
+  .company-enterpreneurs {
+    .company-short-info {
+      margin: 20px 0 0 0;
+      display: block;
+      box-shadow: none;
+      .counter {
+        padding: 20px 0;
+        .CountUp {
+          font-size: 40px;
+          line-height: 50px;
+        }
+        p {
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+  .company-logo {
+    ul {
+      li {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        img {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+  /*End Counter info css*/
+  /*End Intro Home css*/
+  /*home work css*/
+  .home-work {
+    .section-title {
+      h2 {
+        font-size: 40px;
+        line-height: 60px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    .swap-items {
+      display: block;
+      padding: 20px 0;
+      &::before {
+        content: none;
+      }
+      .image-block {
+        margin: 0 auto;
+      }
+      .content-block {
+        h2 {
+          font-size: 30px;
+          line-height: 40px;
+          margin: 25px 0 20px 0;
+        }
+      }
+      &.reverse-items {
+        .image-block {
+          float: none;
+        }
+      }
+    }
+  }
+  /*End home work css*/
+
+  /*contact form css*/
+
+  .contact-from {
+    .section-title {
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    .float-right {
+      float: none !important;
+      text-align: center;
+    }
+  }
+  /*End contact form css*/
+  /*footer css*/
+  footer {
+    padding: 40px 0;
+    .footer-contact {
+      margin-top: 0;
+    }
+  }
+  /*End Footer Css*/
+
+  /*scroll top down css*/
+  .scroll-top {
+    .text {
+      display: none;
+    }
+  }
+  .scroll-down {
+    .text {
+      display: none;
+    }
+  }
+  /*End scroll top down css*/
 }

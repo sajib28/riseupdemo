@@ -149,7 +149,7 @@ class Home extends Component {
                                         <div className="apps-content">
                                             <div className="row">
                                                 <div className="swap-apps">
-                                                    <div className="col-lg-4">
+                                                    <div className="col-lg-4 col-md-12">
                                                         <div className="apps-details">
                                                             <ul className="apps-info list-unstyled">
                                                                 <li><i className="fab fa-apple"></i>ios</li>
@@ -158,7 +158,7 @@ class Home extends Component {
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <div className="col-lg-8">
+                                                    <div className="col-lg-8 col-md-12">
                                                         <div className="apps-description">
                                                             <p>We offer design, development, and solution for apps across a range of devices. We have developed many commercially successful apps for Apple App Store, Google Play Store and for some other platform.<br /><br />
                                                                 We have millions of active users on those mobile apps. Some of our apps were also being featured by Apple for our unique creativity, design innovation & user feedback.

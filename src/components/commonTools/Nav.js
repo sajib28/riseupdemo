@@ -115,7 +115,7 @@ class Nav extends Component {
               <div className="modal-body">
                 <div className="container">
                   <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-md-6 col-sm-6">
                       <div className="navbar">
                         <ul className="list-unstyled left-menu navbar-nav">
                           <li className="nav-item">
@@ -175,7 +175,7 @@ class Nav extends Component {
                         </ul>
                       </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-md-6 col-sm-6">
                       <div className="company-info">
                         <img src={logo} alt="" />
                         <div className="contact-info">

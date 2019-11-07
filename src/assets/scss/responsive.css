@@ -1,24 +1,170 @@
 /* ----------- Suppoted Maximum mobile, Tablet and Desktop ----------- */
-@media (min-width: 320px) {
-  .fullscreen-menu .dropdown .dropdown-menu {
-    background: none;
-    border: none;
-    -webkit-transform: none !important;
-            transform: none !important;
-    position: static !important;
-    float: left;
+@media (min-width: 320px) and (max-width: 480px) {
+  /*Common css for whole site*/
+  section {
+    padding: 40px 0;
   }
-  .fullscreen-menu .dropdown.show .dropdown-menu {
-    position: static !important;
-    float: left;
-    width: 100%;
-    margin-top: 0;
-    background-color: transparent;
-    border: 0;
+  .section-title h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /*End Common css for whole site*/
+  /*Navigation Css*/
+  #mainMenu .navbar-brand {
+    margin-left: 5px;
+  }
+  .fullscreen-menu .modal-content .modal-body {
+    padding: 0;
+  }
+  .fullscreen-menu .modal-content .modal-body .left-menu li a {
+    font-size: 20px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info .contact-info li a {
+    font-size: 20px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info .company-address p {
+    font-size: 20px;
+  }
+  /*End Navigation Css*/
+  /*Intro home css*/
+  .intro .inroText h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .intro .inroText h1 .text-color {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  /*Home Service*/
+  .home-service {
+    padding: 40px 0;
+  }
+  .home-service .service-block {
+    padding: 20px 0;
+  }
+  .home-service .service-block h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps {
+    display: block;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul {
+    position: static;
+    margin: -40px auto 0px;
+    padding: 20px 30px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li {
+    font-size: 18px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li i {
+    font-size: 20px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps .apps-description {
+    padding: 30px 15px 0px 15px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps .apps-description a {
+    margin-top: 10px;
+  }
+  /*End Home Service*/
+  /*Start Project css*/
+  .project {
+    padding-bottom: 60px;
+  }
+  .project .app-list .items {
+    display: block;
+    padding: 0;
+  }
+  .project .app-list .items .list-items {
+    margin: 20px 0;
+    display: inline-block;
+  }
+  /*End Project css*/
+  /*Counter info css*/
+  .company-enterpreneurs .company-short-info {
+    margin: 20px 0 0 0;
+    display: block;
     -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-transform: none !important;
-            transform: none !important;
+            box-shadow: none;
   }
+  .company-enterpreneurs .company-short-info .counter {
+    padding: 20px 0;
+  }
+  .company-enterpreneurs .company-short-info .counter .CountUp {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .company-enterpreneurs .company-short-info .counter p {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .company-logo ul li {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+  .company-logo ul li img {
+    margin: 5px 0;
+  }
+  /*End Counter info css*/
+  /*End Intro Home css*/
+  /*home work css*/
+  .home-work .section-title h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .home-work .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .home-work .swap-items {
+    display: block;
+    padding: 20px 0;
+  }
+  .home-work .swap-items::before {
+    content: none;
+  }
+  .home-work .swap-items .image-block {
+    margin: 0 auto;
+  }
+  .home-work .swap-items .content-block h2 {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 25px 0 20px 0;
+  }
+  .home-work .swap-items.reverse-items .image-block {
+    float: none;
+  }
+  /*End home work css*/
+  /*contact form css*/
+  .contact-from .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .contact-from .float-right {
+    float: none !important;
+    text-align: center;
+  }
+  /*End contact form css*/
+  /*footer css*/
+  footer {
+    padding: 40px 0;
+  }
+  footer .footer-contact {
+    margin-top: 0;
+  }
+  /*End Footer Css*/
+  /*scroll top down css*/
+  .scroll-top .text {
+    display: none;
+  }
+  .scroll-down .text {
+    display: none;
+  }
+  /*End scroll top down css*/
 }
 /*# sourceMappingURL=responsive.css.map */
