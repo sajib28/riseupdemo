@@ -9,7 +9,7 @@ import {
     Link
 } from "react-router-dom";
 import $ from 'jquery';
-class Press extends Component {
+class Process extends Component {
     componentDidMount() {
         $('.inroText h1').each(function () {
 
@@ -26,8 +26,8 @@ class Press extends Component {
         return (
 
             <div className="page press">
-                <Nav />
-                <Banner id="PressBanner" title="Our Expertice Makes Headline" backgroundImage={BackgroundImage} />
+                <Nav className="navbar navbar-expand-lg"/>
+                <Banner id="PressBanner" title="How We Work: From Idea to Reality" backgroundImage={BackgroundImage} />
                 {/* Tab menu */}
                 <div className="container">
                     <div className="row">
@@ -194,4 +194,4 @@ class Press extends Component {
     }
 }
 
-export default Press;
+export default Process;

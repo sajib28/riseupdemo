@@ -23,7 +23,7 @@ class CareerForm extends Component {
     render() {
         return (
             <div className="page career-form">
-                <Nav />
+                <Nav className="navbar navbar-expand-lg"/>
                 <Banner id="careerForm" title="Our Expertice Makes Headline" backgroundImage={BackgroundImage} />
                 <section className="cv-form">
                     <div className="container">

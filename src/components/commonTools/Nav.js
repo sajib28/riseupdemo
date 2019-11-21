@@ -19,7 +19,6 @@ class Nav extends Component {
         let mainMenuSticky = mainMenu.offsetTop;
         if (window.pageYOffset > mainMenuSticky) {
           mainMenu.classList.add("sticky-header");
-          // $('.sticky-header').css("transition", "all 0.3s linear");
         } else {
           mainMenu.classList.remove("sticky-header");
         }
@@ -31,67 +30,55 @@ class Nav extends Component {
       $('.dropdown').on('show.bs.dropdown', function () {
         $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
       });
-
       // Add slideUp animation to Bootstrap dropdown when collapsing.
       $('.dropdown').on('hide.bs.dropdown', function () {
         $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
       });
       //dropdown menu
-    });
 
-    // Back to top
-    // Back to top button
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 100) {
-        $('.scroll-top').fadeIn();
-        $('.scroll-down').fadeOut();
-
-      } else {
-        $('.scroll-top').fadeOut();
-        $('.scroll-down').fadeIn();
-      }
-    });
-
-    $('.scroll-down').click(function () {
-      $('html, body').animate({ scrollTop: $(document).height() }, 1500);
-      return false;
-    });
-
-    $('.scroll-top').click(function () {
-      $('html, body').animate({ scrollTop: 0 }, 1500);
-      return false;
+      $('#fullscreenMenu').scroll(function (){
+     
+        // close button fixed
+        let fullscreenMenu = document.getElementById("fullscreenMenu");
+        if ($(fullscreenMenu).scrollTop() > 0) {
+          fullscreenMenu.classList.add("fixedCloseBtn");
+        } else {
+          fullscreenMenu.classList.remove("fixedCloseBtn");
+        }
+        //End  Close button fixed
+      });
     });
 
   }
   render() {
     return (
       <header>
-        <nav id="mainMenu" className="navbar navbar-expand-lg">
+        <nav id="mainMenu" className={this.props.className}>
           <div className="container">
-            <Link className="navbar-brand" to="/"><img src={riseuplogo} alt="" /></Link>
+            <a className="navbar-brand" href="/"><img src={riseuplogo} alt="" /></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <NavLink activeClassName="active" className="nav-link" to="/service">Service</NavLink>
+                  <a className="nav-link" href="#homeService">Service</a>
                 </li>
                 <li className="nav-item">
-                  <NavLink activeClassName="active" className="nav-link" to="/work">Work</NavLink>
+                  <a className="nav-link" href="/work">Work</a>
                 </li>
                 <li className="nav-item">
-                  <NavLink activeClassName="active" className="nav-link" to="/press">Process</NavLink>
+                  <a className="nav-link" href="/process">Process</a>
                 </li>
                 <li className="nav-item">
-                  <NavLink activeClassName="active" className="nav-link" to="/about">About Us</NavLink>
+                  <a className="nav-link" href="/about">About Us</a>
                 </li>
                 <li className="nav-item">
-                  <NavLink activeClassName="active" className="nav-link" to="/blog">Blog</NavLink>
+                  <a className="nav-link" href="http://www.riseuplabs.com/blog/">Blog</a>
                 </li>
 
                 <li className="nav-item">
-                  <NavLink activeClassName="active" className="nav-link" to="/career">Contact</NavLink>
+                  <a href="/contact" className="nav-link">Contact</a>
                 </li>
               </ul>
             </div>
@@ -103,7 +90,7 @@ class Nav extends Component {
         <div className="modal fade fullscreen-menu" id="fullscreenMenu" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
-              <div className="container">
+              <div className="container-fluid">
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="modal-header">
@@ -161,7 +148,7 @@ class Nav extends Component {
                             <NavLink activeClassName="active" className="nav-link" to="/blog">Blog</NavLink>
                           </li>
                           <li className="nav-item">
-                            <NavLink activeClassName="active" className="nav-link" to="/career">Career</NavLink>
+                            <a className="nav-link" href="/career">Career</a>
                           </li>
                           <li className="nav-item">
                             <NavLink activeClassName="active" className="nav-link" to="/press">Press Kit</NavLink>
@@ -202,12 +189,6 @@ class Nav extends Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="scroll-down">
-          <a href="/"><span className="text">Scroll Down</span><span className="arrow-sign"></span></a>
-        </div>
-        <div className="scroll-top">
-          <a href="/"><span className="text">Scroll Top</span><span className="arrow-sign"></span></a>
         </div>
       </header>
     )

@@ -1,64 +1,78 @@
 import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-} from "react-router-dom";
+import { Switch, Route } from 'react-router-dom';
 import 'bootstrap';
 import '../assets/fontAwesome/css/fontawesome.min.css';
+import '../assets/css/animate.min.css';
 import '../assets/fontAwesome/css/all.min.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// import Main from './Main';
 import Home from './page/home/Home';
-import Service from './page/service/Service';
-import Press from './page/press/Press';
+// import Service from './page/service/Service';
+import Process from './page/process/Process';
 import Work from './page/work/Work';
-import Blog from './page/blog/Blog';
+// import Blog from './page/blog/Blog';
 import Career from './page/career/Career';
 import CareerForm from './page/career/CareerForm';
 import About from './page/about/About';
+import Contact from './page/contact/Contact';
 import Apps from './page/Apps';
 import Iets from './page/iets/Iets';
-import NewsDetails from './page/press/NewsDetails';
-import EventDetails from './page/press/EventDetails';
+import AppsDetails from './page/app-details/AppDetails';
+import SingleApp from './page/single-app/SingleApp';
+// import WOW from 'wowjs';
 // import Intro from '../components/intro/Intro';
-// import simpleParallax from 'simple-parallax-js';
+
+// import { ParallaxProvider } from 'react-scroll-parallax';
 // import Scrollbar from 'smooth-scrollbar';
 import '../assets/scss/main.scss';
 import $ from 'jquery';
 class App extends Component {
+    // Sidebar Menu Scroll
     componentDidMount() {
-        $(window).scroll(function() {
-            // sectionTop = $('section[data-ui="dark"]').offset().top;
-            // if(sectionTop){
-            //     $('.service-menu').addClass("ui-dark");
-            // }
-           
-          });
-        // var image = document.getElementsByClassName('parallax-content');
-        // new simpleParallax(image, {
-        // });
-        // Scrollbar.init(document.querySelector('#my-scrollbar'));
-
+        $(document).ready(function () {
+            var Menuheight = $("#mainMenu").height();
+            $('a[href^="#"]').bind('click', function (e) {
+                e.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: $($(this).attr('href')).offset().top - Menuheight
+                }, 500);
+                return false;
+            });
+        });
     }
+    // componentDidMount() {
+    //     $(window).scroll(function () {
+
+    //     });
+    //     var image = document.getElementsByClassName('parallax-content');
+    //     new simpleParallax(image, {
+    //         delay: .9,
+    // transition: 'cubic-bezier(0,0,0,1)'
+    //     });
+    // Scrollbar.init(document.querySelector('#my-scrollbar'));
+
+    // }
     render() {
         return (
-            <Router>
-                <div className="App">
-                    <Switch >
-                        <Route path="/" render={() => <Home />} exact />
-                        <Route path="/service" render={() => <Service />} />
-                        <Route path="/work" render={() => <Work />} />
-                        <Route path="/press" render={() => <Press />} />
-                        <Route path="/blog" render={() => <Blog />} />
-                        <Route path="/career" render={() => <Career />} />
-                        <Route path="/about" render={() => <About />} />
-                        <Route path="/career-form" render={() => <CareerForm />} />
-                        <Route path="/apps" render={() => < Apps />} />
-                        <Route path="/iets" render={() => < Iets />} />
-                        <Route path="/news-details" render={() => < NewsDetails />} />
-                        <Route path="/event-details" render={() => < EventDetails />} />
-                    </Switch>
-                </div>
-            </Router>
+
+            <div className="App">
+                <Switch >
+                    <Route path="/" render={() => <Home />} exact />
+                    <Route path="/work" render={() => <Work />} />
+                    <Route path="/process" component={Process} />
+                    {/*  <Route path="/blog" render={() => <Blog />} /> */}
+                    <Route path="/career" render={() => <Career />} />
+                    <Route path="/about" component={props => <About {...props} />} />
+                    <Route path="/contact" component={props => <Contact {...props} />} />
+                    
+                    <Route path="/career-form" render={() => <CareerForm />} />
+                    <Route path="/apps" render={() => < Apps />} />
+                    <Route path="/iets" render={() => < Iets />} />
+                    <Route path="/app-details" render={() => < AppsDetails />} />
+                    <Route path="/single-app" render={() => < SingleApp />} />
+                </Switch>
+            </div>
         )
     }
 }

@@ -72,6 +72,12 @@
   -ms-flex-wrap: $wrap;
   flex-wrap: $wrap;
 }
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+     -moz-flex-basis: $width;
+      -ms-flex-basis: $width;
+          flex-basis: $width;
+}
 @mixin justify-content($justify) {
   -webkit-justify-content: $justify;
   -moz-justify-content: $justify;

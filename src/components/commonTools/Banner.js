@@ -12,7 +12,7 @@ export default class Banner extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="inroText">
-                                <h1>{this.props.title}</h1>
+                                <h1>{this.props.title}{this.props.title2}</h1>
                             </div>
                         </div>
                     </div>

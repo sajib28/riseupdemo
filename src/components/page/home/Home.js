@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import src1 from '../../../assets/media/intechnic.mp4';
 import poster from '../../../assets/img/intechnic.jpg';
-import Nav from '../../commonTools/Nav';
 import CompanySummary from '../../commonTools/CompanySummary';
 import CompanyLogo from '../../commonTools/CompanyLogo';
 import ContactForm from '../../commonTools/ContactForm';
@@ -15,89 +14,80 @@ import appdev2 from '../../../assets/img/game-development.png';
 import appdev3 from '../../../assets/img/web-development.png';
 import appdev4 from '../../../assets/img/xr-solution.png';
 import appdev5 from '../../../assets/img/iets.png';
+import Nav from '../../commonTools/Nav';
+import HomeSlider from '../../commonTools/HomeSlider';
+import simpleParallax from 'simple-parallax-js';
 import {
     Link
 } from "react-router-dom";
 import $ from 'jquery';
 class Home extends Component {
     componentDidMount() {
-        $(document).ready(function () {
-            var Menuheight = $("#mainMenu").height();
-            $('.service-menu a').bind('click', function (e) {
-                // alert("Test");
-                e.preventDefault(); // prevent hard jump, the default behavior
-
-                // var target = $(this).attr("href"); // Set the target as variable
-
-                // perform animated scrolling by getting top-position of target-element and set it as scroll target
-                $('html, body').stop().animate({
-                    scrollTop: $($(this).attr('href')).offset().top - Menuheight
-                }, 500);
-                return false;
-            });
+        var image = document.getElementsByClassName('parallax-content');
+        new simpleParallax(image, {
+            delay: .6,
+            transition: 'cubic-bezier(0,0,0,1)'
         });
-
+        //Activated WoW Js
+        // new WOW.WOW({
+        //     live: false,
+        //     mobile: false,
+        //   }).init();
+        // End Activated WoW Js
         $(window).scroll(function () {
             var Menuheight = $("#mainMenu").height();
             var scrollDistance = $(window).scrollTop() + Menuheight;
-
-            // Show/hide menu on scroll
-            //if (scrollDistance >= 850) {
-            //		$('nav').fadeIn("fast");
-            //} else {
-            //		$('nav').fadeOut("fast");
-            //}
-
             // Assign active class to nav links while scolling
             $('.service-block').each(function (i) {
                 if ($(this).position().top <= scrollDistance) {
+
                     $('.service-menu a.active').removeClass('active');
                     $('.service-menu a').eq(i).addClass('active');
                 }
             });
-            var homeHerviceTop = $(".home-service").offset().top;
-            var projectBottom = $(".home-service").offset().top;
-            // if ($(this).scrollTop() >= projectBottom) {
-            //     $('#SideBarMenu').hide();
-            // }
-            if ($(this).scrollTop() >= homeHerviceTop) {
-                $('#SideBarMenu').show();
-                // $('#SideBarMenu').addClass('sidebarfixed');
-            }
-            if ($(this).scrollTop() >= projectBottom) {
-                $('#SideBarMenu').hide();
-                // $('#SideBarMenu').addClass('sidebarfixed');
-            }
-
-            else {
-                $('#SideBarMenu').removeClass('sidebarfixed');
-                $('#SideBarMenu').hide();
-            }
-
         }).scroll();
+        // End Sidebar Menu Scroll
+        // Add Class for Odd/Even items
         $(".service-block:even").addClass('reverse-items');
-        // fixed Sidebar Menu
-        // window.onscroll = function () { sideBarFixed() };
-        // let header = document.getElementById("SideBarMenu");
-
-        // let introHeight = $(".intro").height();
-        // function sideBarFixed() {
-        //     if (window.pageYOffset > introHeight) {
-        //         header.classList.add("sidebarfixed");
-        //     } else {
-        //         header.classList.remove("sidebarfixed");
-        //     }
-        // }
-        //End fixed Sidebar Menu
-
         $(".swap-items:odd").addClass('reverse-items');
-    }
+        //End  Add Class for Odd/Even items
 
+
+        $(window).scroll(function () {
+            var a = $(window).scrollTop();
+            var pos = $('#mainMenu').height();
+            var b = $('.wrap').offset().top - pos;
+
+            var m = $('.sticky-menu').outerHeight() + $('#mainMenu').outerHeight();
+
+            var fixtop = $('#mainMenu').outerHeight();
+            var y = $('.home-project').offset().top - m;
+            if (a > b) {
+                $('.sticky-menu').addClass('fixed').css({ 'top': fixtop + 'px' });
+                $('.wrap').height($('.sticky-menu').outerHeight());
+            }
+            else {
+                $('.sticky-menu').removeClass('fixed')
+                $('.wrap').height(0);
+            }
+            if (a > y) {
+                // alert('removed');
+                $('.sticky-menu').addClass('footstick');
+                $('.wrap').height($('.sticky-menu').outerHeight());
+
+            }
+            else {
+                $('.sticky-menu').removeClass('footstick');
+            }
+        });
+
+    }
     render() {
         let alt = "";
         return (
             <div className="home">
-                <Nav />
+                <Nav className="navbar navbar-expand-lg" />
+                <HomeSlider />
                 <section className="intro" data-ui="light">
                     <div className="background-cover">
                         <video autoPlay muted loop playsInline preload="none" poster={poster}>
@@ -114,13 +104,14 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="home-service" data-ui="light">
+                <section id="homeService" className="home-service" data-ui="light">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="section-title">
                                     <div className="title">
-                                        <h2 className="text-left"><span className="text-color">Riseup</span> Services</h2>
+                                        <h2 className="text-left"><span
+                                            className="text-color">Riseup</span> Services</h2>
                                         <p>We provide complete solution of your digital products from research to vision</p>
                                     </div>
                                 </div>
@@ -128,20 +119,25 @@ class Home extends Component {
                         </div>
                     </div>
                     <div id="riseupApps" className="service-block" data-ui="light">
-                        <div className="container">
-                            <nav className="service-menu ui-light" id="SideBarMenu">
+                        <div className="home-sidebar">
+                            <div className="wrap"></div>
+                            <nav className="service-menu ui-light sticky-menu" id="SideBarMenu">
                                 <ul className="list-unstyled">
-                                    <li className="nav-item"><a className="nav-link active" href="#riseupApps">Apps</a></li>
-                                    <li className="nav-item"><a className="nav-link" href="#riseupGames">Games</a></li>
-                                    <li className="nav-item"><a className="nav-link" href="#riseupWeb">Web</a></li>
-                                    <li className="nav-item"><a className="nav-link" href="#riseupXr">X-R</a></li>
-                                    <li className="nav-item"><a className="nav-link" href="#riseupIets">IETS</a></li>
+                                    <li className="nav-item"><a className="nav-link" href="#riseupApps">Apps <span>Development</span></a></li>
+                                    <li className="nav-item"><a className="nav-link" href="#riseupGames">Games <span>Development</span></a></li>
+                                    <li className="nav-item"><a className="nav-link" href="#riseupWeb">Web <span>System</span></a></li>
+                                    <li className="nav-item"><a className="nav-link" href="#riseupXr">X-R <span>Solution</span></a></li>
+                                    <li className="nav-item"><a className="nav-link" href="#riseupIets">IETS <span></span></a></li>
                                 </ul>
                             </nav>
+                        </div>
+                        <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="apps-wrapper">
-                                        <h2 className="parallax-title">Apps Development</h2>
+                                        <div class="simpleParallax">
+                                            <h2 class="content-text">Apps Development</h2>
+                                        </div>
                                         <figure>
                                             <img className="parallax-content" src={appdev1} alt="" />
                                             <div className="img-overlay"></div>
@@ -163,7 +159,7 @@ class Home extends Component {
                                                             <p>We offer design, development, and solution for apps across a range of devices. We have developed many commercially successful apps for Apple App Store, Google Play Store and for some other platform.<br /><br />
                                                                 We have millions of active users on those mobile apps. Some of our apps were also being featured by Apple for our unique creativity, design innovation & user feedback.
                                                         </p>
-                                                            <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                            <a href="/app-details" className="see-more">See More<i className="fas fa-arrow-right"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -181,7 +177,7 @@ class Home extends Component {
                                     <div className="apps-wrapper">
                                         <h2>Games Development</h2>
                                         <figure>
-                                            <img src={appdev2} alt="" />
+                                            <img className="parallax-content" src={appdev2} alt="" />
                                             <div className="img-overlay"></div>
                                         </figure>
                                         <div className="apps-content">
@@ -222,7 +218,7 @@ class Home extends Component {
                                     <div className="apps-wrapper">
                                         <h2 className="apps-title">Web System</h2>
                                         <figure>
-                                            <img src={appdev3} alt="" />
+                                            <img className="parallax-content" src={appdev3} alt="" />
                                             <div className="img-overlay"></div>
                                         </figure>
                                         <div className="apps-content">
@@ -258,7 +254,7 @@ class Home extends Component {
                                     <div className="apps-wrapper">
                                         <h2>XR Solution</h2>
                                         <figure>
-                                            <img src={appdev4} alt="" />
+                                            <img className="parallax-content" src={appdev4} alt="" />
                                             <div className="img-overlay"></div>
                                         </figure>
                                         <div className="apps-content">
@@ -294,7 +290,7 @@ class Home extends Component {
                                     <div className="apps-wrapper">
                                         <h2>IETS</h2>
                                         <figure>
-                                            <img src={appdev5} alt="" />
+                                            <img className="parallax-content" src={appdev5} alt="" />
                                             <div className="img-overlay"></div>
                                         </figure>
                                         <div className="apps-content">
@@ -311,7 +307,7 @@ class Home extends Component {
                                                     <div className="col-lg-8">
                                                         <div className="apps-description">
                                                             <p>Riseup is one of the emerging leaders as the premier IT/ITES service provider, serving its customers and delivering IT & ITES Solutions to a diverse set of clients in several countries across the globe. The company is backed up with a management team which brings in over 10 years of software development and consultancy experience spread all across the world, specializing in small to enterprise level of system development, implementation and integration services. </p>
-                                                            <Link to="/" className="see-more">See More<i className="fas fa-arrow-right"></i></Link>
+                                                            <a href="/iets" className="see-more">See More<i className="fas fa-arrow-right"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -342,9 +338,10 @@ class Home extends Component {
 
                                         </div>
                                         <div className="item-body">
-
-                                            <p>A tool to simplify the lives of landlords, property managers and tenants. It allows tenants to make mobile rent payments; send messages; store important documents; and make maintenance requests.</p>
-                                            <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <h3>Meena Game</h3>
+                                            <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" />
+                                            <p>Another mobile oriented channel that UNICEF intends to use to execute its Meena Communication Initiative (MCI) aimed at changing perceptions and behavior that hamper the survival</p>
+                                            <a href="/single-app" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -354,8 +351,10 @@ class Home extends Component {
 
                                         </div>
                                         <div className="item-body">
-                                            <p>A tool to simplify the lives of landlords, property managers and tenants. It allows tenants to make mobile rent payments; send messages; store important documents; and make maintenance requests.</p>
-                                            <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <h3>Adolescent App</h3>
+                                            <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" />
+                                            <p>A digital application for adolescent club members to connect, share knowledge and have access information.</p>
+                                            <a href="/single-app" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -366,7 +365,9 @@ class Home extends Component {
                                         <div className="item-bg" style={{ backgroundImage: `url(${project4})` }}>
                                         </div>
                                         <div className="item-body">
-                                            <p>A tool to simplify the lives of landlords, property managers and tenants. It allows tenants to make mobile rent payments; send messages; store important documents; and make maintenance requests.</p>
+                                            <h3>Meena Game</h3>
+                                            <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" />
+                                            <p>Meena is a cartoon character from South Asia. She is a spirited, nine-year-old girl, who braves all the odds – whether in her efforts to go to school or in fighting the discrimination against children.</p>
                                             <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
@@ -376,7 +377,9 @@ class Home extends Component {
                                         <div className="item-bg" style={{ backgroundImage: `url(${project3})` }}>
                                         </div>
                                         <div className="item-body">
-                                            <p>A tool to simplify the lives of landlords, property managers and tenants. It allows tenants to make mobile rent payments; send messages; store important documents; and make maintenance requests.</p>
+                                            <h3>Demo title</h3>
+                                            <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" />
+                                            <p>A digital application for adolescent club members to connect, share knowledge and have access information.</p>
                                             <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
@@ -511,7 +514,27 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
-                <ContactForm />
+                <section className="contact-from" data-ui="light">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="section-title">
+                                    <div className="title text-left">
+                                        <h2 className="text-left">
+                                            <span className="text-color">Let's</span> Talk!</h2>
+                                        <p>We’d love to hear what you are working on.<br />
+                                            Drop us a note here and we’ll get back to you within 24 hours.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <ContactForm />
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <Footer />
             </div >
         )
