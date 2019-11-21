@@ -8,7 +8,7 @@ import $ from 'jquery';
 // import Accordion from '../../commonTools/Accordion';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faBars } from '@fortawesome/free-solid-svg-icons'
-class CareerForm extends Component {
+class ApplicationForm extends Component {
     componentDidMount(){
         $('.rul-btn').each(function(){
 
@@ -22,35 +22,48 @@ class CareerForm extends Component {
     }
     render() {
         return (
-            <div className="page career-form">
+            <div className="page application-form">
                 <Nav className="navbar navbar-expand-lg"/>
-                <Banner id="careerForm" title="Our Expertice Makes Headline" backgroundImage={BackgroundImage} />
-                <section className="cv-form">
+                {/* Banner */}
+                <section id="careerForm" className="banner middle-content" style={{ backgroundImage: `url(${require('../../../assets/img/banner/career-banner.png')})` }}>
+                <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="inroText">
+                                    <h1><span className="text-color">Game </span>Artist</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* End Banner */}
+                <section className="career-form">
                     <div className="container">
                         <form method="post">
                             <div className="row">
                                 <div className="col-lg-3">
-                                    <h3>Demo Title</h3>
-                                    <p>Description</p>
+                                    <h3>Personal information</h3>
+                                    <p>Tell us something about yourself</p>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group">
-                                                <label>Example label</label>
-                                                <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Example input" />
+                                                <label>Full Name*</label>
+                                                <input type="text" className="form-control" id="formGroupExampleInput" placeholder="|" />
                                             </div>
                                             <div className="form-group">
-                                                <label>Another label</label>
-                                                <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Another input" />
+                                                <label>Email address *</label>
+                                                <input type="email" className="form-control" id="formGroupExampleInput2" placeholder="Your email address" />
                                             </div>
                                             <div className="form-group">
-                                                <label>Another label</label>
-                                                <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Another input" />
+                                                <label>Phone number *</label>
+                                                <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Your phone number" />
                                             </div>
                                             <div className="form-group">
                                                 <label>Photo</label>
                                                 <input type="file" className="form-control-file" id="exampleFormControlFile1" />
+                                                <span>We accept PNG, JPG, and JPEG files</span>
                                             </div>
                                         </div>
                                     </div>
@@ -59,8 +72,8 @@ class CareerForm extends Component {
                             <hr />
                             <div className="row">
                                 <div className="col-lg-3">
-                                    <h3>CV / Resume</h3>
-                                    <p>Description</p>
+                                    <h3>CV / Resume *</h3>
+                                    <p>Upload your CV or resume file</p>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="row">
@@ -68,6 +81,7 @@ class CareerForm extends Component {
                                             <div className="form-group">
                                                 <label>Add File</label>
                                                 <input type="file" className="form-control-file" id="exampleFormControlFile1" />
+                                                <span>We accept PDF, DOC, DOCX, JPG and PNG files</span>
                                             </div>
                                         </div>
                                     </div>
@@ -76,8 +90,8 @@ class CareerForm extends Component {
                             <hr />
                             <div className="row">
                                 <div className="col-lg-3">
-                                    <h3>Cover Letter</h3>
-                                    <p>Description</p>
+                                    <h3>Cover letter</h3>
+                                    <p>Insert your cover letter here</p>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="row">
@@ -102,4 +116,4 @@ class CareerForm extends Component {
         )
     }
 }
-export default CareerForm;
+export default ApplicationForm;

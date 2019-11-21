@@ -316,7 +316,6 @@ button {
     background-size: cover;
     // background-attachment: fixed;
   }
-
   &:before {
     content: "";
     background: rgba(0, 0, 0, 0.3);
@@ -330,6 +329,8 @@ button {
   .inroText {
     min-height: 570px;
     @include flexbox();
+    @include justify-content(flex-start);
+    @include align-items(center);
     h1 {
       z-index: 9;
       position: relative;
@@ -1315,7 +1316,7 @@ button {
   .banner {
     &:before {
       @include linear-gradient(-30deg, rgba(#242424, 0.1), rgba(#582977, 0.7));
-      @include box-shadow(0, 20px, 60px, rgba(#98833C, 0.25));
+      @include box-shadow(0, 20px, 60px, rgba(#98833c, 0.25));
     }
   }
 
@@ -1388,6 +1389,38 @@ button {
 }
 
 /* ----------- End Career page css ----------- */
+.application-form {
+  .career-form {
+    h3 {
+      font-size: 26px;
+      font-family: $proximaBold;
+      color: $black-grey;
+    }
+    p {
+      text-align: left;
+      font-size: 18px;
+      color: $white-grey;
+    }
+    label {
+      font-size: 20px;
+      font-family: $proximaRegular;
+      color: $black-grey;
+      font-weight: 700;
+    }
+    input {
+      height: 50px;
+      @include border-radius(12px);
+      border: 0;
+      outline: 0;
+      color: $white-grey;
+      @include box-shadow(0, 0, 20px, rgba($black, 0.34));
+      &:focus {
+        @include box-shadow(0, 0, 20px, rgba($black, 0.34));
+        outline:solid;
+      }
+    }
+  }
+}
 /* ----------- Event Tab css ----------- */
 .event {
   .event-item {

@@ -14,7 +14,7 @@ class Career extends Component {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="inroText">
-                                    <h1><span></span></h1>
+                                    <h1><span className="text-color">We’re </span>hiring.</h1>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@ class Career extends Component {
                                                     <h3>Job Location</h3>
                                                     <p>Dhaka</p>
                                                 </div>
-                                                <a className="cus-btn" href="/career-form"><span className="text-color">Apply</span> for this position</a>
+                                                <a className="cus-btn" href="/application-form"><span className="text-color">Apply</span> for this position</a>
                                             </div>
                                         </div>
                                     </div>
@@ -140,7 +140,7 @@ class Career extends Component {
                                                     <h3>Job Location</h3>
                                                     <p>Dhaka</p>
                                                 </div>
-                                                <a className="cus-btn" href="/career-form"><span className="text-color">Apply</span> for this position</a>
+                                                <a className="cus-btn" href="/application-form"><span className="text-color">Apply</span> for this position</a>
                                             </div>
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@ class Career extends Component {
                                                     <h3>Job Location</h3>
                                                     <p>Dhaka</p>
                                                 </div>
-                                                <a className="cus-btn" href="/career-form"><span className="text-color">Apply</span> for this position</a>
+                                                <a className="cus-btn" href="/application-form"><span className="text-color">Apply</span> for this position</a>
                                             </div>
                                         </div>
                                     </div>
@@ -248,7 +248,7 @@ class Career extends Component {
                                                     <h3>Job Location</h3>
                                                     <p>Dhaka</p>
                                                 </div>
-                                                <a className="cus-btn" href="/career-form"><span className="text-color">Apply</span> for this position</a>
+                                                <a className="cus-btn" href="/application-form"><span className="text-color">Apply</span> for this position</a>
                                             </div>
                                         </div>
                                     </div>

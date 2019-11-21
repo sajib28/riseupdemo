@@ -13,7 +13,7 @@ import Process from './page/process/Process';
 import Work from './page/work/Work';
 // import Blog from './page/blog/Blog';
 import Career from './page/career/Career';
-import CareerForm from './page/career/CareerForm';
+import ApplicationForm from './page/career/ApplicationForm';
 import About from './page/about/About';
 import Contact from './page/contact/Contact';
 import Apps from './page/Apps';
@@ -66,7 +66,7 @@ class App extends Component {
                     <Route path="/about" component={props => <About {...props} />} />
                     <Route path="/contact" component={props => <Contact {...props} />} />
                     
-                    <Route path="/career-form" render={() => <CareerForm />} />
+                    <Route path="/application-form" render={() => <ApplicationForm />} />
                     <Route path="/apps" render={() => < Apps />} />
                     <Route path="/iets" render={() => < Iets />} />
                     <Route path="/app-details" render={() => < AppsDetails />} />
