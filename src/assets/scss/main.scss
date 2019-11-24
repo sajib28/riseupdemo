@@ -57,6 +57,16 @@ a {
   font-family: $proximaRegular;
   font-size: 18px;
 }
+.button {
+  @include box-shadow(0, 8px, 18px, rgba($black, 0.3));
+  @include border-radius(15px);
+  border: none;
+  font-family: $proximaBold;
+  font-size: 24px;
+  background: #fff;
+  padding: 5px 40px;
+  line-height: 38px;
+}
 .rawline-semibold {
   font-family: $rawlineSemiBold;
   font-size: 44px;
@@ -326,7 +336,7 @@ button {
     position: absolute;
     z-index: 9;
   }
-  .inroText {
+  .introText {
     min-height: 570px;
     @include flexbox();
     @include justify-content(flex-start);
@@ -335,6 +345,8 @@ button {
       z-index: 9;
       position: relative;
       color: $white;
+      font-size: 82px;
+      @include text-shadow(0, 3px, 6px, rgba($black, 0.55));
     }
     p {
       font-size: 44px;
@@ -406,7 +418,6 @@ button {
   @include box-shadow(0, 3px, 10px, rgba($black, 0.25));
 }
 .project {
-  background: $black-grey;
   padding-bottom: 180px;
   .section-title {
     h2 {
@@ -781,7 +792,7 @@ button {
   overflow: hidden;
   display: none;
 
-  .inroText {
+  .introText {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -825,7 +836,7 @@ button {
     min-height: 100vh;
   }
 
-  .inroText {
+  .introText {
     h1 {
       font-family: $rawlineExtraBold;
       margin: 0 0 10px 0;
@@ -1212,7 +1223,7 @@ button {
     }
   }
 }
-.contact-from {
+.contact-form {
   .section-title {
     p {
       font-size: 30px;
@@ -1254,7 +1265,7 @@ button {
       outline: 0;
       font-family: $proximaBold;
       font-size: 24px;
-      color: $yellow;
+      color: $black-grey;
       &:focus {
         outline: 0;
       }
@@ -1263,6 +1274,9 @@ button {
   .invalid-feedback {
     font-family: $proximaRegular;
     font-size: 16px;
+  }
+  .form-control.is-invalid {
+    border-color: #dc3545;
   }
 }
 
@@ -1333,6 +1347,7 @@ button {
             font-size: 26px;
             font-family: "proxima_novaregular";
             padding: 35px 0;
+            box-shadow: none;
             &.collapsed {
               color: $black;
             }
@@ -1400,24 +1415,96 @@ button {
       text-align: left;
       font-size: 18px;
       color: $white-grey;
+      margin-bottom: 0;
     }
-    label {
-      font-size: 20px;
-      font-family: $proximaRegular;
-      color: $black-grey;
-      font-weight: 700;
-    }
-    input {
-      height: 50px;
-      @include border-radius(12px);
-      border: 0;
-      outline: 0;
-      color: $white-grey;
-      @include box-shadow(0, 0, 20px, rgba($black, 0.34));
-      &:focus {
-        @include box-shadow(0, 0, 20px, rgba($black, 0.34));
-        outline:solid;
+    .form-group {
+      position: relative;
+      label {
+        font-size: 20px;
+        font-family: $proximaRegular;
+        color: $black-grey;
+        font-weight: 700;
+        color: $black-grey;
       }
+      input,
+      textarea {
+        height: 50px;
+        @include border-radius(12px);
+        border: 0;
+        outline: 0;
+        color: $white-grey;
+        @include box-shadow(0, 0, 20px, rgba($black, 0.34));
+        &:focus {
+          @include box-shadow(0, 0, 20px, rgba($black, 0.34) !important);
+        }
+      }
+      input[type="file"] {
+        height: 0;
+        overflow: hidden;
+        width: 0;
+        padding: 0;
+      }
+      label {
+        &.file {
+          background: #f15d22;
+          border: none;
+          border-radius: 5px;
+          color: #fff;
+          cursor: pointer;
+          display: inline-block;
+          font-family: "Poppins", sans-serif;
+          font-size: inherit;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          outline: none;
+          padding: 1rem 50px;
+          position: relative;
+          transition: all 0.3s;
+          vertical-align: middle;
+        }
+      }
+      textarea {
+        height: 180px;
+        @include border-radius(7px);
+      }
+      .cv,
+      .photo {
+        height: 42px;
+        @include border-radius(7px);
+        color: $white-grey;
+        @include box-shadow(0, 0, 20px, rgba($black, 0.34));
+        line-height: 40px;
+        padding: 0 30px;
+        color: $black-grey;
+        margin-right: 20px;
+      }
+      span {
+        color: $white-grey;
+      }
+      &.photo-upload {
+        .photo-lebel {
+          font-size: 20px;
+          margin: 20px 0 15px;
+          padding: 0;
+          line-height: 20px;
+          color: $black-grey;
+        }
+        span {
+          position: absolute;
+          left: 150px;
+          top: 44px;
+        }
+      }
+      &.file-upload {
+        span {
+          position: absolute;
+          left: 150px;
+          top: 10px;
+        }
+      }
+    }
+    hr {
+      margin: 50px 0;
     }
   }
 }
@@ -2019,7 +2106,7 @@ button {
       @include linear-gradient(-30deg, rgba(#fae8e8, 0.1), rgba(#ce0000, 0.6));
       @include box-shadow(0, 20px, 60px, rgba($red, 0.2));
     }
-    // .inroText {
+    // .introText {
     //   min-height: 570px;
     //   @include flexbox();
     //   @include justify-content(left);
@@ -2150,6 +2237,7 @@ button {
 
       .slick-arrow {
         &.slick-next {
+          box-shadow: none;
           left: -40%;
           bottom: -70px;
           top: 50%;
@@ -2177,6 +2265,7 @@ button {
           @include transition(all 0.3s ease-in-out);
           background-repeat: no-repeat;
           width: 26px;
+          box-shadow: none;
           &:before {
             content: none;
           }
@@ -2198,6 +2287,11 @@ button {
     .content-block {
       img {
         @include border-radius(5px);
+      }
+    }
+    .video-block {
+      iframe {
+        border: none;
       }
     }
   }
@@ -2265,9 +2359,155 @@ button {
 }
 
 /* -----------  End Single App page css----------- */
-.contact .contact-us {
-  margin-top: 100px;
+.contact {
+  .contact-us {
+    margin-top: 120px;
+    padding-bottom: 0;
+    .company-info {
+      position: relative;
+      background: $white;
+      right: 0;
+      padding: 60px 20px;
+      @include box-shadow(0, 3px, 50px, rgba($black, 0.2));
+      li {
+        list-style-type: none;
+        a {
+          font-size: 18px;
+          color: $black;
+        }
+      }
+
+      img {
+        margin-bottom: 20px;
+      }
+      .company-address {
+        padding: 30px 0;
+        p {
+          font-size: 18px;
+          color: $black;
+          margin-bottom: 0;
+          line-height: 25px;
+        }
+      }
+      .phone {
+        padding: 30px 0;
+      }
+      .email {
+        padding: 30px 0;
+      }
+    }
+    .contact-form {
+      position: relative;
+      padding: 100px 20px;
+      background: $white;
+      @include box-shadow(0, 12px, 50px, rgba($black, 0.13));
+      .float-right {
+        text-align: center;
+        float: none !important;
+      }
+      .angle-top {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+      .angle-bottom {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+      }
+      p {
+        font-size: 24px;
+        line-height: 35px;
+        margin-top: 20px;
+      }
+    }
+  }
+  .google-map {
+    .title {
+      font-size: 44px;
+      margin-bottom: 80px;
+    }
+    iframe {
+      border: none;
+    }
+  }
 }
+/* ----------- Work Page css----------- */
+.work{
+  .banner{
+    @include box-shadow(0,20px,60px,rgba($black,0.20));
+    &:before{
+      content: none;
+    }
+      .introText{
+        h1{
+          color: $black-grey;
+        }
+      }
+    }
+    .project{
+      padding-bottom: 120px;
+      button{
+        @include box-shadow(0,3px,10px,rgba($black,0.30));
+        border: none;
+        background: #fff;
+        padding: 8px 50px;
+        font-size: 40px;
+        margin: 28px 35px;
+        font-family: $proximaRegular;
+        @include border-radius(16px);
+        color: $white-grey;
+        &.mixitup-control-active{
+          @include box-shadow(0,3px,26px,rgba(#F26A11,0.28));
+          font-weight: 700;
+          color: $black-grey;
+          @include transition(all 0.3s ease);
+          &:focus,&:active{
+            @include box-shadow(0,3px,26px,rgba(#F26A11,0.28) !important);
+            font-weight: 700;
+            color: $black-grey;
+          }
+        }
+      }
+      .projectfilter{
+        margin-top: 60px;
+      }
+    }
+}
+.swap-items {
+  flex-direction: row;
+  &.reverse-items {
+    flex-direction: row-reverse;
+  }
+}
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ----------- End Work page css----------- */
 /* ----------- Footer css----------- */
 footer {
   padding: 80px 0;

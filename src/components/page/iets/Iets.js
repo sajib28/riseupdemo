@@ -28,7 +28,7 @@ class Iets extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="inroText display-bottom">
+                                <div className="introText display-bottom">
                                     <h1>ITES</h1>
                                     <p>Information Technology Enabled Service</p>
                                 </div>

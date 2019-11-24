@@ -10657,8 +10657,44 @@ a {
   font-size: 18px;
 }
 
+button {
+  -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  border: none;
+  font-family: "proxima_novabold";
+  font-size: 24px;
+  background: #fff;
+  padding: 5px 40px;
+  line-height: 38px;
+}
+
+.rawline-semibold {
+  font-family: "rawlinesemibold";
+  font-size: 44px;
+  line-height: 60px;
+}
+
+.rawline-bold {
+  font-family: "rawlinebold";
+  font-size: 44px;
+  line-height: 60px;
+}
+
+.proxima-semibold {
+  font-family: "proxima_novabold";
+  font-size: 44px;
+  line-height: 60px;
+}
+
 .firstWord {
   color: #f26a11;
+}
+
+.container {
+  max-width: 1210px;
 }
 
 section {
@@ -10695,6 +10731,35 @@ section p {
   font-size: 30px;
   color: #000000;
   line-height: 37px;
+}
+
+.inner-title h2 {
+  font-family: "rawlinesemibold";
+  font-size: 44px;
+  line-height: 60px;
+  color: #221f1f;
+  margin-bottom: 20px;
+}
+
+.inner-title p {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.vertical-middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 /*Autofill css*/
@@ -10765,6 +10830,14 @@ button:focus {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+.dark-bg {
+  background: #221f1f;
+}
+
+.dark-text {
+  color: #221f1f;
 }
 
 .text-color {
@@ -10888,6 +10961,7 @@ button:focus {
 
 .banner {
   position: relative;
+  padding: 0;
 }
 
 .banner.middle-content {
@@ -10904,7 +10978,6 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .banner:before {
@@ -10918,10 +10991,68 @@ button:focus {
   z-index: 9;
 }
 
-.banner h1 {
+.banner .inroText {
+  min-height: 570px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.banner .inroText h1 {
   z-index: 9;
   position: relative;
   color: #ffffff;
+}
+
+.banner .inroText p {
+  font-size: 44px;
+  -webkit-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  -moz-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  -ms-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  -o-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  font-family: "proxima_novabold";
+  color: #ffffff;
+  z-index: 9;
+  text-align: left;
+}
+
+.banner .inroText.display-bottom {
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.banner .inroText.display-bottom h1 {
+  font-size: 82px;
+  font-family: "rawlineextrabold";
+  -webkit-text-shadow: 0 3px 14px rgba(0, 0, 0, 0.22);
+  -moz-text-shadow: 0 3px 14px rgba(0, 0, 0, 0.22);
+  -ms-text-shadow: 0 3px 14px rgba(0, 0, 0, 0.22);
+  -o-text-shadow: 0 3px 14px rgba(0, 0, 0, 0.22);
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.22);
 }
 
 .page .accordion .card-header {
@@ -10975,12 +11106,10 @@ button:focus {
 }
 
 .border-shadow {
-  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-  -ms-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-  display: block;
-  margin: 15px 0;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 .project {
@@ -11074,7 +11203,7 @@ button:focus {
           justify-content: center;
   color: #ffffff;
   padding: 60px 40px;
-  max-width: 460px;
+  max-width: 480px;
 }
 
 .project .app-list .list-items .item-body h3 {
@@ -11173,6 +11302,25 @@ button:focus {
   font-size: 44px;
   font-family: "proxima_novaregular";
   line-height: 54px;
+}
+
+.list-with-hyphen li {
+  padding: 4px 0;
+  font-size: 20px;
+  line-height: 35px;
+  text-decoration: none;
+  color: #221f1f;
+}
+
+.list-with-hyphen li span {
+  width: 14px;
+  height: 1px;
+  background: #221f1f;
+  display: inline-block;
+  line-height: 8px;
+  margin-right: 15px;
+  margin-top: 16px;
+  float: left;
 }
 
 /* ----------- End Common css----------- */
@@ -11887,21 +12035,21 @@ button:focus {
   content: none;
 }
 
-.contact-from .section-title p {
+.contact-form .section-title p {
   font-size: 30px;
   line-height: 40px;
 }
 
-.contact-from .form-group {
+.contact-form .form-group {
   margin-bottom: 50px;
 }
 
-.contact-from .form-group.float-right {
+.contact-form .form-group.float-right {
   margin-bottom: 0;
 }
 
-.contact-from .form-group input,
-.contact-from .form-group textarea {
+.contact-form .form-group input,
+.contact-form .form-group textarea {
   border-radius: 0;
   border: 0;
   border-bottom: 2px solid rgba(0, 0, 0, 0.6);
@@ -11913,18 +12061,18 @@ button:focus {
   color: #7d7d7d;
 }
 
-.contact-from .form-group input:focus,
-.contact-from .form-group textarea:focus {
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-.contact-from .form-group textarea {
+.contact-form .form-group textarea {
   height: 50px;
 }
 
-.contact-from .form-group button {
+.contact-form .form-group button {
   border-radius: 15px;
   -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
@@ -11934,16 +12082,20 @@ button:focus {
   outline: 0;
   font-family: "proxima_novabold";
   font-size: 24px;
-  color: #f26a11;
+  color: #221f1f;
 }
 
-.contact-from .form-group button:focus {
+.contact-form .form-group button:focus {
   outline: 0;
 }
 
-.contact-from .invalid-feedback {
+.contact-form .invalid-feedback {
   font-family: "proxima_novaregular";
   font-size: 16px;
+}
+
+.contact-form .form-control.is-invalid {
+  border-color: #dc3545;
 }
 
 /* ----------- End Home page css----------- */
@@ -11985,20 +12137,216 @@ button:focus {
 
 /* ----------- End Press page  css----------- */
 /* ----------- Career page  css----------- */
-.career .career-position .accordion .card-body {
-  padding: 50px 30px;
+.career .banner:before {
+  background: linear-gradient(-30deg, rgba(36, 36, 36, 0.1), rgba(88, 41, 119, 0.7));
+  -webkit-box-shadow: 0 20px 60px rgba(152, 131, 60, 0.25);
+  -ms-box-shadow: 0 20px 60px rgba(152, 131, 60, 0.25);
+  -o-box-shadow: 0 20px 60px rgba(152, 131, 60, 0.25);
+  box-shadow: 0 20px 60px rgba(152, 131, 60, 0.25);
 }
 
-.career .career-position .accordion .card-body .cus-btn {
+.career .career-position h2 {
+  margin-bottom: 50px;
+}
+
+.career .career-position .accordion .card {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.career .career-position .accordion .card .card-header {
+  border: none;
+}
+
+.career .career-position .accordion .card .card-header button {
+  font-size: 26px;
+  font-family: "proxima_novaregular";
+  padding: 35px 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.career .career-position .accordion .card .card-header button.collapsed {
+  color: #000000;
+}
+
+.career .career-position .accordion .card .card-header button[aria-expanded="true"] {
+  color: #f26a11;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.career .career-position .accordion .card .card-body {
+  padding: 0px 40px 80px;
+}
+
+.career .career-position .accordion .card .card-body .content-block {
+  margin-bottom: 20px;
+}
+
+.career .career-position .accordion .card .card-body .content-block .vacancy {
+  margin-left: -20px;
+}
+
+.career .career-position .accordion .card .card-body .content-block h3 {
   font-size: 20px;
-  font-weight: bold;
+  font-family: "proxima_novaregular";
+  line-height: 25px;
+  font-weight: 700;
+}
+
+.career .career-position .accordion .card .card-body .content-block p {
+  font-family: "proxima_novaregular";
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.career .career-position .accordion .card .card-body .content-block ul {
+  padding-left: 20px;
+}
+
+.career .career-position .accordion .card .card-body .content-block ul li {
+  font-family: "proxima_novaregular";
+  font-size: 20px;
+  line-height: 25px;
+  list-style-type: disc;
+  padding: 4px 0;
+}
+
+.career .career-position .accordion .card .card-body .cus-btn {
+  font-size: 24px;
+  font-family: "proxima_novabold";
   padding: 12px 30px;
   margin-top: 20px;
   display: inline-block;
   line-height: 30px;
+  margin-left: -40px;
+  -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
 }
 
 /* ----------- End Career page css ----------- */
+.application-form .career-form h3 {
+  font-size: 26px;
+  font-family: "proxima_novabold";
+  color: #221f1f;
+}
+
+.application-form .career-form p {
+  text-align: left;
+  font-size: 18px;
+  color: #7d7d7d;
+  margin-bottom: 0;
+}
+
+.application-form .career-form .form-group {
+  position: relative;
+}
+
+.application-form .career-form .form-group label {
+  font-size: 20px;
+  font-family: "proxima_novaregular";
+  color: #221f1f;
+  font-weight: 700;
+  color: #221f1f;
+}
+
+.application-form .career-form .form-group input,
+.application-form .career-form .form-group textarea {
+  height: 50px;
+  border-radius: 12px;
+  border: 0;
+  outline: 0;
+  color: #7d7d7d;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+  -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+  -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+}
+
+.application-form .career-form .form-group input:focus,
+.application-form .career-form .form-group textarea:focus {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.34) !important;
+  -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.34) !important;
+  -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.34) !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.34) !important;
+}
+
+.application-form .career-form .form-group input[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+.application-form .career-form .form-group label.file {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+
+.application-form .career-form .form-group textarea {
+  height: 180px;
+  border-radius: 7px;
+}
+
+.application-form .career-form .form-group .cv,
+.application-form .career-form .form-group .photo {
+  height: 42px;
+  border-radius: 7px;
+  color: #7d7d7d;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+  -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+  -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+  line-height: 40px;
+  padding: 0 30px;
+  color: #221f1f;
+  margin-right: 20px;
+}
+
+.application-form .career-form .form-group span {
+  color: #7d7d7d;
+}
+
+.application-form .career-form .form-group.photo-upload .photo-lebel {
+  font-size: 20px;
+  margin: 20px 0 15px;
+  padding: 0;
+  line-height: 20px;
+  color: #221f1f;
+}
+
+.application-form .career-form .form-group.photo-upload span {
+  position: absolute;
+  left: 150px;
+  top: 44px;
+}
+
+.application-form .career-form .form-group.file-upload span {
+  position: absolute;
+  left: 150px;
+  top: 10px;
+}
+
+.application-form .career-form hr {
+  margin: 50px 0;
+}
+
 /* ----------- Event Tab css ----------- */
 .event .event-item {
   -webkit-box-align: center;
@@ -12086,10 +12434,29 @@ button:focus {
 .about .about-slider .hero-bg-right {
   background: #ffffff;
   margin-bottom: 40px;
+  width: 75%;
   -webkit-box-shadow: 3px 12px 54px rgba(122, 122, 122, 0.25);
   -ms-box-shadow: 3px 12px 54px rgba(122, 122, 122, 0.25);
   -o-box-shadow: 3px 12px 54px rgba(122, 122, 122, 0.25);
   box-shadow: 3px 12px 54px rgba(122, 122, 122, 0.25);
+}
+
+.about .about-slider .slick-slider {
+  margin: 0 -40px;
+}
+
+.about .about-slider .slick-slider .image {
+  padding: 40px;
+}
+
+.about .about-slider .slick-slider .slick-active.slick-current img {
+  -webkit-transform: scale(1.3);
+  -moz-transition: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transition: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
 }
 
 .about .about-slider .slick-slide {
@@ -12429,121 +12796,61 @@ button:focus {
 
 .top-content .content-padding p {
   text-align: justify;
+  line-height: 30px;
 }
 
 .top-content .list-box {
   position: absolute;
   top: -50px;
-  right: 0;
+  right: -200px;
   z-index: 9;
   width: 284px;
 }
 
 .top-content .list-box .list-box-inner {
   background: #fff;
-  padding: 40px;
-  -webkit-box-shadow: 0 1px 20px #222;
-  -ms-box-shadow: 0 1px 20px #222;
-  -o-box-shadow: 0 1px 20px #222;
-  box-shadow: 0 1px 20px #222;
-  border-radius: 10px;
+  padding: 20px 40px;
+  -webkit-box-shadow: 4px 20px 54px rgba(0, 0, 0, 0.16);
+  -ms-box-shadow: 4px 20px 54px rgba(0, 0, 0, 0.16);
+  -o-box-shadow: 4px 20px 54px rgba(0, 0, 0, 0.16);
+  box-shadow: 4px 20px 54px rgba(0, 0, 0, 0.16);
 }
 
 .top-content .list-box .list-box-inner ul li {
-  margin: 5px auto;
+  padding: 15px 0;
+  border-bottom: 0.2px solid #e1e1e1;
+  font-family: "proxima_novaregular";
+  font-size: 22px;
+  line-height: 27px;
 }
 
-.top-content .list-box .list-box-inner ul li a {
-  padding: 5px 0;
-  display: inline-block;
-  color: #000000;
-}
-
-/* ----------- End About page css----------- */
-/* ----------- Iets page css----------- */
-.iets .card-body ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  margin: 0 -10px;
-}
-
-.iets .card-body ul li {
-  width: 200px;
-  height: auto;
-  margin: 15px 10px;
-}
-
-.iets .client-info .counter .CountUp {
+.top-content .list-box .list-box-inner ul li i {
   color: #f26a11;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.iets .client-info .counter p {
-  text-align: center;
+  padding-right: 15px;
   font-size: 22px;
 }
 
-/* ----------- End Iets page css----------- */
-/* ----------- Start Apps details page css----------- */
-.app-details .double-img {
-  position: relative;
+.top-content .list-box .list-box-inner ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.app-details .double-img img {
-  -webkit-box-shadow: 0 0 55px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: 0 0 55px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: 0 0 55px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 55px rgba(0, 0, 0, 0.25);
-}
-
-.app-details .double-img .top-img {
-  position: absolute;
-  right: 220px;
-  top: 130px;
-  z-index: 1;
-}
-
-.app-details .app-development {
+.top-bottom-image {
   border-top: 1px solid rgba(34, 31, 31, 0.2);
   border-bottom: 1px solid rgba(34, 31, 31, 0.2);
   padding-bottom: 210px;
 }
 
-.app-details .app-development .content-block {
-  padding: 130px 50px 0 50px;
+.top-bottom-image .content-block {
+  padding: 130px 50px 0 0;
 }
 
-.app-details .app-development .content-block h2 {
+.top-bottom-image .content-block h2 {
   font-size: 44px;
   margin-bottom: 40px;
 }
 
-.app-details .app-development .content-block ul li {
-  padding: 4px 0;
-}
-
-.app-details .app-development .content-block ul li a {
-  font-size: 20px;
-  line-height: 35px;
-  text-decoration: none;
-  color: #221f1f;
-}
-
-.app-details .app-development .content-block ul li a i {
-  font-size: 15px;
-  padding-right: 15px;
-}
-
-.app-details .app-development .align-middle {
+.top-bottom-image .align-middle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12558,6 +12865,240 @@ button:focus {
   -webkit-box-align: center;
           align-items: center;
   width: 100%;
+}
+
+.top-bottom-image .align-middle .double-img {
+  position: relative;
+  right: -250px;
+}
+
+.top-bottom-image .align-middle .double-img img {
+  -webkit-box-shadow: 0 0 55px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0 0 55px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 0 0 55px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 55px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.top-bottom-image .align-middle .double-img img.show-top {
+  z-index: 10;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.top-bottom-image .align-middle .double-img .top-img {
+  position: absolute;
+  right: 220px;
+  top: 130px;
+  z-index: 1;
+}
+
+.top-bottom-image .align-middle .double-img .bottom-img {
+  position: relative;
+}
+
+/* ----------- End About page css----------- */
+/* ----------- Iets page css----------- */
+.iets .banner:before {
+  background: linear-gradient(-30deg, rgba(250, 232, 232, 0.1), rgba(154, 143, 0, 0.6));
+  -webkit-box-shadow: 0 20px 60px rgba(214, 222, 0, 0.25);
+  -ms-box-shadow: 0 20px 60px rgba(214, 222, 0, 0.25);
+  -o-box-shadow: 0 20px 60px rgba(214, 222, 0, 0.25);
+  box-shadow: 0 20px 60px rgba(214, 222, 0, 0.25);
+}
+
+.iets .top-content {
+  padding: 0;
+}
+
+.iets .advantage .content-block h2 {
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+
+.iets .advantage .img-block {
+  position: relative;
+  right: -200px;
+}
+
+.iets .advantage .img-block img {
+  -webkit-box-shadow: 5px 5px 47px rgba(0, 0, 0, 0.35);
+  -ms-box-shadow: 5px 5px 47px rgba(0, 0, 0, 0.35);
+  -o-box-shadow: 5px 5px 47px rgba(0, 0, 0, 0.35);
+  box-shadow: 5px 5px 47px rgba(0, 0, 0, 0.35);
+}
+
+.iets .team-strength .content-block {
+  padding: 130px 0 0 0;
+}
+
+.iets .team-strength .content-block h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 70px;
+}
+
+.iets .team-strength .content-block p {
+  color: #ffffff;
+}
+
+.iets .team-strength .content-block ul li {
+  color: #ffffff;
+}
+
+.iets .team-strength .content-block ul li span {
+  background: #ffffff;
+}
+
+.iets .team-strength .double-img {
+  right: 250px;
+  float: left !important;
+}
+
+.iets .team-strength .double-img .top-img {
+  z-index: 9;
+  position: relative;
+  right: auto;
+  left: 220px;
+}
+
+.iets .team-strength .double-img .bottom-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.iets .tools-and-tech {
+  padding-bottom: 40px;
+}
+
+.iets .tools-and-tech .section-title h2 {
+  color: #ffffff;
+}
+
+.iets .tools-and-tech .accordion .card {
+  border-bottom: 1px solid #333;
+}
+
+.iets .tools-and-tech .accordion .card:last-child {
+  border: none;
+}
+
+.iets .tools-and-tech .accordion .card .card-header {
+  border: none;
+}
+
+.iets .tools-and-tech .accordion .card .card-header button {
+  color: #ffffff;
+  font-size: 26px;
+  font-family: "proxima_novaregular";
+  padding: 35px 0;
+}
+
+.iets .tools-and-tech .accordion .card .card-body {
+  padding: 0px 0 50px;
+}
+
+.iets .tools-and-tech .accordion .card .card-body .card-body-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.iets .tools-and-tech .accordion .card .card-body .card-body-inner a {
+  background: #ffffff;
+  min-height: 180px;
+  margin: 15px 10px;
+  width: 180px;
+  height: 180px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  text-decoration: none;
+}
+
+.iets .tools-and-tech .accordion .card .card-body .card-body-inner a .img-inner {
+  max-height: 100px;
+}
+
+.iets .tools-and-tech .accordion .card .card-body .card-body-inner a span {
+  color: #221f1f;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.iets .client-info .company-short-info {
+  max-width: 100%;
+  margin: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.iets .working-brand .border-shadow {
+  min-height: 175px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  margin: 15px 0;
+  padding: 20px;
+}
+
+/* ----------- End Iets page css----------- */
+/* ----------- Start Apps details page css----------- */
+.app-details .banner {
+  padding: 0;
+}
+
+.app-details .banner:before {
+  background: linear-gradient(-30deg, rgba(250, 232, 232, 0.1), rgba(206, 0, 0, 0.6));
+  -webkit-box-shadow: 0 20px 60px rgba(255, 0, 0, 0.2);
+  -ms-box-shadow: 0 20px 60px rgba(255, 0, 0, 0.2);
+  -o-box-shadow: 0 20px 60px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 20px 60px rgba(255, 0, 0, 0.2);
 }
 
 .app-details .project {
@@ -12586,6 +13127,391 @@ button:focus {
 }
 
 /* -----------  End Apps details page css----------- */
+/* -----------  Single App page css----------- */
+.single-app .short-info {
+  border-bottom: 1px solid rgba(34, 31, 31, 0.2);
+}
+
+.single-app .short-info h2 {
+  line-height: 45px;
+  margin-bottom: 55px;
+}
+
+.single-app .short-info .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -moz-justify-content: left;
+  -ms-justify-content: left;
+  -webkit-box-pack: left;
+          justify-content: left;
+  -ms-flex-pack: left;
+}
+
+.single-app .short-info .description img {
+  margin-right: 70px;
+}
+
+.single-app .short-info .description .content h3 {
+  font-family: "rawlinesemibold";
+  font-size: 30px;
+}
+
+.single-app .about-game {
+  position: relative;
+}
+
+.single-app .about-game h2 {
+  margin-bottom: 20px;
+}
+
+.single-app .about-game .market-place h2 {
+  margin: 40px 0;
+}
+
+.single-app .about-game .market-place ul li {
+  display: inline-block;
+  margin: 10px 50px;
+}
+
+.single-app .about-game .market-place ul li:first-child {
+  margin-left: 0;
+}
+
+.single-app .feature {
+  position: relative;
+}
+
+.single-app .feature .hero-bg-left {
+  width: 65%;
+}
+
+.single-app .feature .content-block {
+  max-width: 520px;
+}
+
+.single-app .feature .content-block h2 {
+  margin-bottom: 35px;
+}
+
+.single-app .feature .content-block ul {
+  padding-left: 20px;
+}
+
+.single-app .feature .content-block ul li {
+  list-style-type: disc;
+  line-height: 32px;
+  font-size: 20px;
+}
+
+.single-app .feature .img-block {
+  position: relative;
+  right: -160px;
+}
+
+.single-app .screenshots {
+  position: relative;
+  margin: 100px 0 100px;
+  overflow: hidden;
+}
+
+.single-app .screenshots .hero-bg-right {
+  width: 50%;
+  margin-bottom: 60px;
+}
+
+.single-app .screenshots .content-block {
+  padding: 65px;
+  text-align: center;
+}
+
+.single-app .screenshots .screenshot-slider {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.single-app .screenshots .screenshot-slider .image {
+  padding: 50px;
+}
+
+.single-app .screenshots .screenshot-slider .slick-slider {
+  margin: 0 -50px;
+}
+
+.single-app .screenshots .screenshot-slider .slick-slider .slick-current img {
+  -webkit-transform: scale(1.3);
+  -moz-transition: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transition: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.single-app .screenshots .screenshot-slider .slick-arrow.slick-next {
+  left: -40%;
+  bottom: -70px;
+  top: 50%;
+  right: auto;
+  background: url("../img/icon/right-arrow.png");
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 26px;
+}
+
+.single-app .screenshots .screenshot-slider .slick-arrow.slick-next:before {
+  content: none;
+}
+
+.single-app .screenshots .screenshot-slider .slick-arrow.slick-next:hover {
+  background: url("../img/icon/right-arrow-hover.png");
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-repeat: no-repeat;
+}
+
+.single-app .screenshots .screenshot-slider .slick-arrow.slick-prev {
+  left: -40%;
+  bottom: -70px;
+  top: 50%;
+  margin-left: -50px;
+  z-index: 9;
+  background: url("../img/icon/left-arrow.png");
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  width: 26px;
+}
+
+.single-app .screenshots .screenshot-slider .slick-arrow.slick-prev:before {
+  content: none;
+}
+
+.single-app .screenshots .screenshot-slider .slick-arrow.slick-prev:hover {
+  background: url("../img/icon/left-arrow-hover.png");
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.single-app .youtube-channel {
+  position: relative;
+}
+
+.single-app .youtube-channel .hero-bg-left {
+  width: 50%;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.single-app .youtube-channel .content-block img {
+  border-radius: 5px;
+}
+
+.single-app .used-technology h2 {
+  font-family: "rawlinesemibold";
+  font-size: 44px;
+  margin-bottom: 30px;
+  color: #221f1f;
+}
+
+.single-app .used-technology .technology-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -60px;
+  margin-right: -60px;
+}
+
+.single-app .used-technology .technology-wrap a {
+  background: #ffffff;
+  min-height: 180px;
+  margin: 35px 70px;
+  width: 180px;
+  height: 180px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  text-decoration: none;
+}
+
+.single-app .used-technology .technology-wrap a .img-inner {
+  max-height: 100px;
+}
+
+.single-app .used-technology .technology-wrap a span {
+  color: #221f1f;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.single-app .build-story {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.single-app .build-story h2 {
+  font-family: "rawlinesemibold";
+  font-size: 44px;
+  margin-bottom: 5px;
+  color: #221f1f;
+}
+
+.single-app .build-story p {
+  text-align: center;
+}
+
+.single-app .build-story a {
+  color: #f26a11;
+  display: inline-block;
+  font-family: "proxima_novabold";
+  margin-top: 15px;
+  font-size: 22px;
+  -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* -----------  End Single App page css----------- */
+.contact .contact-us {
+  margin-top: 120px;
+  padding-bottom: 0;
+}
+
+.contact .contact-us .company-info {
+  position: relative;
+  background: #ffffff;
+  right: 0;
+  padding: 60px 20px;
+  -webkit-box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2);
+}
+
+.contact .contact-us .company-info li {
+  list-style-type: none;
+}
+
+.contact .contact-us .company-info li a {
+  font-size: 18px;
+  color: #000000;
+}
+
+.contact .contact-us .company-info img {
+  margin-bottom: 20px;
+}
+
+.contact .contact-us .company-info .company-address {
+  padding: 30px 0;
+}
+
+.contact .contact-us .company-info .company-address p {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 0;
+  line-height: 25px;
+}
+
+.contact .contact-us .company-info .phone {
+  padding: 30px 0;
+}
+
+.contact .contact-us .company-info .email {
+  padding: 30px 0;
+}
+
+.contact .contact-us .contact-form {
+  position: relative;
+  padding: 100px 20px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 12px 50px rgba(0, 0, 0, 0.13);
+  -ms-box-shadow: 0 12px 50px rgba(0, 0, 0, 0.13);
+  -o-box-shadow: 0 12px 50px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.13);
+}
+
+.contact .contact-us .contact-form .float-right {
+  text-align: center;
+  float: none !important;
+}
+
+.contact .contact-us .contact-form .angle-top {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.contact .contact-us .contact-form .angle-bottom {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.contact .contact-us .contact-form p {
+  font-size: 24px;
+  line-height: 35px;
+  margin-top: 20px;
+}
+
+.contact .google-map .title {
+  font-size: 44px;
+  margin-bottom: 80px;
+}
+
+.contact .google-map iframe {
+  border: none;
+}
+
 /* ----------- Footer css----------- */
 footer {
   padding: 80px 0;
@@ -12659,8 +13585,11 @@ footer .newsletter .input-group-text {
   background: #f26a11;
   border: 1px solid #f26a11;
   padding: 0 30px;
-  border-radius: 11px;
   cursor: pointer;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 11px !important;
+  border-bottom-right-radius: 11px !important;
 }
 
 footer .newsletter .input-group-text i {
@@ -12698,14 +13627,46 @@ footer .term-condition ul li a {
 
 /* ----------- End Footer css----------- */
 /* ----------- Suppoted Maximum mobile, Tablet and Desktop ----------- */
+@media (max-width: 1800px) {
+  /*----------------------Apps Details Page Css-----------------------------*/
+  /*----------------------End Apps Details Page Css-----------------------------*/
+}
+
 @media (min-width: 1367px) and (max-width: 1600px) {
+  /*Common css for whole site*/
+  .top-content .list-box {
+    right: -100px;
+  }
+  .top-bottom-image {
+    padding-bottom: 150px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 35px;
+    line-height: 60px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: -100px;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 100px;
+    top: 80px;
+  }
+  /*End Common css for whole site*/
   /*Navigation Css*/
   #mainMenu .navbar-brand {
     margin-left: 0;
   }
   /*End Navigation Css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  /*----------------------End Apps Details Page Css-----------------------------*/
 }
 
+/*----------------------Iets Page Css-----------------------------*/
+.iets .advantage .img-block {
+  right: -100px;
+}
+
+/*----------------------End Iets Page Css-----------------------------*/
 @media (min-width: 1201px) and (max-width: 1366px) {
   /*Common css for whole site*/
   section {
@@ -12718,6 +13679,23 @@ footer .term-condition ul li a {
   .section-title p {
     font-size: 18px;
     line-height: 30px;
+  }
+  .top-content .list-box {
+    right: 0;
+  }
+  .top-bottom-image {
+    padding-bottom: 150px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 35px;
+    line-height: 60px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: 0;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 100px;
+    top: 80px;
   }
   /*End Common css for whole site*/
   /*Navigation Css*/
@@ -12790,6 +13768,11 @@ footer .term-condition ul li a {
     line-height: 30px;
   }
   /*End contact form css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .inroText h1 {
+    font-size: 60px;
+  }
+  /*----------------------End Apps Details Page Css-----------------------------*/
   /*footer css*/
   footer .newsletter .input-group-text {
     padding: 0 15px;
@@ -12815,11 +13798,28 @@ footer .term-condition ul li a {
   }
   .section-title h2 {
     font-size: 60px;
-    line-height: 50px;
+    line-height: 65px;
   }
   .section-title p {
     font-size: 20px;
     line-height: 30px;
+  }
+  .top-content .list-box {
+    right: auto;
+  }
+  .top-bottom-image {
+    padding-bottom: 150px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 35px;
+    line-height: 60px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: auto;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 100px;
+    top: 80px;
   }
   /*End Common css for whole site*/
   /*Navigation Css*/
@@ -12907,6 +13907,11 @@ footer .term-condition ul li a {
     line-height: 30px;
   }
   /*End contact form css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .inroText h1 {
+    font-size: 60px;
+  }
+  /*----------------------End Apps Details Page Css-----------------------------*/
   /*footer css*/
   footer .newsletter .input-group-text {
     padding: 0 15px;
@@ -12927,6 +13932,12 @@ footer .term-condition ul li a {
 
 @media (min-width: 768px) and (max-width: 991px) {
   /*Common css for whole site*/
+  .hero-bg-left {
+    display: none;
+  }
+  .hero-bg-right {
+    display: none;
+  }
   section {
     padding: 60px 0;
   }
@@ -12938,10 +13949,51 @@ footer .term-condition ul li a {
     font-size: 20px;
     line-height: 30px;
   }
+  .top-content {
+    padding-bottom: 40px;
+  }
+  .top-content .content-padding {
+    padding-top: 0;
+  }
+  .top-content .list-box {
+    position: relative;
+    top: -50px;
+    right: auto;
+    min-width: 500px;
+    margin: 0 auto;
+  }
+  .top-bottom-image {
+    padding-bottom: 160px;
+  }
+  .top-bottom-image .align-middle {
+    display: block;
+  }
+  .top-bottom-image .align-middle .content-block {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: auto;
+    max-width: 480px;
+    margin: 0 auto;
+    left: 80px;
+    float: none !important;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 160px;
+    top: 80px;
+  }
   /*End Common css for whole site*/
   /*Navigation Css*/
   #mainMenu .navbar-brand {
     margin-left: 5px;
+  }
+  #mainMenu .openMenu {
+    padding-right: 15px;
   }
   /*End Navigation Css*/
   /*Intro home css*/
@@ -13044,6 +14096,67 @@ footer .term-condition ul li a {
     line-height: 30px;
   }
   /*End contact form css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .inroText {
+    min-height: auto;
+  }
+  .app-details .banner .inroText h1 {
+    font-size: 55px;
+    line-height: 75px;
+  }
+  /*----------------------End Apps Details Page Css-----------------------------*/
+  /*----------------------Single App Page Css-----------------------------*/
+  .single-app .about-game .market-place ul li {
+    margin: 10px 30px;
+  }
+  .single-app .feature .vertical-middle {
+    display: block;
+    width: 100%;
+  }
+  .single-app .feature .vertical-middle .content-block {
+    max-width: 100%;
+  }
+  .single-app .feature .vertical-middle .img-block {
+    right: auto;
+    text-align: center;
+  }
+  .single-app .screenshots {
+    margin: 0;
+    padding: 0;
+  }
+  .single-app .screenshots .screenshot-slider .slick-arrow.slick-prev {
+    left: 50%;
+    top: 0;
+  }
+  .single-app .screenshots .screenshot-slider .slick-arrow.slick-next {
+    left: 50%;
+    top: 0;
+  }
+  .single-app .youtube-channel .vertical-middle {
+    display: block;
+  }
+  .single-app .used-technology .technology-wrap {
+    margin: 0;
+  }
+  .single-app .used-technology .technology-wrap a {
+    margin: 35px 30px;
+  }
+  /*----------------------End Single App Page Css-----------------------------*/
+  /*----------------------Contact Page Css-----------------------------*/
+  .contact .contact-us .vertical-middle {
+    display: block;
+  }
+  .contact .contact-us .vertical-middle .company-info {
+    margin-bottom: 40px;
+    padding: 20px 20px;
+  }
+  .contact .contact-us .vertical-middle .pr-0 {
+    padding-right: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .pl-0 {
+    padding-left: 15px !important;
+  }
+  /*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/
   footer {
     padding: 60px 0;
@@ -13067,10 +14180,54 @@ footer .term-condition ul li a {
     font-size: 20px;
     line-height: 30px;
   }
+  .top-content {
+    padding-bottom: 40px;
+  }
+  .top-content .content-padding {
+    padding-top: 0;
+  }
+  .top-content .list-box {
+    position: relative;
+    top: -50px;
+    right: auto;
+    margin: 0 auto;
+  }
+  .top-bottom-image {
+    padding-bottom: 110px;
+  }
+  .top-bottom-image .align-middle {
+    display: block;
+  }
+  .top-bottom-image .align-middle .content-block {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: auto;
+    max-width: 380px;
+    margin: 0 auto;
+    left: 0;
+    float: none !important;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 40px;
+    top: 50px;
+    left: 20px;
+  }
+  .top-bottom-image .align-middle .double-img .bottom-img {
+    right: 20px;
+  }
   /*End Common css for whole site*/
   /*Navigation Css*/
   #mainMenu .navbar-brand {
     margin-left: 5px;
+  }
+  #mainMenu .openMenu {
+    padding-right: 15px;
   }
   .fullscreen-menu .modal-content .modal-body {
     padding: 0;
@@ -13235,6 +14392,91 @@ footer .term-condition ul li a {
     margin-top: 40px;
   }
   /*End Process Page Css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .inroText {
+    min-height: auto;
+  }
+  .app-details .banner .inroText h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets .advantage .vertical-middle {
+    display: block;
+  }
+  .iets .advantage .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .iets .advantage .img-block {
+    right: auto;
+  }
+  .iets .advantage .img-block img {
+    float: none !important;
+    margin: 0 auto;
+    display: block;
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*----------------------Single App Page Css-----------------------------*/
+  .single-app .short-info .description {
+    display: block;
+    margin: 30px 0;
+  }
+  .single-app .short-info .description .content {
+    margin-top: 20px;
+  }
+  .single-app .about-game .market-place ul {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .single-app .about-game .market-place ul li {
+    margin: 20px auto;
+    display: block;
+  }
+  .single-app .feature .vertical-middle {
+    display: block;
+  }
+  .single-app .feature .vertical-middle .content-block {
+    margin-bottom: 40px;
+  }
+  .single-app .feature .vertical-middle .img-block {
+    right: auto;
+    text-align: center;
+  }
+  .single-app .screenshots {
+    margin: 0;
+  }
+  .single-app .screenshots .content-block {
+    padding: 0;
+  }
+  .single-app .youtube-channel .vertical-middle {
+    display: block;
+  }
+  .single-app .youtube-channel .vertical-middle .content-block {
+    margin-bottom: 40px;
+  }
+  .single-app .used-technology .technology-wrap {
+    margin: 0;
+  }
+  .single-app .used-technology .technology-wrap a {
+    margin: 35px 20px;
+  }
+  /*----------------------End Single App Page Css-----------------------------*/
+  /*----------------------Contact Page Css-----------------------------*/
+  .contact .contact-us .vertical-middle {
+    display: block;
+  }
+  .contact .contact-us .vertical-middle .company-info {
+    margin-bottom: 40px;
+    padding: 20px 20px;
+  }
+  .contact .contact-us .vertical-middle .pr-0 {
+    padding-right: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .pl-0 {
+    padding-left: 15px !important;
+  }
+  /*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/
   footer {
     padding: 40px 0;
@@ -13257,6 +14499,76 @@ footer .term-condition ul li a {
   .section-title p {
     font-size: 20px;
     line-height: 30px;
+  }
+  .rawline-semibold {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .banner .inroText {
+    min-height: auto;
+  }
+  .banner .inroText h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .banner .inroText p {
+    font-size: 25px;
+    text-align: left;
+  }
+  .banner .inroText.display-bottom h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .banner .inroText.display-bottom p {
+    font-size: 25px;
+    text-align: left;
+  }
+  .top-content {
+    padding-bottom: 40px;
+  }
+  .top-content .content-padding {
+    padding-top: 0;
+  }
+  .top-content .list-box {
+    position: relative;
+    top: -50px;
+    right: auto;
+    margin: 0 auto;
+  }
+  .top-bottom-image {
+    padding-bottom: 110px;
+  }
+  .top-bottom-image .align-middle {
+    display: block;
+  }
+  .top-bottom-image .align-middle .content-block {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: auto;
+    max-width: 220px;
+    margin: 0 auto;
+    left: 20px;
+    float: none !important;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 40px;
+    top: 50px;
+    left: auto;
+  }
+  .company-short-info .counter {
+    padding: 5px 0;
+  }
+  .company-short-info .counter .CountUp {
+    font-size: 45px;
+  }
+  .company-short-info .counter p {
+    font-size: 30px;
   }
   /*End Common css for whole site*/
   /*Navigation Css*/
@@ -13445,6 +14757,111 @@ footer .term-condition ul li a {
     margin-top: 40px;
   }
   /*End Process Page Css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .inroText {
+    min-height: auto;
+  }
+  .app-details .banner .inroText h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  /*----------------------End Apps Details Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets .advantage .vertical-middle {
+    display: block;
+  }
+  .iets .advantage .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .iets .advantage .img-block {
+    right: auto;
+  }
+  .iets .tools-and-tech .accordion .card .card-header button {
+    font-size: 22px;
+  }
+  .iets .tools-and-tech .accordion .card .card-body-inner {
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -ms-flex-pack: center;
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*----------------------Single App Page Css-----------------------------*/
+  .single-app .short-info .description {
+    display: block;
+    margin: 30px 0;
+  }
+  .single-app .short-info .description .content {
+    margin-top: 20px;
+  }
+  .single-app .about-game .market-place ul {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .single-app .about-game .market-place ul li {
+    margin: 20px auto;
+    display: block;
+  }
+  .single-app .feature .vertical-middle {
+    display: block;
+  }
+  .single-app .feature .vertical-middle .content-block {
+    margin-bottom: 40px;
+  }
+  .single-app .feature .vertical-middle .img-block {
+    right: auto;
+    text-align: center;
+  }
+  .single-app .screenshots {
+    margin: 0;
+  }
+  .single-app .screenshots .content-block {
+    padding: 0;
+  }
+  .single-app .youtube-channel .vertical-middle {
+    display: block;
+  }
+  .single-app .youtube-channel .vertical-middle .content-block {
+    margin-bottom: 40px;
+  }
+  .single-app .used-technology .technology-wrap {
+    margin: 0;
+  }
+  /*----------------------End Single App Page Css-----------------------------*/
+  /*----------------------Career Page Css-----------------------------*/
+  .career .career-position .accordion .card .card-body {
+    padding: 0px 0 60px;
+  }
+  .career .career-position .accordion .card .card-body .content-block .vacancy {
+    margin-left: 0;
+  }
+  .career .career-position .accordion .card .card-body .cus-btn {
+    margin-left: 0;
+  }
+  /*----------------------End Career Page Css-----------------------------*/
+  /*----------------------Contact Page Css-----------------------------*/
+  .contact .contact-us .vertical-middle {
+    display: block;
+  }
+  .contact .contact-us .vertical-middle .company-info {
+    margin-bottom: 40px;
+    padding: 20px 20px;
+  }
+  .contact .contact-us .vertical-middle .pr-0 {
+    padding-right: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .pl-0 {
+    padding-left: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .contact-form .angle-top {
+    width: 50px;
+  }
+  .contact .contact-us .vertical-middle .contact-form .angle-bottom {
+    width: 50px;
+  }
+  /*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/
   footer {
     padding: 40px 0;

@@ -11,7 +11,7 @@ export default class Banner extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="inroText">
+                            <div className="introText">
                                 <h1>{this.props.title}{this.props.title2}</h1>
                             </div>
                         </div>

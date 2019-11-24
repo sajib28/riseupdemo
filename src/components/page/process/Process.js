@@ -21,7 +21,7 @@ class Press extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="inroText">
+                            <div className="introText">
                                 <h1><span className="text-color">How We Work:</span><br/>From Idea to Reality</h1>
                             </div>
                         </div>

@@ -13,7 +13,7 @@ class Career extends Component {
                 <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="inroText">
+                                <div className="introText">
                                     <h1><span className="text-color">We’re </span>hiring.</h1>
                                 </div>
                             </div>

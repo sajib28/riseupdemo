@@ -97,7 +97,7 @@ class Home extends Component {
                     <div className="container middle-content">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="inroText">
+                                <div className="introText">
                                     <h1><span className="text-uppercase text-color">Riseup</span><br />Beyond Reality Driving <br />into Technology</h1>
                                 </div>
                             </div>
@@ -319,7 +319,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="home-project project" data-ui="dark">
+                <section className="home-project project dark-bg" data-ui="dark">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
@@ -514,7 +514,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="contact-from" data-ui="light">
+                <section className="contact-form" data-ui="light">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">

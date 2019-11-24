@@ -15,7 +15,7 @@ class AppDetails extends Component {
             bottomImg.classList.remove("show-top");
         });
     }
-    
+
     render() {
         return (
             <div className="page app-details">
@@ -24,7 +24,7 @@ class AppDetails extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="inroText display-bottom">
+                                <div className="introText display-bottom">
                                     <h1>Apps Development</h1>
                                 </div>
                             </div>
@@ -48,9 +48,9 @@ class AppDetails extends Component {
                             </div>
                             <div className="col-lg-8  order-lg-1">
                                 <div className="content-padding">
-                                    <p>We offer design, development, and solution for apps across a range of devices. We have developed many commercially successful apps for Apple App Store, Google Play Store and for some other platform. </p><br/>
+                                    <p>We offer design, development, and solution for apps across a range of devices. We have developed many commercially successful apps for Apple App Store, Google Play Store and for some other platform. </p><br />
 
-                                    <p>We have millions of active users on those mobile apps. Some of our apps were also being featured by Apple for our unique creativity, design innovation & user feedback.</p><br/>
+                                    <p>We have millions of active users on those mobile apps. Some of our apps were also being featured by Apple for our unique creativity, design innovation & user feedback.</p><br />
                                     <p>We also developed a few apps for our local clients in Bangladesh. Moreover, we are the partner of the Department of Agricultural Extension (DAE), under the Ministry of Agriculture in Bangladesh, to help them build their innovative apps for our local farmers.</p>
                                 </div>
                             </div>

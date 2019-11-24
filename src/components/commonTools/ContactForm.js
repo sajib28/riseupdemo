@@ -207,7 +207,7 @@ class ContactUs extends Component {
                     </div>
                     <div className="col-lg-12">
                         <div className="form-group float-right">
-                            <button type="submit" className="cus-btn">Send <span className="red-text">Message</span></button>
+                            <button type="submit" className="cus-btn"><span className="text-color">Send</span> Message</button>
                         </div>
                     </div>
                 </div>

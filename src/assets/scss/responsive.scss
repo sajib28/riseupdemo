@@ -64,7 +64,7 @@
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details {
     .banner {
-      .inroText {
+      .introText {
         h1 {
         }
       }
@@ -134,7 +134,7 @@
   /*End Navigation Css*/
   /*Intro home css*/
   .intro {
-    .inroText {
+    .introText {
       padding: 40px;
       h1 {
         font-size: 60px;
@@ -237,7 +237,7 @@
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details {
     .banner {
-      .inroText {
+      .introText {
         h1 {
           font-size: 60px;
         }
@@ -325,7 +325,7 @@
   /*End Navigation Css*/
   /*Intro home css*/
   .intro {
-    .inroText {
+    .introText {
       padding: 40px;
       h1 {
         font-size: 50px;
@@ -438,7 +438,7 @@
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details {
     .banner {
-      .inroText {
+      .introText {
         h1 {
           font-size: 60px;
         }
@@ -548,7 +548,7 @@
   /*End Navigation Css*/
   /*Intro home css*/
   .intro {
-    .inroText {
+    .introText {
       padding: 40px;
       h1 {
         font-size: 50px;
@@ -679,7 +679,7 @@
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details {
     .banner {
-      .inroText {
+      .introText {
         min-height: auto;
         h1 {
           font-size: 55px;
@@ -746,6 +746,31 @@
     }
   }
   /*----------------------End Single App Page Css-----------------------------*/
+
+  /*----------------------Contact Page Css-----------------------------*/
+.contact {
+  .contact-us {
+    .vertical-middle {
+      display: block;
+      .company-info {
+        margin-bottom: 40px;
+        padding: 20px 20px;
+      }
+      .pr-0 {
+        padding-right: 15px !important;
+      }
+      .pl-0 {
+        padding-left: 15px !important;
+      }
+      .contact-form {
+        
+      }
+    }
+  }
+  .google-map {
+  }
+}
+/*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/
   footer {
     padding: 60px 0;
@@ -870,7 +895,7 @@
 
   /*Intro home css*/
   .intro {
-    .inroText {
+    .introText {
       h1 {
         font-size: 50px;
         line-height: 45px;
@@ -1046,7 +1071,7 @@
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details {
     .banner {
-      .inroText {
+      .introText {
         min-height: auto;
         h1 {
           font-size: 35px;
@@ -1139,6 +1164,33 @@
     }
   }
   /*----------------------End Single App Page Css-----------------------------*/
+
+/*----------------------Contact Page Css-----------------------------*/
+.contact {
+  .contact-us {
+    .vertical-middle {
+      display: block;
+      .company-info {
+        margin-bottom: 40px;
+        padding: 20px 20px;
+      }
+      .pr-0 {
+        padding-right: 15px !important;
+      }
+      .pl-0 {
+        padding-left: 15px !important;
+      }
+      .contact-form {
+        
+      }
+    }
+  }
+  .google-map {
+  }
+}
+/*----------------------End Contact Page Css-----------------------------*/
+
+
   /*footer css*/
   footer {
     padding: 40px 0;
@@ -1169,7 +1221,7 @@
     line-height: 45px;
   }
   .banner {
-    .inroText {
+    .introText {
       min-height: auto;
       h1 {
         font-size: 35px;
@@ -1304,14 +1356,14 @@
   /*Home Slider*/
   #homeSlider {
     display: block;
-    .inroText {
+    .introText {
       max-width: 320px;
     }
   }
   /*Intro home css*/
   .intro {
     display: none;
-    .inroText {
+    .introText {
       h1 {
         font-size: 35px;
         line-height: 45px;
@@ -1493,7 +1545,7 @@
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details {
     .banner {
-      .inroText {
+      .introText {
         min-height: auto;
         h1 {
           font-size: 35px;
@@ -1597,7 +1649,6 @@
   /*----------------------End Single App Page Css-----------------------------*/
   /*----------------------Career Page Css-----------------------------*/
   .career {
-    
     .career-position {
       .accordion {
         .card {
@@ -1608,8 +1659,8 @@
                 margin-left: 0;
               }
             }
-            .cus-btn{
-              margin-left:0;
+            .cus-btn {
+              margin-left: 0;
             }
           }
         }
@@ -1617,6 +1668,36 @@
     }
   }
   /*----------------------End Career Page Css-----------------------------*/
+
+  /*----------------------Contact Page Css-----------------------------*/
+  .contact {
+    .contact-us {
+      .vertical-middle {
+        display: block;
+        .company-info {
+          margin-bottom: 40px;
+          padding: 20px 20px;
+        }
+        .pr-0 {
+          padding-right: 15px !important;
+        }
+        .pl-0 {
+          padding-left: 15px !important;
+        }
+        .contact-form {
+          .angle-top {
+            width: 50px;
+          }
+          .angle-bottom {
+            width: 50px;
+          }
+        }
+      }
+    }
+    .google-map {
+    }
+  }
+  /*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/
   footer {
     h3 {

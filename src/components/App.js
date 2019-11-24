@@ -11,6 +11,7 @@ import Home from './page/home/Home';
 // import Service from './page/service/Service';
 import Process from './page/process/Process';
 import Work from './page/work/Work';
+import Work1 from './page/work/Work1';
 // import Blog from './page/blog/Blog';
 import Career from './page/career/Career';
 import ApplicationForm from './page/career/ApplicationForm';
@@ -60,12 +61,13 @@ class App extends Component {
                 <Switch >
                     <Route path="/" render={() => <Home />} exact />
                     <Route path="/work" render={() => <Work />} />
+                    <Route path="/work1" render={() => <Work1 />} />
                     <Route path="/process" component={Process} />
                     {/*  <Route path="/blog" render={() => <Blog />} /> */}
                     <Route path="/career" render={() => <Career />} />
                     <Route path="/about" component={props => <About {...props} />} />
                     <Route path="/contact" component={props => <Contact {...props} />} />
-                    
+
                     <Route path="/application-form" render={() => <ApplicationForm />} />
                     <Route path="/apps" render={() => < Apps />} />
                     <Route path="/iets" render={() => < Iets />} />

@@ -4,22 +4,174 @@ import Footer from '../../commonTools/Footer';
 import Banner from '../../commonTools/Banner';
 import BackgroundImage from '../../../assets/img/event.jpg';
 // import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 import $ from 'jquery';
 // import Accordion from '../../commonTools/Accordion';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faBars } from '@fortawesome/free-solid-svg-icons'
 class ApplicationForm extends Component {
-    componentDidMount(){
-        $('.rul-btn').each(function(){
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            phone: '',
+            cv:'',
+            nameError: '',
+            emailError: '',
+            phoneError: '',
+            cvError:''
+           
 
-            var text = $(this).text().split(' ');
-            if(text.length < 2)
-                return;
-            text[0] = '<span class="firstWord">'+text[0]+'</span>';
-            $(this).html( text.join(' ') );
-        
+        };
+    }
+
+    handleNameChange = (event) => {
+        this.setState({ name: event.target.value }, () => {
+            this.validateName();
         });
     }
+    handleEmailChange = (event) => {
+        this.setState({ email: event.target.value }, () => {
+            this.validateEmail();
+        });
+    }
+    handlePhoneChange = (event) => {
+        this.setState({ phone: event.target.value }, () => {
+            this.validatePhone();
+        });
+    }
+    handleCvChange = (event) => {
+        this.setState({ cv: event.target.value }, () => {
+            this.validateCv();
+        });
+    }
+    validateName = () => {
+        const { name } = this.state;
+        if (name === '') {
+            this.setState({
+                nameError: 'Please type your name'
+            });
+            return true
+        }
+        else if (name.length < 3) {
+            this.setState({
+                nameError: 'Name must be longer than 2 characters'
+            });
+            return true
+        }
+        else if (name.match(/^\s+$/) !== null) {
+            this.setState({
+                nameError: 'Please type valid name'
+            });
+            return true
+        }
+        else {
+            this.setState({
+                nameError: ''
+            });
+            return false
+        }
+        // this.setState({
+        //     nameError:
+        //         name.length > 3 ? null : 'Name must be longer than 3 characters'
+        // });
+    }
+    validateEmail = () => {
+        const { email } = this.state;
+        if (email === '') {
+            this.setState({
+                emailError: 'Please Enter your email'
+            });
+            return true
+        }
+        else if (!email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
+            this.setState({
+                emailError: 'Please Enter Valid email'
+
+            });
+            return true
+        }
+        else {
+            this.setState({
+                emailError: ''
+
+            });
+            return false
+        }
+        // this.setState({
+        //     emailError:
+        //         email.length > 3 ? null : 'Name must be longer than 3 characters'
+        // });
+    }
+    validatePhone = () => {
+        const { phone } = this.state;
+        if (phone === '') {
+            this.setState({
+                phoneError: 'Please type your number'
+            });
+            return true
+        }
+        else if (isNaN(phone)) {
+            this.setState({
+                phoneError: 'Please type only number'
+            });
+            return true
+        }
+        else {
+            this.setState({
+                phoneError: ''
+            });
+            return false
+        }
+    }
+    validateCv = () => {
+        const { cv } = this.state;
+        if (cv === '') {
+            this.setState({
+                cvError: 'Please Upload your CV'
+            });
+            return true
+        }
+        else {
+            this.setState({
+                cvError: ''
+            });
+            return false
+        }
+    }
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.validateName();
+        this.validateEmail();
+        this.validatePhone();
+        this.validateCv();
+        if (this.validateName() === true) {
+            $('html, body').animate({ scrollTop: $('#name').offset().top - 150 }, 'slow');
+            return false;
+        }
+        else if (this.validateEmail() === true) {
+            $('html, body').animate({ scrollTop: $('#email').offset().top - 150 }, 'slow');
+            return false;
+        }
+
+        else if (this.validatePhone() === true) {
+            $('html, body').animate({ scrollTop: $('#phone').offset().top - 150 }, 'slow');
+            return false;
+        }
+        else if (this.validateCv() === true) {
+            $('html, body').animate({ scrollTop: $('#cv').offset().top - 150 }, 'slow');
+            return false;
+        }
+        else {
+            Swal.fire({
+                icon: 'success',
+                title: 'The form has been successfully submitted',
+                showConfirmButton: true
+            })
+        }
+    }
+
     render() {
         return (
             <div className="page application-form">
@@ -39,7 +191,7 @@ class ApplicationForm extends Component {
                 {/* End Banner */}
                 <section className="career-form">
                     <div className="container">
-                        <form method="post">
+                        <form onSubmit={this.handleSubmit}>
                             <div className="row">
                                 <div className="col-lg-3">
                                     <h3>Personal information</h3>
@@ -49,20 +201,24 @@ class ApplicationForm extends Component {
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group">
-                                                <label>Full Name*</label>
-                                                <input type="text" className="form-control" id="formGroupExampleInput" placeholder="|" />
+                                                <label>Full Name <span className="text-danger">*</span></label>
+                                                <input type="text" className={`form-control ${this.state.nameError ? 'is-invalid' : ''}`} id="name" name="full_name" value={this.state.name} onChange={this.handleNameChange} onBlur={this.validateName} placeholder="|" />
+                                                <div className='invalid-feedback'>{this.state.nameError}</div>
                                             </div>
                                             <div className="form-group">
-                                                <label>Email address *</label>
-                                                <input type="email" className="form-control" id="formGroupExampleInput2" placeholder="Your email address" />
+                                                <label>Email address <span className="text-danger">*</span></label>
+                                                <input type="email" className={`form-control ${this.state.emailError ? 'is-invalid' : ''}`} name="email" id="email" value={this.state.email} onChange={this.handleEmailChange} onBlur={this.validateEmail} placeholder="Your email address" />
+                                                <div className='invalid-feedback'>{this.state.emailError}</div>
                                             </div>
                                             <div className="form-group">
-                                                <label>Phone number *</label>
-                                                <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Your phone number" />
+                                                <label>Phone number <span className="text-danger">*</span></label>
+                                                <input type="text" className={`form-control ${this.state.phoneError ? 'is-invalid' : ''}`} name="phone" id="phone" value={this.state.phone} onChange={this.handlePhoneChange} onBlur={this.validatePhone} placeholder="Your phone number" />
+                                                <div className='invalid-feedback'>{this.state.phoneError}</div>
                                             </div>
-                                            <div className="form-group">
-                                                <label>Photo</label>
-                                                <input type="file" className="form-control-file" id="exampleFormControlFile1" />
+                                            <div className="form-group photo-upload">
+                                                <h2 className="photo-lebel">Photo</h2>
+                                                <label for="photo" className="photo">Add File </label>
+                                                <input type="file" className="form-control-file" name="photo" id="photo" />
                                                 <span>We accept PNG, JPG, and JPEG files</span>
                                             </div>
                                         </div>
@@ -72,16 +228,17 @@ class ApplicationForm extends Component {
                             <hr />
                             <div className="row">
                                 <div className="col-lg-3">
-                                    <h3>CV / Resume *</h3>
+                                    <h3>CV / Resume <span className="text-danger">*</span></h3>
                                     <p>Upload your CV or resume file</p>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <div className="form-group">
-                                                <label>Add File</label>
-                                                <input type="file" className="form-control-file" id="exampleFormControlFile1" />
+                                            <div className="form-group file-upload">
+                                                <label for="cv" className="cv">Add File</label>
+                                                <input type="file" className={`form-control ${this.state.cvError ? 'is-invalid' : ''}`} name="cv" id="cv" value={this.state.cv} onChange={this.handleCvChange} onBlur={this.validateCv} />
                                                 <span>We accept PDF, DOC, DOCX, JPG and PNG files</span>
+                                                <div className='invalid-feedback'>{this.state.cvError}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -103,9 +260,10 @@ class ApplicationForm extends Component {
                                     </div>
                                 </div>
                             </div>
+                            <hr />
                             <div className="row">
                                 <div className="col-lg-12 d-block text-center">
-                                    <button type="submit" className="cus-btn">Submit Application</button>
+                                    <button type="submit"><span className="text-color">Submit</span> Application</button>
                                 </div>
                             </div>
                         </form>
