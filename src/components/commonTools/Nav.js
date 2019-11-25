@@ -112,7 +112,7 @@ class Nav extends Component {
                           <NavLink activeClassName="active" className="nav-link" to="/service">Our Services</NavLink>
                         </li> */}
                           <li className="nav-item dropdown">
-                            <Link to="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Services <span className="caret"></span></Link>
+                            <Link to="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Services <i className="fas fa-chevron-down"></i></Link>
                             <ul className="dropdown-menu">
                               <li className="nav-item">
                                 <NavLink activeClassName="active" className="nav-link" to="/iets">Apps Development</NavLink>

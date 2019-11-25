@@ -10657,7 +10657,7 @@ a {
   font-size: 18px;
 }
 
-button {
+.button {
   -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
@@ -10991,7 +10991,7 @@ button:focus {
   z-index: 9;
 }
 
-.banner .inroText {
+.banner .introText {
   min-height: 570px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11008,13 +11008,19 @@ button:focus {
           align-items: center;
 }
 
-.banner .inroText h1 {
+.banner .introText h1 {
   z-index: 9;
   position: relative;
   color: #ffffff;
+  font-size: 82px;
+  -webkit-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  -moz-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  -ms-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  -o-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
 }
 
-.banner .inroText p {
+.banner .introText p {
   font-size: 44px;
   -webkit-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
   -moz-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
@@ -11027,7 +11033,7 @@ button:focus {
   text-align: left;
 }
 
-.banner .inroText.display-bottom {
+.banner .introText.display-bottom {
   -moz-align-items: flex-start;
   -ms-align-items: flex-start;
   -ms-flex-align: flex-start;
@@ -11045,7 +11051,7 @@ button:focus {
           flex-direction: column;
 }
 
-.banner .inroText.display-bottom h1 {
+.banner .introText.display-bottom h1 {
   font-size: 82px;
   font-family: "rawlineextrabold";
   -webkit-text-shadow: 0 3px 14px rgba(0, 0, 0, 0.22);
@@ -11113,7 +11119,6 @@ button:focus {
 }
 
 .project {
-  background: #221f1f;
   padding-bottom: 180px;
 }
 
@@ -11381,6 +11386,26 @@ button:focus {
   color: #f26a11;
 }
 
+.fullscreen-menu .modal-content .modal-body .left-menu .dropdown .dropdown-toggle:after {
+  content: none;
+}
+
+.fullscreen-menu .modal-content .modal-body .left-menu .dropdown .dropdown-toggle i {
+  margin-left: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.fullscreen-menu .modal-content .modal-body .left-menu .dropdown.show i {
+  -webkit-transform: rotate(180deg);
+  -moz-transition: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transition: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 .fullscreen-menu .modal-content .modal-body .left-menu .dropdown-menu {
   background: none;
 }
@@ -11410,7 +11435,7 @@ button:focus {
 
 .fullscreen-menu.fixedCloseBtn .modal-content .modal-header button {
   position: fixed;
-  right: 32px;
+  right: 15px;
   z-index: 999;
 }
 
@@ -11542,14 +11567,19 @@ button:focus {
   display: none;
 }
 
-#homeSlider .inroText {
+#homeSlider .slick-slide {
+  position: relative;
+}
+
+#homeSlider .slick-slide .introText {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  max-width: 100%;
 }
 
-#homeSlider .inroText h1 {
+#homeSlider .slick-slide .introText h1 {
   font-family: "rawlineextrabold";
   margin: 0 0 10px 0;
   padding: 15px;
@@ -11601,7 +11631,7 @@ button:focus {
   min-height: 100vh;
 }
 
-.intro .inroText h1 {
+.intro .introText h1 {
   font-family: "rawlineextrabold";
   margin: 0 0 10px 0;
   font-size: 66px;
@@ -11616,7 +11646,7 @@ button:focus {
   text-shadow: 0px 2px 11px rgba(0, 0, 0, 0.56);
 }
 
-.intro .inroText h1 .text-color {
+.intro .introText h1 .text-color {
   font-size: 82px;
   line-height: 113px;
 }
@@ -11639,6 +11669,12 @@ button:focus {
 
 .home-sidebar .wrap {
   height: 100vh;
+}
+
+.home-sidebar .service-menu {
+  min-height: 300px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .home-sidebar .service-menu ul li {
@@ -11707,10 +11743,14 @@ button:focus {
 
 .home-sidebar .service-menu.sticky-menu.fixed {
   position: fixed;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .home-sidebar .service-menu.sticky-menu.footstick {
   position: absolute;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .service-block {
@@ -12087,6 +12127,10 @@ button:focus {
 
 .contact-form .form-group button:focus {
   outline: 0;
+  -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2) !important;
+  -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2) !important;
+  -o-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2) !important;
 }
 
 .contact-form .invalid-feedback {
@@ -12151,6 +12195,10 @@ button:focus {
 
 .career .career-position .accordion .card {
   border-bottom: 1px solid #e1e1e1;
+}
+
+.career .career-position .accordion .card:first-child {
+  border-top: 1px solid #e1e1e1;
 }
 
 .career .career-position .accordion .card .card-header {
@@ -12278,6 +12326,7 @@ button:focus {
   height: 0;
   overflow: hidden;
   width: 0;
+  padding: 0;
 }
 
 .application-form .career-form .form-group label.file {
@@ -12341,6 +12390,25 @@ button:focus {
   position: absolute;
   left: 150px;
   top: 10px;
+}
+
+.application-form .career-form button {
+  -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  font-size: 24px;
+  font-family: "proxima_novabold";
+  border: none;
+  padding: 10px 40px;
+}
+
+.application-form .career-form button:focus {
+  -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3) !important;
+  -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3) !important;
+  -o-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3) !important;
 }
 
 .application-form .career-form hr {
@@ -12483,7 +12551,7 @@ button:focus {
   content: none;
 }
 
-.about .about-slider .slick-arrow.slick-next:hover {
+.about .about-slider .slick-arrow.slick-next:hover, .about .about-slider .slick-arrow.slick-next:active, .about .about-slider .slick-arrow.slick-next:focus {
   background: url("../img/icon/right-arrow-hover.png");
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -12507,7 +12575,7 @@ button:focus {
   content: none;
 }
 
-.about .about-slider .slick-arrow.slick-prev:hover {
+.about .about-slider .slick-arrow.slick-prev:hover, .about .about-slider .slick-arrow.slick-prev:active, .about .about-slider .slick-arrow.slick-prev:focus {
   background: url("../img/icon/left-arrow-hover.png");
   background-repeat: no-repeat;
   -webkit-transition: all 0.3s ease-in-out;
@@ -12869,7 +12937,7 @@ button:focus {
 
 .top-bottom-image .align-middle .double-img {
   position: relative;
-  right: -250px;
+  right: -215px;
 }
 
 .top-bottom-image .align-middle .double-img img {
@@ -12919,7 +12987,7 @@ button:focus {
 
 .iets .advantage .img-block {
   position: relative;
-  right: -200px;
+  right: -215px;
 }
 
 .iets .advantage .img-block img {
@@ -12980,6 +13048,10 @@ button:focus {
 
 .iets .tools-and-tech .accordion .card {
   border-bottom: 1px solid #333;
+}
+
+.iets .tools-and-tech .accordion .card:first-child {
+  border-top: 1px solid #333;
 }
 
 .iets .tools-and-tech .accordion .card:last-child {
@@ -13259,6 +13331,8 @@ button:focus {
 }
 
 .single-app .screenshots .screenshot-slider .slick-arrow.slick-next {
+  -webkit-box-shadow: none;
+          box-shadow: none;
   left: -40%;
   bottom: -70px;
   top: 50%;
@@ -13292,6 +13366,8 @@ button:focus {
   transition: all 0.3s ease-in-out;
   background-repeat: no-repeat;
   width: 26px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .single-app .screenshots .screenshot-slider .slick-arrow.slick-prev:before {
@@ -13319,6 +13395,10 @@ button:focus {
 
 .single-app .youtube-channel .content-block img {
   border-radius: 5px;
+}
+
+.single-app .youtube-channel .video-block iframe {
+  border: none;
 }
 
 .single-app .used-technology h2 {
@@ -13422,6 +13502,7 @@ button:focus {
 }
 
 /* -----------  End Single App page css----------- */
+/* ----------- Contact Page css----------- */
 .contact .contact-us {
   margin-top: 120px;
   padding-bottom: 0;
@@ -13480,6 +13561,10 @@ button:focus {
   box-shadow: 0 12px 50px rgba(0, 0, 0, 0.13);
 }
 
+.contact .contact-us .contact-form .section-title h2 {
+  font-size: 82px;
+}
+
 .contact .contact-us .contact-form .float-right {
   text-align: center;
   float: none !important;
@@ -13487,20 +13572,24 @@ button:focus {
 
 .contact .contact-us .contact-form .angle-top {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
 }
 
 .contact .contact-us .contact-form .angle-bottom {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 15px;
+  right: 15px;
 }
 
 .contact .contact-us .contact-form p {
   font-size: 24px;
   line-height: 35px;
   margin-top: 20px;
+}
+
+.contact .contact-us .contact-form button {
+  padding: 10px 30px;
 }
 
 .contact .google-map .title {
@@ -13512,6 +13601,113 @@ button:focus {
   border: none;
 }
 
+/* ----------- End Contact Page css----------- */
+/* ----------- Work Page css----------- */
+.grid {
+  background: #ddd;
+}
+
+/* clear fix */
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---- .element-item ---- */
+/* 5 columns, percentage width */
+.grid-item,
+.grid-sizer {
+  width: 20%;
+}
+
+.grid-item img {
+  width: 100%;
+}
+
+.grid-item {
+  float: left;
+  width: 40%;
+  height: 460px;
+}
+
+.grid-item--width2 {
+  width: 60%;
+}
+
+.work .banner {
+  -webkit-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.work .banner:before {
+  content: none;
+}
+
+.work .banner .introText h1 {
+  color: #221f1f;
+}
+
+.work .project {
+  padding-bottom: 120px;
+}
+
+.work .project button {
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  border: none;
+  background: #fff;
+  padding: 8px 50px;
+  font-size: 40px;
+  margin: 28px 35px;
+  font-family: "proxima_novaregular";
+  border-radius: 16px;
+  color: #7d7d7d;
+}
+
+.work .project button.mixitup-control-active {
+  -webkit-box-shadow: 0 3px 26px rgba(242, 106, 17, 0.28);
+  -ms-box-shadow: 0 3px 26px rgba(242, 106, 17, 0.28);
+  -o-box-shadow: 0 3px 26px rgba(242, 106, 17, 0.28);
+  box-shadow: 0 3px 26px rgba(242, 106, 17, 0.28);
+  font-weight: 700;
+  color: #221f1f;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.work .project button.mixitup-control-active:focus, .work .project button.mixitup-control-active:active {
+  -webkit-box-shadow: 0 3px 26px rgba(242, 106, 17, 0.28) !important;
+  -ms-box-shadow: 0 3px 26px rgba(242, 106, 17, 0.28) !important;
+  -o-box-shadow: 0 3px 26px rgba(242, 106, 17, 0.28) !important;
+  box-shadow: 0 3px 26px rgba(242, 106, 17, 0.28) !important;
+  font-weight: 700;
+  color: #221f1f;
+}
+
+.work .project .projectfilter {
+  margin-top: 60px;
+}
+
+.swap-items {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.swap-items.reverse-items {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+/* ----------- End Work page css----------- */
 /* ----------- Footer css----------- */
 footer {
   padding: 80px 0;
@@ -13560,6 +13756,11 @@ footer ul li a:hover {
 
 footer .footer-contact {
   margin-top: 58px;
+}
+
+footer .newsletter {
+  max-width: 420px;
+  margin: 30px auto 0;
 }
 
 footer .newsletter input {
@@ -13627,15 +13828,10 @@ footer .term-condition ul li a {
 
 /* ----------- End Footer css----------- */
 /* ----------- Suppoted Maximum mobile, Tablet and Desktop ----------- */
-@media (max-width: 1800px) {
-  /*----------------------Apps Details Page Css-----------------------------*/
-  /*----------------------End Apps Details Page Css-----------------------------*/
-}
-
-@media (min-width: 1367px) and (max-width: 1600px) {
+@media (min-width: 1601px) and (max-width: 1800px) {
   /*Common css for whole site*/
   .top-content .list-box {
-    right: -100px;
+    right: -60px;
   }
   .top-bottom-image {
     padding-bottom: 150px;
@@ -13645,11 +13841,55 @@ footer .term-condition ul li a {
     line-height: 60px;
   }
   .top-bottom-image .align-middle .double-img {
-    right: -100px;
+    right: auto;
   }
   .top-bottom-image .align-middle .double-img .top-img {
-    right: 100px;
+    right: auto;
     top: 80px;
+    left: 100px;
+  }
+  /*End Common css for whole site*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .app-development .double-img {
+    right: -75px;
+  }
+  .app-details .app-development .double-img .top-img {
+    right: 100px;
+    left: auto;
+  }
+  /*----------------------End Apps Details Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets .advantage .img-block {
+    right: -75px;
+  }
+  .iets .top-bottom-image .align-middle .double-img {
+    right: 100px;
+  }
+  .iets .top-bottom-image .align-middle .double-img .top-img {
+    left: 140px;
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
+}
+
+@media (min-width: 1367px) and (max-width: 1600px) {
+  /*Common css for whole site*/
+  .top-content .list-box {
+    right: -60px;
+  }
+  .top-bottom-image {
+    padding-bottom: 150px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 35px;
+    line-height: 60px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: auto;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: auto;
+    top: 80px;
+    left: 100px;
   }
   /*End Common css for whole site*/
   /*Navigation Css*/
@@ -13658,30 +13898,40 @@ footer .term-condition ul li a {
   }
   /*End Navigation Css*/
   /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .app-development .double-img {
+    right: -75px;
+  }
+  .app-details .app-development .double-img .top-img {
+    right: 100px;
+    left: auto;
+  }
   /*----------------------End Apps Details Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets .advantage .img-block {
+    right: -75px;
+  }
+  .iets .advantage .content-block h2 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
 }
 
-/*----------------------Iets Page Css-----------------------------*/
-.iets .advantage .img-block {
-  right: -100px;
-}
-
-/*----------------------End Iets Page Css-----------------------------*/
 @media (min-width: 1201px) and (max-width: 1366px) {
   /*Common css for whole site*/
   section {
     padding: 60px 0;
   }
   .section-title h2 {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 60px;
+    line-height: 65px;
   }
   .section-title p {
     font-size: 18px;
     line-height: 30px;
   }
   .top-content .list-box {
-    right: 0;
+    right: 15px;
   }
   .top-bottom-image {
     padding-bottom: 150px;
@@ -13694,8 +13944,9 @@ footer .term-condition ul li a {
     right: 0;
   }
   .top-bottom-image .align-middle .double-img .top-img {
-    right: 100px;
+    right: auto;
     top: 80px;
+    left: 80px;
   }
   /*End Common css for whole site*/
   /*Navigation Css*/
@@ -13704,14 +13955,14 @@ footer .term-condition ul li a {
   }
   /*End Navigation Css*/
   /*Intro home css*/
-  .intro .inroText {
+  .intro .introText {
     padding: 40px;
   }
-  .intro .inroText h1 {
+  .intro .introText h1 {
     font-size: 60px;
     line-height: 80px;
   }
-  .intro .inroText h1 .text-color {
+  .intro .introText h1 .text-color {
     font-size: 60px;
     line-height: 80px;
   }
@@ -13769,11 +14020,51 @@ footer .term-condition ul li a {
   }
   /*End contact form css*/
   /*----------------------Apps Details Page Css-----------------------------*/
-  .app-details .banner .inroText h1 {
+  .app-details .banner .introText h1 {
     font-size: 60px;
   }
+  .app-details .app-development .double-img .top-img {
+    right: 100px;
+    left: auto;
+  }
   /*----------------------End Apps Details Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets .advantage .content-block h2 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+  .iets .advantage .img-block {
+    position: relative;
+    right: 0;
+  }
+  .iets .top-bottom-image {
+    padding-bottom: 100px;
+  }
+  .iets .top-bottom-image .align-middle .double-img .top-img {
+    left: 100px;
+  }
+  .iets .top-bottom-image .align-middle .double-img img {
+    max-width: 300px;
+  }
+  .iets .top-bottom-image .align-middle .content-block {
+    padding: 0;
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*---------------------------------Conatct Page Css-----------------------------*/
+  .contact .contact-us .contact-form .section-title h2 {
+    font-size: 60px;
+  }
+  .contact .contact-us .contact-form .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /*----------------------------------End Conatct Page Css-------------------------*/
   /*footer css*/
+  footer {
+    padding: 60px 0;
+  }
   footer .newsletter .input-group-text {
     padding: 0 15px;
   }
@@ -13804,6 +14095,16 @@ footer .term-condition ul li a {
     font-size: 20px;
     line-height: 30px;
   }
+  .banner .introText {
+    min-height: auto;
+  }
+  .banner .introText.display-bottom h1 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+  .banner .introText.display-bottom p {
+    font-size: 25px;
+  }
   .top-content .list-box {
     right: auto;
   }
@@ -13828,14 +14129,14 @@ footer .term-condition ul li a {
   }
   /*End Navigation Css*/
   /*Intro home css*/
-  .intro .inroText {
+  .intro .introText {
     padding: 40px;
   }
-  .intro .inroText h1 {
+  .intro .introText h1 {
     font-size: 50px;
     line-height: 70px;
   }
-  .intro .inroText h1 .text-color {
+  .intro .introText h1 .text-color {
     font-size: 60px;
     line-height: 70px;
   }
@@ -13883,20 +14184,6 @@ footer .term-condition ul li a {
     font-size: 40px;
     line-height: 50px;
   }
-  .home-work .swap-items::before {
-    -webkit-transform: rotate(50deg);
-    -moz-transition: rotate(50deg);
-    -ms-transform: rotate(50deg);
-    -o-transition: rotate(50deg);
-    transform: rotate(50deg);
-  }
-  .home-work .swap-items.reverse-items::before {
-    -webkit-transform: rotate(-75deg);
-    -moz-transition: rotate(-75deg);
-    -ms-transform: rotate(-75deg);
-    -o-transition: rotate(-75deg);
-    transform: rotate(-75deg);
-  }
   .home-work .swap-items .content-block h2 {
     font-size: 35px;
   }
@@ -13908,10 +14195,47 @@ footer .term-condition ul li a {
   }
   /*End contact form css*/
   /*----------------------Apps Details Page Css-----------------------------*/
-  .app-details .banner .inroText h1 {
+  .app-details .banner .introText h1 {
     font-size: 60px;
   }
+  .app-details .top-content .list-box {
+    right: 15px;
+  }
   /*----------------------End Apps Details Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets .top-content .list-box {
+    right: 15px;
+  }
+  .iets .advantage .content-block h2 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+  .iets .advantage .img-block {
+    position: relative;
+    right: 0;
+  }
+  .iets .top-bottom-image {
+    padding-bottom: 100px;
+  }
+  .iets .top-bottom-image .align-middle .double-img .top-img {
+    left: 100px;
+  }
+  .iets .top-bottom-image .align-middle .double-img img {
+    max-width: 300px;
+  }
+  .iets .top-bottom-image .align-middle .content-block {
+    padding: 0;
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*---------------------------------Conatct Page Css-----------------------------*/
+  .contact .contact-us .contact-form .section-title h2 {
+    font-size: 60px;
+  }
+  .contact .contact-us .contact-form .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /*----------------------------------End Conatct Page Css-------------------------*/
   /*footer css*/
   footer .newsletter .input-group-text {
     padding: 0 15px;
@@ -13997,14 +14321,14 @@ footer .term-condition ul li a {
   }
   /*End Navigation Css*/
   /*Intro home css*/
-  .intro .inroText {
+  .intro .introText {
     padding: 40px;
   }
-  .intro .inroText h1 {
+  .intro .introText h1 {
     font-size: 50px;
     line-height: 70px;
   }
-  .intro .inroText h1 .text-color {
+  .intro .introText h1 .text-color {
     font-size: 60px;
     line-height: 70px;
   }
@@ -14072,20 +14396,6 @@ footer .term-condition ul li a {
     font-size: 40px;
     line-height: 50px;
   }
-  .home-work .swap-items::before {
-    -webkit-transform: rotate(50deg);
-    -moz-transition: rotate(50deg);
-    -ms-transform: rotate(50deg);
-    -o-transition: rotate(50deg);
-    transform: rotate(50deg);
-  }
-  .home-work .swap-items.reverse-items::before {
-    -webkit-transform: rotate(-75deg);
-    -moz-transition: rotate(-75deg);
-    -ms-transform: rotate(-75deg);
-    -o-transition: rotate(-75deg);
-    transform: rotate(-75deg);
-  }
   .home-work .swap-items .content-block h2 {
     font-size: 35px;
   }
@@ -14097,10 +14407,10 @@ footer .term-condition ul li a {
   }
   /*End contact form css*/
   /*----------------------Apps Details Page Css-----------------------------*/
-  .app-details .banner .inroText {
+  .app-details .banner .introText {
     min-height: auto;
   }
-  .app-details .banner .inroText h1 {
+  .app-details .banner .introText h1 {
     font-size: 55px;
     line-height: 75px;
   }
@@ -14142,6 +14452,42 @@ footer .term-condition ul li a {
     margin: 35px 30px;
   }
   /*----------------------End Single App Page Css-----------------------------*/
+  /*----------------------application form Page Css-----------------------------*/
+  .application-form .career-form hr {
+    margin: 30px 0;
+  }
+  /*----------------------End application form Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets .advantage .vertical-middle {
+    display: block;
+  }
+  .iets .advantage .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .iets .advantage .img-block {
+    right: auto;
+  }
+  .iets .advantage .img-block img {
+    float: none !important;
+    margin: 0 auto;
+    display: block;
+  }
+  .iets .top-bottom-image .align-middle .double-img {
+    max-width: 680px;
+    left: 0;
+  }
+  .iets .top-bottom-image .align-middle .double-img .top-img {
+    left: 0;
+  }
+  .iets .tools-and-tech .accordion .card .card-body .card-body-inner {
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -ms-flex-pack: center;
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
   /*----------------------Contact Page Css-----------------------------*/
   .contact .contact-us .vertical-middle {
     display: block;
@@ -14155,6 +14501,13 @@ footer .term-condition ul li a {
   }
   .contact .contact-us .vertical-middle .pl-0 {
     padding-left: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .contact-form .section-title h2 {
+    font-size: 40px;
+  }
+  .contact .google-map .title {
+    font-size: 35px;
+    margin-bottom: 60px;
   }
   /*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/
@@ -14171,6 +14524,16 @@ footer .term-condition ul li a {
   /*Common css for whole site*/
   section {
     padding: 40px 0;
+  }
+  .banner .introText {
+    min-height: auto;
+  }
+  .banner .introText.display-bottom h1 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+  .banner .introText.display-bottom p {
+    font-size: 25px;
   }
   .section-title h2 {
     font-size: 35px;
@@ -14254,12 +14617,27 @@ footer .term-condition ul li a {
     line-height: 40px;
   }
   /*End Navigation Css*/
+  /*Home page css*/
+  /*Home Slider*/
+  #homeSlider {
+    display: block;
+  }
+  #homeSlider .slick-slide .introText {
+    left: 20px;
+  }
+  #homeSlider .slick-slide .introText h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
   /*Intro home css*/
-  .intro .inroText h1 {
+  .intro {
+    display: none;
+  }
+  .intro .introText h1 {
     font-size: 50px;
     line-height: 45px;
   }
-  .intro .inroText h1 .text-color {
+  .intro .introText h1 .text-color {
     font-size: 60px;
     line-height: 70px;
   }
@@ -14366,9 +14744,9 @@ footer .term-condition ul li a {
     margin: 0 auto;
   }
   .home-work .swap-items .content-block h2 {
-    font-size: 30px;
-    line-height: 40px;
-    margin: 25px 0 20px 0;
+    font-size: 35px;
+    line-height: 45px;
+    margin: 10px 0 20px 0;
   }
   .home-work .swap-items .content-block p {
     text-align: left;
@@ -14393,10 +14771,10 @@ footer .term-condition ul li a {
   }
   /*End Process Page Css*/
   /*----------------------Apps Details Page Css-----------------------------*/
-  .app-details .banner .inroText {
+  .app-details .banner .introText {
     min-height: auto;
   }
-  .app-details .banner .inroText h1 {
+  .app-details .banner .introText h1 {
     font-size: 35px;
     line-height: 45px;
   }
@@ -14415,6 +14793,13 @@ footer .term-condition ul li a {
     float: none !important;
     margin: 0 auto;
     display: block;
+  }
+  .iets .tools-and-tech .accordion .card .card-body .card-body-inner {
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -ms-flex-pack: center;
   }
   /*----------------------End Iets Page Css-----------------------------*/
   /*----------------------Single App Page Css-----------------------------*/
@@ -14462,6 +14847,31 @@ footer .term-condition ul li a {
     margin: 35px 20px;
   }
   /*----------------------End Single App Page Css-----------------------------*/
+  /*----------------------career Page Css-----------------------------*/
+  .career .career-position h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .career .career-position .accordion .card .card-header button {
+    font-size: 24px;
+  }
+  .career .career-position .accordion .card .card-body {
+    padding: 0px 0 60px;
+  }
+  .career .career-position .accordion .card .card-body .content-block .vacancy {
+    margin-left: 0;
+  }
+  .career .career-position .accordion .card .card-body .cus-btn {
+    margin-left: 0;
+    text-align: center;
+    font-size: 22px;
+  }
+  /*----------------------End career Page Css-----------------------------*/
+  /*----------------------application form Page Css-----------------------------*/
+  .application-form .career-form hr {
+    margin: 30px 0;
+  }
+  /*----------------------End application form Page Css-----------------------------*/
   /*----------------------Contact Page Css-----------------------------*/
   .contact .contact-us .vertical-middle {
     display: block;
@@ -14476,6 +14886,16 @@ footer .term-condition ul li a {
   .contact .contact-us .vertical-middle .pl-0 {
     padding-left: 15px !important;
   }
+  .contact .contact-us .vertical-middle .contact-form .section-title h2 {
+    font-size: 40px;
+  }
+  .contact .contact-us .vertical-middle .contact-form .form-group {
+    margin-bottom: 40px;
+  }
+  .contact .google-map .title {
+    font-size: 35px;
+    margin-bottom: 80px;
+  }
   /*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/
   footer {
@@ -14489,12 +14909,19 @@ footer .term-condition ul li a {
 
 @media (min-width: 320px) and (max-width: 480px) {
   /*Common css for whole site*/
+  .hero-bg-left {
+    display: none;
+  }
+  .hero-bg-right {
+    display: none;
+  }
   section {
     padding: 40px 0;
   }
   .section-title h2 {
     font-size: 35px;
-    line-height: 40px;
+    line-height: 45px;
+    margin-bottom: 15px;
   }
   .section-title p {
     font-size: 20px;
@@ -14504,22 +14931,22 @@ footer .term-condition ul li a {
     font-size: 35px;
     line-height: 45px;
   }
-  .banner .inroText {
+  .banner .introText {
     min-height: auto;
   }
-  .banner .inroText h1 {
+  .banner .introText h1 {
     font-size: 35px;
     line-height: 45px;
   }
-  .banner .inroText p {
+  .banner .introText p {
     font-size: 25px;
     text-align: left;
   }
-  .banner .inroText.display-bottom h1 {
+  .banner .introText.display-bottom h1 {
     font-size: 35px;
     line-height: 45px;
   }
-  .banner .inroText.display-bottom p {
+  .banner .introText.display-bottom p {
     font-size: 25px;
     text-align: left;
   }
@@ -14587,6 +15014,9 @@ footer .term-condition ul li a {
   .fullscreen-menu .modal-content .modal-body .left-menu li a {
     font-size: 20px;
   }
+  .fullscreen-menu .modal-content .modal-body .company-info {
+    margin-top: 20px;
+  }
   .fullscreen-menu .modal-content .modal-body .company-info img {
     max-width: 120px;
   }
@@ -14599,27 +15029,21 @@ footer .term-condition ul li a {
   .fullscreen-menu .modal-content .modal-body .company-info .social-media li {
     margin: 0 6px;
   }
-  .fullscreen-menu.fixedCloseBtn .modal-content .modal-header button {
-    right: 15px;
-  }
   /*End Navigation Css*/
   /*Start  Home Page Css*/
   /*Home Slider*/
   #homeSlider {
     display: block;
   }
-  #homeSlider .inroText {
-    max-width: 320px;
-  }
   /*Intro home css*/
   .intro {
     display: none;
   }
-  .intro .inroText h1 {
+  .intro .introText h1 {
     font-size: 35px;
     line-height: 45px;
   }
-  .intro .inroText h1 .text-color {
+  .intro .introText h1 .text-color {
     font-size: 50px;
     line-height: 70px;
   }
@@ -14699,13 +15123,15 @@ footer .term-condition ul li a {
     line-height: 40px;
   }
   .company-logo ul li {
-    width: 50%;
+    width: 46%;
     display: inline-block;
     text-align: center;
+    margin: 2%;
+    border: 1px solid #e1e1e1;
   }
   .company-logo ul li a img {
     margin: 5px 0;
-    width: 100%;
+    max-width: 100%;
     padding: 0 5px;
   }
   /*End Counter info css*/
@@ -14730,9 +15156,9 @@ footer .term-condition ul li a {
     margin: 0 auto;
   }
   .home-work .swap-items .content-block h2 {
-    font-size: 30px;
-    line-height: 40px;
-    margin: 25px 0 20px 0;
+    font-size: 35px;
+    line-height: 45px;
+    margin: 10px 0 20px 0;
   }
   .home-work .swap-items .content-block p {
     text-align: left;
@@ -14742,13 +15168,16 @@ footer .term-condition ul li a {
   }
   /*End home work css*/
   /*contact form css*/
-  .contact-from .section-title p {
+  .contact-form .section-title p {
     font-size: 20px;
     line-height: 30px;
   }
-  .contact-from .float-right {
+  .contact-form .float-right {
     float: none !important;
     text-align: center;
+  }
+  .contact-form .form-group {
+    margin-bottom: 40px;
   }
   /*End contact form css*/
   /*End Home Page Css*/
@@ -14758,10 +15187,10 @@ footer .term-condition ul li a {
   }
   /*End Process Page Css*/
   /*----------------------Apps Details Page Css-----------------------------*/
-  .app-details .banner .inroText {
+  .app-details .banner .introText {
     min-height: auto;
   }
-  .app-details .banner .inroText h1 {
+  .app-details .banner .introText h1 {
     font-size: 35px;
     line-height: 45px;
   }
@@ -14777,6 +15206,12 @@ footer .term-condition ul li a {
   .iets .advantage .img-block {
     right: auto;
   }
+  .iets .advantage .img-block img {
+    float: none !important;
+    float: none !important;
+    margin: 0 auto;
+    display: block;
+  }
   .iets .tools-and-tech .accordion .card .card-header button {
     font-size: 22px;
   }
@@ -14789,6 +15224,9 @@ footer .term-condition ul li a {
   }
   /*----------------------End Iets Page Css-----------------------------*/
   /*----------------------Single App Page Css-----------------------------*/
+  .single-app .short-info h2 {
+    margin-bottom: 30px;
+  }
   .single-app .short-info .description {
     display: block;
     margin: 30px 0;
@@ -14820,17 +15258,52 @@ footer .term-condition ul li a {
   .single-app .screenshots .content-block {
     padding: 0;
   }
+  .single-app .screenshots .screenshot-slider {
+    margin-bottom: 0;
+  }
+  .single-app .screenshots .screenshot-slider .slick-slider .slick-current img {
+    -webkit-transform: scale(1);
+    -moz-transition: scale(1);
+    -ms-transform: scale(1);
+    -o-transition: scale(1);
+    transform: scale(1);
+  }
+  .single-app .screenshots .screenshot-slider .slick-slider .slick-arrow.slick-next {
+    top: 15px;
+    left: 50%;
+  }
+  .single-app .screenshots .screenshot-slider .slick-slider .slick-arrow.slick-prev {
+    top: 15px;
+    left: 50%;
+  }
+  .single-app .screenshots .screenshot-slider .slick-slider .image {
+    padding-bottom: 0;
+  }
   .single-app .youtube-channel .vertical-middle {
     display: block;
   }
   .single-app .youtube-channel .vertical-middle .content-block {
     margin-bottom: 40px;
   }
+  .single-app .youtube-channel .vertical-middle .content-block .inner-title h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .single-app .youtube-channel .vertical-middle .video-block iframe {
+    max-height: 280px;
+  }
   .single-app .used-technology .technology-wrap {
     margin: 0;
   }
   /*----------------------End Single App Page Css-----------------------------*/
   /*----------------------Career Page Css-----------------------------*/
+  .career .career-position h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .career .career-position .accordion .card .card-header button {
+    font-size: 24px;
+  }
   .career .career-position .accordion .card .card-body {
     padding: 0px 0 60px;
   }
@@ -14839,8 +15312,25 @@ footer .term-condition ul li a {
   }
   .career .career-position .accordion .card .card-body .cus-btn {
     margin-left: 0;
+    text-align: center;
+    font-size: 22px;
   }
   /*----------------------End Career Page Css-----------------------------*/
+  /*----------------------application form Page Css-----------------------------*/
+  .application-form .career-form hr {
+    margin: 30px 0;
+  }
+  .application-form .career-form .form-group.photo-upload span {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+  .application-form .career-form .form-group.file-upload span {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+  /*----------------------End application form Page Css-----------------------------*/
   /*----------------------Contact Page Css-----------------------------*/
   .contact .contact-us .vertical-middle {
     display: block;
@@ -14855,11 +15345,22 @@ footer .term-condition ul li a {
   .contact .contact-us .vertical-middle .pl-0 {
     padding-left: 15px !important;
   }
+  .contact .contact-us .vertical-middle .contact-form .section-title h2 {
+    font-size: 40px;
+  }
   .contact .contact-us .vertical-middle .contact-form .angle-top {
     width: 50px;
   }
   .contact .contact-us .vertical-middle .contact-form .angle-bottom {
     width: 50px;
+  }
+  .contact .contact-us .vertical-middle .contact-form .form-group {
+    margin-bottom: 40px;
+  }
+  .contact .google-map .title {
+    font-size: 35px;
+    margin-bottom: 40px;
+    line-height: 45px;
   }
   /*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/

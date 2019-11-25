@@ -213,25 +213,25 @@ class Contact extends Component {
                                         </div>
                                         <form id="ContactForm" onSubmit={this.handleSubmit}>
                                             <div className="row">
-                                                <div className="col-lg-6">
+                                                <div className="col-lg-6 col-md-6">
                                                     <div className="form-group">
                                                         <input type="text" name="names" className={`form-control ${this.state.nameError ? 'is-invalid' : ''}`} id="name" placeholder="Your Name" value={this.state.name} onChange={this.handleNameChange} onBlur={this.validateName} />
                                                         <div className='invalid-feedback'>{this.state.nameError}</div>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-6">
+                                                <div className="col-lg-6 col-md-6">
                                                     <div className="form-group">
                                                         <input type="email" name="email" className={`form-control ${this.state.emailError ? 'is-invalid' : ''}`} id="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} onBlur={this.validateEmail} />
                                                         <div className='invalid-feedback'>{this.state.emailError}</div>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-6">
+                                                <div className="col-lg-6 col-md-6">
                                                     <div className="form-group">
                                                         <input type="text" name="phone" className={`form-control ${this.state.phoneError ? 'is-invalid' : ''}`} id="phone" placeholder="Phone Number" value={this.state.phone} onChange={this.handlephoneChange} onBlur={this.validatephone} />
                                                         <div className='invalid-feedback'>{this.state.phoneError}</div>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-6">
+                                                <div className="col-lg-6 col-md-6">
                                                     <div className="form-group">
                                                         <input type="text" name="company" className="form-control" id="companyName" placeholder="Company (Optional)" value={this.state.company} />
                                                     </div>

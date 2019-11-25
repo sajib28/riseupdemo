@@ -39,7 +39,7 @@ class Home extends Component {
             var scrollDistance = $(window).scrollTop() + Menuheight;
             // Assign active class to nav links while scolling
             $('.service-block').each(function (i) {
-                if ($(this).position().top <= scrollDistance) {
+                if ($(this).position().top <= scrollDistance - Menuheight) {
 
                     $('.service-menu a.active').removeClass('active');
                     $('.service-menu a').eq(i).addClass('active');
@@ -55,15 +55,17 @@ class Home extends Component {
 
         $(window).scroll(function () {
             var a = $(window).scrollTop();
+            var serviceMenu = $('.service-menu').height();
+            var screenmiddle = ($(window).height() / 2) - (serviceMenu / 2);
             var pos = $('#mainMenu').height();
-            var b = $('.wrap').offset().top - pos;
+            var b = $('.wrap').offset().top - pos - screenmiddle - 50;
 
             var m = $('.sticky-menu').outerHeight() + $('#mainMenu').outerHeight();
 
             var fixtop = $('#mainMenu').outerHeight();
-            var y = $('.home-project').offset().top - m;
+            var y = $('.home-project').offset().top - screenmiddle * 2 - 50;
             if (a > b) {
-                $('.sticky-menu').addClass('fixed').css({ 'top': fixtop + 'px' });
+                $('.sticky-menu').addClass('fixed').css({ 'top': screenmiddle + 50 + 'px' });
                 $('.wrap').height($('.sticky-menu').outerHeight());
             }
             else {
@@ -71,7 +73,6 @@ class Home extends Component {
                 $('.wrap').height(0);
             }
             if (a > y) {
-                // alert('removed');
                 $('.sticky-menu').addClass('footstick');
                 $('.wrap').height($('.sticky-menu').outerHeight());
 

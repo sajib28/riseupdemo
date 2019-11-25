@@ -127,11 +127,18 @@ class ApplicationForm extends Component {
     }
     validateCv = () => {
         const { cv } = this.state;
+        var allowedExtensions = /(\.pdf|\.doc|\.docx|\.jpg|\.png)$/i;
         if (cv === '') {
             this.setState({
                 cvError: 'Please Upload your CV'
             });
             return true
+        }
+        else if(!allowedExtensions.exec(cv)){
+            this.setState({
+                cvError: 'Please Upload your Cv with Valid Extension'
+            });
+            return false
         }
         else {
             this.setState({
@@ -181,7 +188,7 @@ class ApplicationForm extends Component {
                 <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="inroText">
+                                <div className="introText">
                                     <h1><span className="text-color">Game </span>Artist</h1>
                                 </div>
                             </div>
@@ -193,11 +200,11 @@ class ApplicationForm extends Component {
                     <div className="container">
                         <form onSubmit={this.handleSubmit}>
                             <div className="row">
-                                <div className="col-lg-3">
+                                <div className="col-lg-3 col-md-5">
                                     <h3>Personal information</h3>
                                     <p>Tell us something about yourself</p>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 col-md-7">
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group">
@@ -217,7 +224,7 @@ class ApplicationForm extends Component {
                                             </div>
                                             <div className="form-group photo-upload">
                                                 <h2 className="photo-lebel">Photo</h2>
-                                                <label for="photo" className="photo">Add File </label>
+                                                <label htmlFor="photo" className="photo">Add File </label>
                                                 <input type="file" className="form-control-file" name="photo" id="photo" />
                                                 <span>We accept PNG, JPG, and JPEG files</span>
                                             </div>
@@ -227,17 +234,18 @@ class ApplicationForm extends Component {
                             </div>
                             <hr />
                             <div className="row">
-                                <div className="col-lg-3">
+                                <div className="col-lg-3 col-md-5">
                                     <h3>CV / Resume <span className="text-danger">*</span></h3>
                                     <p>Upload your CV or resume file</p>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 col-md-7">
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group file-upload">
-                                                <label for="cv" className="cv">Add File</label>
+                                                <label htmlFor="cv" className="cv">Add File</label>
                                                 <input type="file" className={`form-control ${this.state.cvError ? 'is-invalid' : ''}`} name="cv" id="cv" value={this.state.cv} onChange={this.handleCvChange} onBlur={this.validateCv} />
                                                 <span>We accept PDF, DOC, DOCX, JPG and PNG files</span>
+                                                <div id="imagePreview"></div>
                                                 <div className='invalid-feedback'>{this.state.cvError}</div>
                                             </div>
                                         </div>
@@ -246,11 +254,11 @@ class ApplicationForm extends Component {
                             </div>
                             <hr />
                             <div className="row">
-                                <div className="col-lg-3">
+                                <div className="col-lg-3 col-md-5">
                                     <h3>Cover letter</h3>
                                     <p>Insert your cover letter here</p>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 col-md-7">
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group">
@@ -263,7 +271,7 @@ class ApplicationForm extends Component {
                             <hr />
                             <div className="row">
                                 <div className="col-lg-12 d-block text-center">
-                                    <button type="submit"><span className="text-color">Submit</span> Application</button>
+                                    <button type="submit" className="cus-btn"><span className="text-color">Submit</span> Application</button>
                                 </div>
                             </div>
                         </form>

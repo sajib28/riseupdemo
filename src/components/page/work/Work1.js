@@ -6,9 +6,8 @@ import BackgroundImage from '../../../assets/img/event.jpg';
 import eventImg1 from '../../../assets/img/write.jpg';
 import apps1 from '../../../assets/img/Valrhona-Chocolate.jpg';
 import apps2 from '../../../assets/img/rent-lion-image-2.jpg';
-import mixitup from 'mixitup';
-import Masonry from 'masonry-layout';
-
+// import mixitup from 'mixitup';
+import Isotope from 'isotope-layout';
 import $ from 'jquery';
 import {
     Link
@@ -16,23 +15,25 @@ import {
 
 class Work extends Component {
     componentDidMount() {
-        mixitup('.grid');
-        // var $grid = $('.grid').masonry({
-        //     itemSelector: '.grid-item',
-        //     percentPosition: true,
-        //     columnWidth: '.grid-sizer'
-        // });
+        var Isotope = require('isotope-layout');
 
-        // $grid.imagesLoaded().progress(function () {
-        //     $grid.masonry();
-        // });
-        var elem = document.querySelector('.grid');
-        var msnry = new Masonry(elem, {
+        var iso = new Isotope('.grid', {
             itemSelector: '.grid-item',
             percentPosition: true,
-            columnWidth: '.grid-sizer'
+            layoutMode: 'masonry',
+            masonry: {
+                columnWidth: '.grid-sizer'
+            }
         });
-        // $(".mix:odd").addClass('reverse-items');
+        // bind filter button click
+        var filtersElem = document.querySelector('.filters-button-group');
+        filtersElem.addEventListener('click', function (event) {
+            // only work with buttons
+            var filterValue = event.target.getAttribute('data-filter');
+            // use matching filter function
+            filterValue = filterValue;
+            iso.arrange({ filter: filterValue });
+        });
     }
 
     render() {
@@ -40,47 +41,46 @@ class Work extends Component {
         return (
             <div className="page work">
                 <Nav className="navbar navbar-expand-lg" />
-                <Banner id="workBanner" backgroundImage={BackgroundImage} />
-                <button type="button" data-filter="all">All</button>
-                <button type="button" data-filter=".client">Client</button>
-                <button type="button" data-filter=".rise-up">Rise up</button>
-                <button type="button" data-filter=".app">App</button>
-                <button type="button" data-filter=".game">Game</button>
-                <button type="button" data-filter=".x-r">X-R</button>
-                <button type="button" data-filter=".web-system">Web System</button>
-                <section>
-                    <div class="grid">
-                        <div class="grid-sizer"></div>
-                        <div class="grid-item mix x-r">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
-                        </div>
-                        <div class="grid-item mix client">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
-                        </div>
-                        <div class="grid-item mix app game">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
-                        </div>
-                        <div class="grid-item mix rise-up">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
-                        </div>
-                        <div class="grid-item mix game x-r">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
-                        </div>
-                        <div class="grid-item mix web-system">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
-                        </div>
-                        <div class="grid-item mix x-r game">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
-                        </div>
-                        <div class="grid-item mix x-r app">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
-                        </div>
-                        <div class="grid-item mix game">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+                <section id="careerForm" className="banner middle-content" style={{ backgroundImage: `url(${require('../../../assets/img/banner/career-banner.png')})` }}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="inroText">
+                                    <h1><span className="text-color">Game </span>Artist</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </section>
+                <div class="button-group filters-button-group">
+                    <button class="button is-checked" data-filter="*">show all</button>
+                    <button class="button" data-filter=".cat1">Cat1</button>
+                    <button class="button" data-filter=".cat2">Cat2</button>
+                    <button class="button" data-filter=".cat3">Cat3</button>
+                </div>
+                <section>
+                    <div className="container">
+                        <div className="row grid">
+
+                            <div class="grid-sizer"></div>
+                            <div class="grid-item grid-item--width2">
+                                <img src={require('../../../assets/img/project/meena-game.png')} alt="" />
+                            </div>
+
+                            <div class="grid-item">
+                                <img src={require('../../../assets/img/project/adolescent-app.png')} alt="" />
+                            </div>
+                            <div class="grid-item grid-item--width2">
+                                <img src={require('../../../assets/img/project/meena-game.png')} alt="" />
+                            </div>
+
+                            <div class="grid-item">
+                                <img src={require('../../../assets/img/project/adolescent-app.png')} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <Footer />
             </div >
         )

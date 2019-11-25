@@ -9,7 +9,8 @@ class HomeSlider extends Component {
             centerPadding: "0",
             swipeToSlide: true,
             slidesToShow: 1,
-            speed: 500
+            speed: 500,
+            autoplay: true
         };
         return (
             <div id="homeSlider">
@@ -17,14 +18,14 @@ class HomeSlider extends Component {
                     <div>
                         <img src={require('../../assets/img/home-slider/home-slide-1.jpg')} alt="" />
 
-                        <div className="inroText">
+                        <div className="introText">
                             <h1><span className="text-uppercase text-color">Riseup</span><br />Beyond Reality Driving <br />into Technology</h1>
                         </div>
                     </div>
                     <div>
                         <img src={require('../../assets/img/home-slider/home-slide-2.png')} alt="" />
 
-                        <div className="inroText">
+                        <div className="introText">
                             <h1><span className="text-uppercase text-color">Riseup</span><br />Beyond Reality Driving <br />into Technology</h1>
                         </div>
                     </div>

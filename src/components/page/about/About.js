@@ -205,6 +205,42 @@ class About extends Component {
                             </div>
                         </div>
                         <div className="row">
+                             {/* team member item */}
+                             <div className="col-lg-3 col-md-4 col-sm-6">
+                                <div className="team-item">
+                                    <div className="team-member">
+                                        <figure className="team-member-img">
+                                            <a rel="noopener noreferrer" href="/">
+                                                <img src={teamMember2} alt="" />
+                                            </a>
+                                        </figure>
+                                        <div className="team-member-meta">
+                                            <ul className="list-unstyled team-social-links">
+                                                <li>
+                                                    <a rel="noopener noreferrer" href="/" target="_blank">
+                                                        <i className="fab fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a rel="noopener noreferrer" href="/" target="_blank">
+                                                        <i className="fab fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a rel="noopener noreferrer" href="/" target="_blank">
+                                                        <i className="fab fa-linkedin-in"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="team-info">
+                                        <h3><a rel="noopener noreferrer" href="/">Ershadul Hoque</a></h3>
+                                        <p>Founder & CEO</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End team member item */}
                             {/* team member item */}
                             <div className="col-lg-3 col-md-4 col-sm-6">
                                 <div className="team-item">
@@ -236,43 +272,6 @@ class About extends Component {
                                     </div>
                                     <div className="team-info">
                                         <h3><a rel="noopener noreferrer" href="/">Mohammad Zaman</a></h3>
-                                        <p>Advisor</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End team member item */}
-
-                            {/* team member item */}
-                            <div className="col-lg-3 col-md-4 col-sm-6">
-                                <div className="team-item">
-                                    <div className="team-member">
-                                        <figure className="team-member-img">
-                                            <a rel="noopener noreferrer" href="/">
-                                                <img src={teamMember3} alt="" />
-                                            </a>
-                                        </figure>
-                                        <div className="team-member-meta">
-                                            <ul className="list-unstyled team-social-links">
-                                                <li>
-                                                    <a rel="noopener noreferrer" href="/" target="_blank">
-                                                        <i className="fab fa-facebook-f"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a rel="noopener noreferrer" href="/" target="_blank">
-                                                        <i className="fab fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a rel="noopener noreferrer" href="/" target="_blank">
-                                                        <i className="fab fa-linkedin-in"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="team-info">
-                                        <h3><a rel="noopener noreferrer" href="/">Francesco Patarnello</a></h3>
                                         <p>Advisor</p>
                                     </div>
                                 </div>

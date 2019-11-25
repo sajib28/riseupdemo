@@ -3,35 +3,11 @@
   .fullscreen-menu {
   }
 }
-@media (max-width: 1800px) {
-  /*----------------------Apps Details Page Css-----------------------------*/
-  .app-details {
-    // .top-content {
-    //   .list-box {
-    //     right: -100px;
-    //   }
-    // }
-    // .app-development {
-    //   padding-bottom: 150px;
-    //   .align-middle {
-    //     .double-img {
-    //       right: -100px;
-    //       .top-img {
-    //         right: 100px;
-    //         top: 80px;
-    //       }
-    //     }
-    //   }
-    // }
-  }
-
-  /*----------------------End Apps Details Page Css-----------------------------*/
-}
-@media (min-width: 1367px) and (max-width: 1600px) {
+@media (min-width: 1601px) and (max-width: 1800px) {
   /*Common css for whole site*/
   .top-content {
     .list-box {
-      right: -100px;
+      right: -60px;
     }
   }
   .top-bottom-image {
@@ -44,10 +20,83 @@
         }
       }
       .double-img {
-        right: -100px;
+        right: auto;
+        .top-img {
+          right: auto;
+          top: 80px;
+          left: 100px;
+        }
+      }
+    }
+  }
+  /*End Common css for whole site*/
+
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details {
+    .banner {
+      .introText {
+        h1 {
+        }
+      }
+    }
+    .app-development {
+      .double-img {
+        right: -75px;
         .top-img {
           right: 100px;
+          left: auto;
+        }
+      }
+    }
+  }
+
+  /*----------------------End Apps Details Page Css-----------------------------*/
+
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets {
+    .advantage {
+      .img-block {
+        right: -75px;
+      }
+      .content-block {
+      }
+    }
+    .top-bottom-image {
+      .align-middle {
+        .double-img {
+          right: 100px;
+          .top-img {
+            left: 140px;
+          }
+        }
+      }
+    }
+  }
+
+  /*----------------------End Iets Page Css-----------------------------*/
+}
+@media (min-width: 1367px) and (max-width: 1600px) {
+  /*Common css for whole site*/
+  .top-content {
+    .list-box {
+      right: -60px;
+    }
+  }
+  .top-bottom-image {
+    padding-bottom: 150px;
+    .align-middle {
+      .content-block {
+        h2 {
+          font-size: 35px;
+          line-height: 60px;
+        }
+      }
+      .double-img {
+        right: auto;
+        .top-img {
+          right: auto;
           top: 80px;
+          left: 100px;
         }
       }
     }
@@ -69,21 +118,35 @@
         }
       }
     }
-  }
-
-  /*----------------------End Apps Details Page Css-----------------------------*/
-}
-/*----------------------Iets Page Css-----------------------------*/
-.iets {
-  .advantage {
-    .img-block {
-      right: -100px;
-      img {
+    .app-development {
+      .double-img {
+        right: -75px;
+        .top-img {
+          right: 100px;
+          left: auto;
+        }
       }
     }
   }
+
+  /*----------------------End Apps Details Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets {
+    .advantage {
+      .img-block {
+        right: -75px;
+      }
+      .content-block {
+        h2 {
+          font-size: 60px;
+          line-height: 65px;
+        }
+      }
+    }
+  }
+
+  /*----------------------End Iets Page Css-----------------------------*/
 }
-/*----------------------End Iets Page Css-----------------------------*/
 
 @media (min-width: 1201px) and (max-width: 1366px) {
   /*Common css for whole site*/
@@ -92,8 +155,8 @@
   }
   .section-title {
     h2 {
-      font-size: 50px;
-      line-height: 60px;
+      font-size: 60px;
+      line-height: 65px;
     }
     p {
       font-size: 18px;
@@ -102,7 +165,7 @@
   }
   .top-content {
     .list-box {
-      right: 0;
+      right: 15px;
     }
   }
   .top-bottom-image {
@@ -117,8 +180,9 @@
       .double-img {
         right: 0;
         .top-img {
-          right: 100px;
+          right: auto;
           top: 80px;
+          left: 80px;
         }
       }
     }
@@ -243,12 +307,74 @@
         }
       }
     }
+    .app-development {
+      .double-img {
+        .top-img {
+          right: 100px;
+          left: auto;
+        }
+        img {
+          // max-width: 300px;
+        }
+      }
+    }
   }
 
   /*----------------------End Apps Details Page Css-----------------------------*/
-
+  /*----------------------Iets Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets {
+    .advantage {
+      .content-block {
+        h2 {
+          font-size: 60px;
+          line-height: 65px;
+        }
+      }
+      .img-block {
+        position: relative;
+        right: 0;
+      }
+    }
+    .top-bottom-image {
+      padding-bottom: 100px;
+      .align-middle {
+        .double-img {
+          .top-img {
+            left: 100px;
+          }
+          img {
+            max-width: 300px;
+          }
+        }
+        .content-block {
+          padding: 0;
+        }
+      }
+    }
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*---------------------------------Conatct Page Css-----------------------------*/
+  .contact {
+    .contact-us {
+      .contact-form {
+        .section-title {
+          h2 {
+            font-size: 60px;
+          }
+          p {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  /*----------------------------------End Conatct Page Css-------------------------*/
   /*footer css*/
   footer {
+    padding: 60px 0;
     .newsletter {
       .input-group-text {
         padding: 0 15px;
@@ -288,6 +414,20 @@
     p {
       font-size: 20px;
       line-height: 30px;
+    }
+  }
+  .banner {
+    .introText {
+      min-height: auto;
+      &.display-bottom {
+        h1 {
+          font-size: 60px;
+          line-height: 65px;
+        }
+        p {
+          font-size: 25px;
+        }
+      }
     }
   }
   .top-content {
@@ -408,11 +548,11 @@
     }
     .swap-items {
       &::before {
-        @include transform(rotate(50deg));
+        // @include transform(rotate(50deg));
       }
       &.reverse-items {
         &::before {
-          @include transform(rotate(-75deg));
+          // @include transform(rotate(-75deg));
         }
       }
       .content-block {
@@ -444,10 +584,72 @@
         }
       }
     }
+    .top-content {
+      .list-box {
+        right: 15px;
+      }
+    }
+    .app-development {
+      .double-img {
+      }
+    }
   }
 
   /*----------------------End Apps Details Page Css-----------------------------*/
-
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets {
+    .top-content {
+      .list-box {
+        right: 15px;
+      }
+    }
+    .advantage {
+      .content-block {
+        h2 {
+          font-size: 60px;
+          line-height: 65px;
+        }
+      }
+      .img-block {
+        position: relative;
+        right: 0;
+      }
+    }
+    .top-bottom-image {
+      padding-bottom: 100px;
+      .align-middle {
+        .double-img {
+          .top-img {
+            left: 100px;
+          }
+          img {
+            max-width: 300px;
+          }
+        }
+        .content-block {
+          padding: 0;
+        }
+      }
+    }
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*---------------------------------Conatct Page Css-----------------------------*/
+  .contact {
+    .contact-us {
+      .contact-form {
+        .section-title {
+          h2 {
+            font-size: 60px;
+          }
+          p {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  /*----------------------------------End Conatct Page Css-------------------------*/
   /*footer css*/
   footer {
     .newsletter {
@@ -650,11 +852,11 @@
     }
     .swap-items {
       &::before {
-        @include transform(rotate(50deg));
+        // @include transform(rotate(50deg));
       }
       &.reverse-items {
         &::before {
-          @include transform(rotate(-75deg));
+          // @include transform(rotate(-75deg));
         }
       }
       .content-block {
@@ -746,31 +948,95 @@
     }
   }
   /*----------------------End Single App Page Css-----------------------------*/
-
-  /*----------------------Contact Page Css-----------------------------*/
-.contact {
-  .contact-us {
-    .vertical-middle {
-      display: block;
-      .company-info {
-        margin-bottom: 40px;
-        padding: 20px 20px;
-      }
-      .pr-0 {
-        padding-right: 15px !important;
-      }
-      .pl-0 {
-        padding-left: 15px !important;
-      }
-      .contact-form {
-        
+  /*----------------------application form Page Css-----------------------------*/
+  .application-form {
+    .career-form {
+      hr {
+        margin: 30px 0;
       }
     }
   }
-  .google-map {
+
+  /*----------------------End application form Page Css-----------------------------*/
+
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets {
+    .advantage {
+      .vertical-middle {
+        display: block;
+      }
+      .content-block {
+        h2 {
+          font-size: 30px;
+          line-height: 45px;
+        }
+      }
+      .img-block {
+        right: auto;
+        img {
+          float: none !important;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+    .top-bottom-image {
+      .align-middle {
+        .double-img {
+          max-width: 680px;
+          left: 0;
+          .top-img {
+            left: 0;
+          }
+        }
+      }
+    }
+    .tools-and-tech {
+      .accordion {
+        .card {
+          .card-body {
+            .card-body-inner {
+              @include justify-content(center);
+            }
+          }
+        }
+      }
+    }
   }
-}
-/*----------------------End Contact Page Css-----------------------------*/
+
+  /*----------------------End Iets Page Css-----------------------------*/
+
+  /*----------------------Contact Page Css-----------------------------*/
+
+  .contact {
+    .contact-us {
+      .vertical-middle {
+        display: block;
+        .company-info {
+          margin-bottom: 40px;
+          padding: 20px 20px;
+        }
+        .pr-0 {
+          padding-right: 15px !important;
+        }
+        .pl-0 {
+          padding-left: 15px !important;
+        }
+        .contact-form {
+          .section-title h2 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+    .google-map {
+      .title {
+        font-size: 35px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+  /*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/
   footer {
     padding: 60px 0;
@@ -786,6 +1052,21 @@
   section {
     padding: 40px 0;
   }
+  .banner {
+    .introText {
+      min-height: auto;
+      &.display-bottom {
+        h1 {
+          font-size: 60px;
+          line-height: 65px;
+        }
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
   .section-title {
     h2 {
       font-size: 35px;
@@ -892,9 +1173,23 @@
     }
   }
   /*End Navigation Css*/
-
+  /*Home page css*/
+  /*Home Slider*/
+  #homeSlider {
+    display: block;
+    .slick-slide {
+      .introText {
+        left: 20px;
+        h1 {
+          font-size: 40px;
+          line-height: 55px;
+        }
+      }
+    }
+  }
   /*Intro home css*/
   .intro {
+    display: none;
     .introText {
       h1 {
         font-size: 50px;
@@ -1025,9 +1320,9 @@
       }
       .content-block {
         h2 {
-          font-size: 30px;
-          line-height: 40px;
-          margin: 25px 0 20px 0;
+          font-size: 35px;
+          line-height: 45px;
+          margin: 10px 0 20px 0;
         }
         p {
           text-align: left;
@@ -1102,6 +1397,17 @@
         }
       }
     }
+    .tools-and-tech {
+      .accordion {
+        .card {
+          .card-body {
+            .card-body-inner {
+              @include justify-content(center);
+            }
+          }
+        }
+      }
+    }
   }
 
   /*----------------------End Iets Page Css-----------------------------*/
@@ -1165,31 +1471,81 @@
   }
   /*----------------------End Single App Page Css-----------------------------*/
 
-/*----------------------Contact Page Css-----------------------------*/
-.contact {
-  .contact-us {
-    .vertical-middle {
-      display: block;
-      .company-info {
-        margin-bottom: 40px;
-        padding: 20px 20px;
+  /*----------------------career Page Css-----------------------------*/
+  .career {
+    .career-position {
+      h2 {
+        font-size: 35px;
+        line-height: 45px;
       }
-      .pr-0 {
-        padding-right: 15px !important;
-      }
-      .pl-0 {
-        padding-left: 15px !important;
-      }
-      .contact-form {
-        
+      .accordion {
+        .card {
+          .card-header {
+            button {
+              font-size: 24px;
+            }
+          }
+          .card-body {
+            padding: 0px 0 60px;
+            .content-block {
+              .vacancy {
+                margin-left: 0;
+              }
+            }
+            .cus-btn {
+              margin-left: 0;
+              text-align: center;
+              font-size: 22px;
+            }
+          }
+        }
       }
     }
   }
-  .google-map {
+  /*----------------------End career Page Css-----------------------------*/
+  /*----------------------application form Page Css-----------------------------*/
+  .application-form {
+    .career-form {
+      hr {
+        margin: 30px 0;
+      }
+    }
   }
-}
-/*----------------------End Contact Page Css-----------------------------*/
 
+  /*----------------------End application form Page Css-----------------------------*/
+  /*----------------------Contact Page Css-----------------------------*/
+  .contact {
+    .contact-us {
+      .vertical-middle {
+        display: block;
+        .company-info {
+          margin-bottom: 40px;
+          padding: 20px 20px;
+        }
+        .pr-0 {
+          padding-right: 15px !important;
+        }
+        .pl-0 {
+          padding-left: 15px !important;
+        }
+        .contact-form {
+          .section-title h2 {
+            font-size: 40px;
+          }
+          .form-group {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+    .google-map {
+      .title {
+        font-size: 35px;
+        margin-bottom: 80px;
+      }
+    }
+  }
+  /*----------------------End Contact Page Css-----------------------------*/
 
   /*footer css*/
   footer {
@@ -1203,13 +1559,20 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   /*Common css for whole site*/
+  .hero-bg-left {
+    display: none;
+  }
+  .hero-bg-right {
+    display: none;
+  }
   section {
     padding: 40px 0;
   }
   .section-title {
     h2 {
       font-size: 35px;
-      line-height: 40px;
+      line-height: 45px;
+      margin-bottom: 15px;
     }
     p {
       font-size: 20px;
@@ -1317,6 +1680,7 @@
           }
         }
         .company-info {
+          margin-top: 20px;
           img {
             max-width: 120px;
           }
@@ -1340,15 +1704,6 @@
         }
       }
     }
-    &.fixedCloseBtn {
-      .modal-content {
-        .modal-header {
-          button {
-            right: 15px;
-          }
-        }
-      }
-    }
   }
   /*End Navigation Css*/
 
@@ -1356,9 +1711,6 @@
   /*Home Slider*/
   #homeSlider {
     display: block;
-    .introText {
-      max-width: 320px;
-    }
   }
   /*Intro home css*/
   .intro {
@@ -1460,13 +1812,15 @@
   .company-logo {
     ul {
       li {
-        width: 50%;
+        width: 46%;
         display: inline-block;
         text-align: center;
+        margin: 2%;
+        border: 1px solid #e1e1e1;
         a {
           img {
             margin: 5px 0;
-            width: 100%;
+            max-width: 100%;
             padding: 0 5px;
           }
         }
@@ -1498,9 +1852,9 @@
       }
       .content-block {
         h2 {
-          font-size: 30px;
-          line-height: 40px;
-          margin: 25px 0 20px 0;
+          font-size: 35px;
+          line-height: 45px;
+          margin: 10px 0 20px 0;
         }
         p {
           text-align: left;
@@ -1516,8 +1870,7 @@
   /*End home work css*/
 
   /*contact form css*/
-
-  .contact-from {
+  .contact-form {
     .section-title {
       p {
         font-size: 20px;
@@ -1528,8 +1881,12 @@
       float: none !important;
       text-align: center;
     }
+    .form-group {
+      margin-bottom: 40px;
+    }
   }
   /*End contact form css*/
+
   /*End Home Page Css*/
 
   /*Start Process Page Css*/
@@ -1571,6 +1928,12 @@
       }
       .img-block {
         right: auto;
+        img {
+          float: none !important;
+          float: none !important;
+          margin: 0 auto;
+          display: block;
+        }
       }
     }
     .tools-and-tech {
@@ -1594,6 +1957,9 @@
   /*----------------------Single App Page Css-----------------------------*/
   .single-app {
     .short-info {
+      h2 {
+        margin-bottom: 30px;
+      }
       .description {
         display: block;
         margin: 30px 0;
@@ -1631,12 +1997,46 @@
       .content-block {
         padding: 0;
       }
+      .screenshot-slider {
+        margin-bottom: 0;
+        .slick-slider {
+          .slick-current {
+            img {
+              @include transform(scale(1));
+            }
+          }
+          .slick-arrow {
+            &.slick-next {
+              top: 15px;
+              left: 50%;
+            }
+            &.slick-prev {
+              top: 15px;
+              left: 50%;
+            }
+          }
+          .image {
+            padding-bottom: 0;
+          }
+        }
+      }
     }
     .youtube-channel {
       .vertical-middle {
         display: block;
         .content-block {
           margin-bottom: 40px;
+          .inner-title {
+            h2 {
+              font-size: 35px;
+              line-height: 45px;
+            }
+          }
+        }
+        .video-block {
+          iframe {
+            max-height: 280px;
+          }
         }
       }
     }
@@ -1650,8 +2050,17 @@
   /*----------------------Career Page Css-----------------------------*/
   .career {
     .career-position {
+      h2 {
+        font-size: 35px;
+        line-height: 45px;
+      }
       .accordion {
         .card {
+          .card-header {
+            button {
+              font-size: 24px;
+            }
+          }
           .card-body {
             padding: 0px 0 60px;
             .content-block {
@@ -1661,6 +2070,8 @@
             }
             .cus-btn {
               margin-left: 0;
+              text-align: center;
+              font-size: 22px;
             }
           }
         }
@@ -1668,6 +2079,33 @@
     }
   }
   /*----------------------End Career Page Css-----------------------------*/
+
+  /*----------------------application form Page Css-----------------------------*/
+  .application-form {
+    .career-form {
+      hr {
+        margin: 30px 0;
+      }
+      .form-group {
+        &.photo-upload {
+          span {
+            position: relative;
+            left: auto;
+            top: auto;
+          }
+        }
+        &.file-upload {
+          span {
+            position: relative;
+            left: auto;
+            top: auto;
+          }
+        }
+      }
+    }
+  }
+
+  /*----------------------End application form Page Css-----------------------------*/
 
   /*----------------------Contact Page Css-----------------------------*/
   .contact {
@@ -1685,16 +2123,27 @@
           padding-left: 15px !important;
         }
         .contact-form {
+          .section-title h2 {
+            font-size: 40px;
+          }
           .angle-top {
             width: 50px;
           }
           .angle-bottom {
             width: 50px;
           }
+          .form-group {
+            margin-bottom: 40px;
+          }
         }
       }
     }
     .google-map {
+      .title {
+        font-size: 35px;
+        margin-bottom: 40px;
+        line-height: 45px;
+      }
     }
   }
   /*----------------------End Contact Page Css-----------------------------*/

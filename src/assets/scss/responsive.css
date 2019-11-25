@@ -1,8 +1,324 @@
 /* ----------- Suppoted Maximum mobile, Tablet and Desktop ----------- */
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 1800px) {
+  /*----------------------Apps Details Page Css-----------------------------*/
+  /*----------------------End Apps Details Page Css-----------------------------*/
+}
+
+@media (min-width: 1367px) and (max-width: 1600px) {
+  /*Common css for whole site*/
+  .top-content .list-box {
+    right: -100px;
+  }
+  .top-bottom-image {
+    padding-bottom: 150px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 35px;
+    line-height: 60px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: -100px;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 100px;
+    top: 80px;
+  }
+  /*End Common css for whole site*/
+  /*Navigation Css*/
+  #mainMenu .navbar-brand {
+    margin-left: 0;
+  }
+  /*End Navigation Css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  /*----------------------End Apps Details Page Css-----------------------------*/
+}
+
+/*----------------------Iets Page Css-----------------------------*/
+.iets .advantage .img-block {
+  right: -100px;
+}
+
+/*----------------------End Iets Page Css-----------------------------*/
+@media (min-width: 1201px) and (max-width: 1366px) {
   /*Common css for whole site*/
   section {
+    padding: 60px 0;
+  }
+  .section-title h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .section-title p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .top-content .list-box {
+    right: 0;
+  }
+  .top-bottom-image {
+    padding-bottom: 150px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 35px;
+    line-height: 60px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: 0;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 100px;
+    top: 80px;
+  }
+  /*End Common css for whole site*/
+  /*Navigation Css*/
+  #mainMenu .navbar-brand {
+    margin-left: 0;
+  }
+  /*End Navigation Css*/
+  /*Intro home css*/
+  .intro .introText {
+    padding: 40px;
+  }
+  .intro .introText h1 {
+    font-size: 60px;
+    line-height: 80px;
+  }
+  .intro .introText h1 .text-color {
+    font-size: 60px;
+    line-height: 80px;
+  }
+  /*End intro Css*/
+  /*Home Service*/
+  .home-service {
     padding: 40px 0;
+  }
+  .home-service .service-block {
+    padding: 20px 0;
+  }
+  .home-service .service-block h2 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li {
+    font-size: 18px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li i {
+    font-size: 20px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps .apps-description a {
+    margin-top: 10px;
+  }
+  /*End Home Service*/
+  /*Company Short Info*/
+  .company-short-info .counter .CountUp {
+    font-size: 50px;
+  }
+  .company-short-info .counter p {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  /*End Company short Info*/
+  /*Company Logo*/
+  .company-logo ul li img {
+    width: 100%;
+    padding: 0 20px;
+  }
+  /*Company Logo*/
+  /*home work css*/
+  .home-work .section-title h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .home-work .swap-items .content-block h2 {
+    font-size: 35px;
+    line-height: 22px;
+  }
+  /*End home work css*/
+  /*contact form css*/
+  .contact-from .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /*End contact form css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .introText h1 {
+    font-size: 60px;
+  }
+  /*----------------------End Apps Details Page Css-----------------------------*/
+  /*---------------------------------Conatct Page Css-----------------------------*/
+  .contact .contact-us .contact-form .section-title h2 {
+    font-size: 60px;
+  }
+  .contact .contact-us .contact-form .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /*----------------------------------End Conatct Page Css-------------------------*/
+  /*footer css*/
+  footer {
+    padding: 60px 0;
+  }
+  footer .newsletter .input-group-text {
+    padding: 0 15px;
+  }
+  footer .social-media ul li {
+    margin: 0 6px;
+  }
+  footer .social-media ul li a {
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+  }
+  footer .social-media ul li a i {
+    font-size: 18px;
+  }
+  /*End Footer Css*/
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /*Common css for whole site*/
+  section {
+    padding: 60px 0;
+  }
+  .section-title h2 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+  .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .top-content .list-box {
+    right: auto;
+  }
+  .top-bottom-image {
+    padding-bottom: 150px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 35px;
+    line-height: 60px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: auto;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 100px;
+    top: 80px;
+  }
+  /*End Common css for whole site*/
+  /*Navigation Css*/
+  #mainMenu .navbar-brand {
+    margin-left: 0;
+  }
+  /*End Navigation Css*/
+  /*Intro home css*/
+  .intro .introText {
+    padding: 40px;
+  }
+  .intro .introText h1 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .intro .introText h1 .text-color {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  /*End intro Css*/
+  /*Home Service*/
+  .service-menu {
+    display: none;
+  }
+  .home-service {
+    padding: 40px 0;
+  }
+  .home-service .service-block {
+    padding: 20px 0;
+  }
+  .home-service .service-block h2 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li {
+    font-size: 18px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li i {
+    font-size: 20px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps .apps-description a {
+    margin-top: 10px;
+  }
+  /*End Home Service*/
+  /*Company Short Info*/
+  .company-short-info .counter .CountUp {
+    font-size: 50px;
+  }
+  .company-short-info .counter p {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  /*End Company short Info*/
+  /*Company Logo*/
+  .company-logo ul li img {
+    width: 100%;
+  }
+  /*Company Logo*/
+  /*home work css*/
+  .home-work .section-title h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .home-work .swap-items .content-block h2 {
+    font-size: 35px;
+  }
+  /*End home work css*/
+  /*contact form css*/
+  .contact-from .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /*End contact form css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .introText h1 {
+    font-size: 60px;
+  }
+  /*----------------------End Apps Details Page Css-----------------------------*/
+  /*---------------------------------Conatct Page Css-----------------------------*/
+  .contact .contact-us .contact-form .section-title h2 {
+    font-size: 60px;
+  }
+  .contact .contact-us .contact-form .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /*----------------------------------End Conatct Page Css-------------------------*/
+  /*footer css*/
+  footer .newsletter .input-group-text {
+    padding: 0 15px;
+  }
+  footer .social-media ul li {
+    margin: 0 6px;
+  }
+  footer .social-media ul li a {
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+  }
+  footer .social-media ul li a i {
+    font-size: 18px;
+  }
+  /*End Footer Css*/
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /*Common css for whole site*/
+  .hero-bg-left {
+    display: none;
+  }
+  .hero-bg-right {
+    display: none;
+  }
+  section {
+    padding: 60px 0;
   }
   .section-title h2 {
     font-size: 40px;
@@ -12,34 +328,338 @@
     font-size: 20px;
     line-height: 30px;
   }
+  .top-content {
+    padding-bottom: 40px;
+  }
+  .top-content .content-padding {
+    padding-top: 0;
+  }
+  .top-content .list-box {
+    position: relative;
+    top: -50px;
+    right: auto;
+    min-width: 500px;
+    margin: 0 auto;
+  }
+  .top-bottom-image {
+    padding-bottom: 160px;
+  }
+  .top-bottom-image .align-middle {
+    display: block;
+  }
+  .top-bottom-image .align-middle .content-block {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: auto;
+    max-width: 480px;
+    margin: 0 auto;
+    left: 80px;
+    float: none !important;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 160px;
+    top: 80px;
+  }
   /*End Common css for whole site*/
   /*Navigation Css*/
   #mainMenu .navbar-brand {
     margin-left: 5px;
   }
+  #mainMenu .openMenu {
+    padding-right: 15px;
+  }
+  /*End Navigation Css*/
+  /*Intro home css*/
+  .intro .introText {
+    padding: 40px;
+  }
+  .intro .introText h1 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .intro .introText h1 .text-color {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  /*End intro Css*/
+  /*Home Service*/
+  .service-menu {
+    display: none;
+  }
+  .home-service {
+    padding: 40px 0;
+  }
+  .home-service .service-block {
+    padding: 20px 0;
+  }
+  .home-service .service-block h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps {
+    display: block;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul {
+    position: static;
+    margin: -40px auto 0px;
+    padding: 20px 30px;
+    min-width: 500px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li {
+    font-size: 18px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li i {
+    font-size: 20px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps .apps-description {
+    padding: 30px 15px 0px 15px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps .apps-description a {
+    margin-top: 10px;
+  }
+  /*End Home Service*/
+  /*Company Short Info*/
+  .company-short-info {
+    max-width: 100%;
+  }
+  .company-short-info .counter .CountUp {
+    font-size: 50px;
+  }
+  .company-short-info .counter p {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  /*End Company short Info*/
+  /*Company Logo*/
+  .company-logo ul li img {
+    width: 100%;
+  }
+  /*Company Logo*/
+  /*Start Project css*/
+  .project .app-list .items .list-items .item-body {
+    padding: 30px;
+  }
+  /*End Project css*/
+  /*home work css*/
+  .home-work .section-title h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .home-work .swap-items .content-block h2 {
+    font-size: 35px;
+  }
+  /*End home work css*/
+  /*contact form css*/
+  .contact-from .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /*End contact form css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .introText {
+    min-height: auto;
+  }
+  .app-details .banner .introText h1 {
+    font-size: 55px;
+    line-height: 75px;
+  }
+  /*----------------------End Apps Details Page Css-----------------------------*/
+  /*----------------------Single App Page Css-----------------------------*/
+  .single-app .about-game .market-place ul li {
+    margin: 10px 30px;
+  }
+  .single-app .feature .vertical-middle {
+    display: block;
+    width: 100%;
+  }
+  .single-app .feature .vertical-middle .content-block {
+    max-width: 100%;
+  }
+  .single-app .feature .vertical-middle .img-block {
+    right: auto;
+    text-align: center;
+  }
+  .single-app .screenshots {
+    margin: 0;
+    padding: 0;
+  }
+  .single-app .screenshots .screenshot-slider .slick-arrow.slick-prev {
+    left: 50%;
+    top: 0;
+  }
+  .single-app .screenshots .screenshot-slider .slick-arrow.slick-next {
+    left: 50%;
+    top: 0;
+  }
+  .single-app .youtube-channel .vertical-middle {
+    display: block;
+  }
+  .single-app .used-technology .technology-wrap {
+    margin: 0;
+  }
+  .single-app .used-technology .technology-wrap a {
+    margin: 35px 30px;
+  }
+  /*----------------------End Single App Page Css-----------------------------*/
+  /*----------------------application form Page Css-----------------------------*/
+  .application-form .career-form hr {
+    margin: 30px 0;
+  }
+  /*----------------------End application form Page Css-----------------------------*/
+  /*----------------------Contact Page Css-----------------------------*/
+  .contact .contact-us .vertical-middle {
+    display: block;
+  }
+  .contact .contact-us .vertical-middle .company-info {
+    margin-bottom: 40px;
+    padding: 20px 20px;
+  }
+  .contact .contact-us .vertical-middle .pr-0 {
+    padding-right: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .pl-0 {
+    padding-left: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .contact-form .section-title h2 {
+    font-size: 40px;
+  }
+  .contact .google-map .title {
+    font-size: 35px;
+    margin-bottom: 60px;
+  }
+  /*----------------------End Contact Page Css-----------------------------*/
+  /*footer css*/
+  footer {
+    padding: 60px 0;
+  }
+  footer .footer-contact {
+    margin-top: 0;
+  }
+  /*End Footer Css*/
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /*Common css for whole site*/
+  section {
+    padding: 40px 0;
+  }
+  .section-title h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .top-content {
+    padding-bottom: 40px;
+  }
+  .top-content .content-padding {
+    padding-top: 0;
+  }
+  .top-content .list-box {
+    position: relative;
+    top: -50px;
+    right: auto;
+    margin: 0 auto;
+  }
+  .top-bottom-image {
+    padding-bottom: 110px;
+  }
+  .top-bottom-image .align-middle {
+    display: block;
+  }
+  .top-bottom-image .align-middle .content-block {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: auto;
+    max-width: 380px;
+    margin: 0 auto;
+    left: 0;
+    float: none !important;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 40px;
+    top: 50px;
+    left: 20px;
+  }
+  .top-bottom-image .align-middle .double-img .bottom-img {
+    right: 20px;
+  }
+  /*End Common css for whole site*/
+  /*Navigation Css*/
+  #mainMenu .navbar-brand {
+    margin-left: 5px;
+  }
+  #mainMenu .openMenu {
+    padding-right: 15px;
+  }
   .fullscreen-menu .modal-content .modal-body {
     padding: 0;
   }
   .fullscreen-menu .modal-content .modal-body .left-menu li a {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info img {
+    max-width: 140px;
   }
   .fullscreen-menu .modal-content .modal-body .company-info .contact-info li a {
-    font-size: 20px;
+    font-size: 18px;
   }
   .fullscreen-menu .modal-content .modal-body .company-info .company-address p {
     font-size: 20px;
+    line-height: 30px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info .social-media ul li {
+    margin: 0 3px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info .social-media ul li a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
   }
   /*End Navigation Css*/
+  /*Home page css*/
+  /*Home Slider*/
+  #homeSlider {
+    display: block;
+  }
+  #homeSlider .slick-slide .introText {
+    left: 20px;
+  }
+  #homeSlider .slick-slide .introText h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
   /*Intro home css*/
-  .intro .inroText h1 {
-    font-size: 35px;
+  .intro {
+    display: none;
+  }
+  .intro .introText h1 {
+    font-size: 50px;
     line-height: 45px;
   }
-  .intro .inroText h1 .text-color {
-    font-size: 50px;
+  .intro .introText h1 .text-color {
+    font-size: 60px;
     line-height: 70px;
   }
+  /*End intro Css*/
   /*Home Service*/
+  .service-menu {
+    display: none;
+  }
   .home-service {
     padding: 40px 0;
   }
@@ -82,6 +702,10 @@
   .project .app-list .items .list-items {
     margin: 20px 0;
     display: inline-block;
+    height: 400px;
+  }
+  .project .app-list .items .list-items .item-body {
+    padding: 20px;
   }
   /*End Project css*/
   /*Counter info css*/
@@ -103,12 +727,14 @@
     line-height: 40px;
   }
   .company-logo ul li {
-    width: 100%;
+    width: 25%;
     display: inline-block;
     text-align: center;
   }
-  .company-logo ul li img {
+  .company-logo ul li a img {
     margin: 5px 0;
+    width: 100%;
+    padding: 0 5px;
   }
   /*End Counter info css*/
   /*End Intro Home css*/
@@ -132,9 +758,12 @@
     margin: 0 auto;
   }
   .home-work .swap-items .content-block h2 {
-    font-size: 30px;
-    line-height: 40px;
-    margin: 25px 0 20px 0;
+    font-size: 35px;
+    line-height: 45px;
+    margin: 10px 0 20px 0;
+  }
+  .home-work .swap-items .content-block p {
+    text-align: left;
   }
   .home-work .swap-items.reverse-items .image-block {
     float: none;
@@ -150,12 +779,559 @@
     text-align: center;
   }
   /*End contact form css*/
+  /*Start Process Page Css*/
+  .process .home-work .content-block {
+    margin-top: 40px;
+  }
+  /*End Process Page Css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .introText {
+    min-height: auto;
+  }
+  .app-details .banner .introText h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets .advantage .vertical-middle {
+    display: block;
+  }
+  .iets .advantage .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .iets .advantage .img-block {
+    right: auto;
+  }
+  .iets .advantage .img-block img {
+    float: none !important;
+    margin: 0 auto;
+    display: block;
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*----------------------Single App Page Css-----------------------------*/
+  .single-app .short-info .description {
+    display: block;
+    margin: 30px 0;
+  }
+  .single-app .short-info .description .content {
+    margin-top: 20px;
+  }
+  .single-app .about-game .market-place ul {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .single-app .about-game .market-place ul li {
+    margin: 20px auto;
+    display: block;
+  }
+  .single-app .feature .vertical-middle {
+    display: block;
+  }
+  .single-app .feature .vertical-middle .content-block {
+    margin-bottom: 40px;
+  }
+  .single-app .feature .vertical-middle .img-block {
+    right: auto;
+    text-align: center;
+  }
+  .single-app .screenshots {
+    margin: 0;
+  }
+  .single-app .screenshots .content-block {
+    padding: 0;
+  }
+  .single-app .youtube-channel .vertical-middle {
+    display: block;
+  }
+  .single-app .youtube-channel .vertical-middle .content-block {
+    margin-bottom: 40px;
+  }
+  .single-app .used-technology .technology-wrap {
+    margin: 0;
+  }
+  .single-app .used-technology .technology-wrap a {
+    margin: 35px 20px;
+  }
+  /*----------------------End Single App Page Css-----------------------------*/
+  /*----------------------career Page Css-----------------------------*/
+  .career .career-position h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .career .career-position .accordion .card .card-header button {
+    font-size: 24px;
+  }
+  .career .career-position .accordion .card .card-body {
+    padding: 0px 0 60px;
+  }
+  .career .career-position .accordion .card .card-body .content-block .vacancy {
+    margin-left: 0;
+  }
+  .career .career-position .accordion .card .card-body .cus-btn {
+    margin-left: 0;
+    text-align: center;
+    font-size: 22px;
+  }
+  /*----------------------End career Page Css-----------------------------*/
+  /*----------------------application form Page Css-----------------------------*/
+  .application-form .career-form hr {
+    margin: 30px 0;
+  }
+  /*----------------------End application form Page Css-----------------------------*/
+  /*----------------------Contact Page Css-----------------------------*/
+  .contact .contact-us .vertical-middle {
+    display: block;
+  }
+  .contact .contact-us .vertical-middle .company-info {
+    margin-bottom: 40px;
+    padding: 20px 20px;
+  }
+  .contact .contact-us .vertical-middle .pr-0 {
+    padding-right: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .pl-0 {
+    padding-left: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .contact-form .section-title h2 {
+    font-size: 40px;
+  }
+  .contact .contact-us .vertical-middle .contact-form .form-group {
+    margin-bottom: 40px;
+  }
+  .contact .google-map .title {
+    font-size: 35px;
+    margin-bottom: 80px;
+  }
+  /*----------------------End Contact Page Css-----------------------------*/
   /*footer css*/
   footer {
     padding: 40px 0;
   }
   footer .footer-contact {
     margin-top: 0;
+  }
+  /*End Footer Css*/
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /*Common css for whole site*/
+  section {
+    padding: 40px 0;
+  }
+  .section-title h2 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+  .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .rawline-semibold {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .banner .introText {
+    min-height: auto;
+  }
+  .banner .introText h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .banner .introText p {
+    font-size: 25px;
+    text-align: left;
+  }
+  .banner .introText.display-bottom h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .banner .introText.display-bottom p {
+    font-size: 25px;
+    text-align: left;
+  }
+  .top-content {
+    padding-bottom: 40px;
+  }
+  .top-content .content-padding {
+    padding-top: 0;
+  }
+  .top-content .list-box {
+    position: relative;
+    top: -50px;
+    right: auto;
+    margin: 0 auto;
+  }
+  .top-bottom-image {
+    padding-bottom: 110px;
+  }
+  .top-bottom-image .align-middle {
+    display: block;
+  }
+  .top-bottom-image .align-middle .content-block {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .top-bottom-image .align-middle .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .top-bottom-image .align-middle .double-img {
+    right: auto;
+    max-width: 220px;
+    margin: 0 auto;
+    left: 20px;
+    float: none !important;
+  }
+  .top-bottom-image .align-middle .double-img .top-img {
+    right: 40px;
+    top: 50px;
+    left: auto;
+  }
+  .company-short-info .counter {
+    padding: 5px 0;
+  }
+  .company-short-info .counter .CountUp {
+    font-size: 45px;
+  }
+  .company-short-info .counter p {
+    font-size: 30px;
+  }
+  /*End Common css for whole site*/
+  /*Navigation Css*/
+  #mainMenu .navbar-brand {
+    margin-left: 5px;
+  }
+  #mainMenu .openMenu {
+    padding-right: 15px;
+  }
+  .fullscreen-menu .modal-content .modal-header {
+    margin-top: 0;
+  }
+  .fullscreen-menu .modal-content .modal-body {
+    padding: 0;
+  }
+  .fullscreen-menu .modal-content .modal-body .left-menu li a {
+    font-size: 20px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info {
+    margin-top: 20px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info img {
+    max-width: 120px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info .contact-info li a {
+    font-size: 20px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info .company-address p {
+    font-size: 20px;
+  }
+  .fullscreen-menu .modal-content .modal-body .company-info .social-media li {
+    margin: 0 6px;
+  }
+  /*End Navigation Css*/
+  /*Start  Home Page Css*/
+  /*Home Slider*/
+  #homeSlider {
+    display: block;
+  }
+  /*Intro home css*/
+  .intro {
+    display: none;
+  }
+  .intro .introText h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .intro .introText h1 .text-color {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  /*End intro Css*/
+  /*Home Service*/
+  .service-menu {
+    display: none;
+  }
+  .home-service {
+    padding: 40px 0;
+  }
+  .home-service .service-block {
+    padding: 20px 0;
+  }
+  .home-service .service-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps {
+    display: block;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul {
+    position: static;
+    margin: -40px auto 0px;
+    padding: 20px 30px;
+    max-width: 280px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li {
+    font-size: 18px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps ul li i {
+    font-size: 20px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps .apps-description {
+    padding: 30px 15px 0px 15px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps .apps-description a {
+    margin-top: 10px;
+  }
+  .home-service .service-block .apps-wrapper .apps-content .swap-apps .apps-description p {
+    text-align: left;
+    font-size: 18px;
+  }
+  /*End Home Service*/
+  /*Start Project css*/
+  .project {
+    padding-bottom: 60px;
+  }
+  .project .app-list .items {
+    display: block;
+    padding: 0;
+  }
+  .project .app-list .items .list-items {
+    margin: 20px 0;
+    display: inline-block;
+  }
+  .project .app-list .items .list-items .item-body {
+    padding: 20px;
+  }
+  /*End Project css*/
+  /*Counter info css*/
+  .company-enterpreneurs .company-short-info {
+    margin: 20px 0 0 0;
+    display: block;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .company-enterpreneurs .company-short-info .counter {
+    padding: 20px 0;
+  }
+  .company-enterpreneurs .company-short-info .counter .CountUp {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .company-enterpreneurs .company-short-info .counter p {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .company-logo ul li {
+    width: 46%;
+    display: inline-block;
+    text-align: center;
+    margin: 2%;
+    border: 1px solid #e1e1e1;
+  }
+  .company-logo ul li a img {
+    margin: 5px 0;
+    max-width: 100%;
+    padding: 0 5px;
+  }
+  /*End Counter info css*/
+  /*End Intro Home css*/
+  /*home work css*/
+  .home-work .section-title h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .home-work .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .home-work .swap-items {
+    display: block;
+    padding: 20px 0;
+  }
+  .home-work .swap-items::before {
+    content: none;
+  }
+  .home-work .swap-items .image-block {
+    margin: 0 auto;
+  }
+  .home-work .swap-items .content-block h2 {
+    font-size: 35px;
+    line-height: 45px;
+    margin: 10px 0 20px 0;
+  }
+  .home-work .swap-items .content-block p {
+    text-align: left;
+  }
+  .home-work .swap-items.reverse-items .image-block {
+    float: none;
+  }
+  /*End home work css*/
+  /*contact form css*/
+  .contact-form .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .contact-form .float-right {
+    float: none !important;
+    text-align: center;
+  }
+  .contact-form .form-group {
+    margin-bottom: 40px;
+  }
+  /*End contact form css*/
+  /*End Home Page Css*/
+  /*Start Process Page Css*/
+  .process .home-work .content-block {
+    margin-top: 40px;
+  }
+  /*End Process Page Css*/
+  /*----------------------Apps Details Page Css-----------------------------*/
+  .app-details .banner .introText {
+    min-height: auto;
+  }
+  .app-details .banner .introText h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  /*----------------------End Apps Details Page Css-----------------------------*/
+  /*----------------------Iets Page Css-----------------------------*/
+  .iets .advantage .vertical-middle {
+    display: block;
+  }
+  .iets .advantage .content-block h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .iets .advantage .img-block {
+    right: auto;
+  }
+  .iets .tools-and-tech .accordion .card .card-header button {
+    font-size: 22px;
+  }
+  /*----------------------End Iets Page Css-----------------------------*/
+  /*----------------------Single App Page Css-----------------------------*/
+  .single-app .short-info .description {
+    display: block;
+    margin: 30px 0;
+  }
+  .single-app .short-info .description .content {
+    margin-top: 20px;
+  }
+  .single-app .about-game .market-place ul {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .single-app .about-game .market-place ul li {
+    margin: 20px auto;
+    display: block;
+  }
+  .single-app .feature .vertical-middle {
+    display: block;
+  }
+  .single-app .feature .vertical-middle .content-block {
+    margin-bottom: 40px;
+  }
+  .single-app .feature .vertical-middle .img-block {
+    right: auto;
+    text-align: center;
+  }
+  .single-app .screenshots {
+    margin: 0;
+  }
+  .single-app .screenshots .content-block {
+    padding: 0;
+  }
+  .single-app .youtube-channel .vertical-middle {
+    display: block;
+  }
+  .single-app .youtube-channel .vertical-middle .content-block {
+    margin-bottom: 40px;
+  }
+  .single-app .used-technology .technology-wrap {
+    margin: 0;
+  }
+  /*----------------------End Single App Page Css-----------------------------*/
+  /*----------------------Career Page Css-----------------------------*/
+  .career .career-position h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .career .career-position .accordion .card .card-header button {
+    font-size: 24px;
+  }
+  .career .career-position .accordion .card .card-body {
+    padding: 0px 0 60px;
+  }
+  .career .career-position .accordion .card .card-body .content-block .vacancy {
+    margin-left: 0;
+  }
+  .career .career-position .accordion .card .card-body .cus-btn {
+    margin-left: 0;
+    text-align: center;
+    font-size: 22px;
+  }
+  /*----------------------End Career Page Css-----------------------------*/
+  /*----------------------application form Page Css-----------------------------*/
+  .application-form .career-form hr {
+    margin: 30px 0;
+  }
+  .application-form .career-form .form-group.photo-upload span {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+  .application-form .career-form .form-group.file-upload span {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+  /*----------------------End application form Page Css-----------------------------*/
+  /*----------------------Contact Page Css-----------------------------*/
+  .contact .contact-us .vertical-middle {
+    display: block;
+  }
+  .contact .contact-us .vertical-middle .company-info {
+    margin-bottom: 40px;
+    padding: 20px 20px;
+  }
+  .contact .contact-us .vertical-middle .pr-0 {
+    padding-right: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .pl-0 {
+    padding-left: 15px !important;
+  }
+  .contact .contact-us .vertical-middle .contact-form .section-title h2 {
+    font-size: 40px;
+  }
+  .contact .contact-us .vertical-middle .contact-form .angle-top {
+    width: 50px;
+  }
+  .contact .contact-us .vertical-middle .contact-form .angle-bottom {
+    width: 50px;
+  }
+  .contact .contact-us .vertical-middle .contact-form .form-group {
+    margin-bottom: 40px;
+  }
+  .contact .google-map .title {
+    font-size: 35px;
+    margin-bottom: 40px;
+    line-height: 45px;
+  }
+  /*----------------------End Contact Page Css-----------------------------*/
+  /*footer css*/
+  footer {
+    padding: 40px 0;
+  }
+  footer h3 {
+    font-size: 25px;
+  }
+  footer .footer-contact {
+    margin-top: 0;
+  }
+  footer .social-media ul li {
+    margin: 0 6px;
   }
   /*End Footer Css*/
   /*scroll top down css*/
