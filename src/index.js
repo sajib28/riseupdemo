@@ -24,17 +24,39 @@ import SingleApp from './components/page/single-app/SingleApp';
 import NotFound from './components/page/NotFound';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+import { CSSTransition,TransitionGroup } from "react-transition-group";
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      appearHome: true
+     
+    }
+  }
   render() {
+    const {appearHome} = this.state;
     return (
+      <CSSTransition
+      in={appearHome}
+      appear={true}
+      timeout={1000}
+      classNames="fade"
+    >
       <Home />
+      </CSSTransition>
     )
   }
 }
 ReactDOM.render((
+  <TransitionGroup>
+  <CSSTransition
+    timeout={300}
+    classNames='fade'
+  >
   <BrowserRouter>
-    <Switch >
+    
+ 
+    <Switch>
       <Route path={`${process.env.PUBLIC_URL}/`} exact component={App} />
       <Route path={`${process.env.PUBLIC_URL}/work`} component={Work} />
       <Route path={`${process.env.PUBLIC_URL}/work1`} component={Work1} />
@@ -48,7 +70,10 @@ ReactDOM.render((
       <Route path={`${process.env.PUBLIC_URL}/single-app`} render={() => < SingleApp />} />
       <Route path="*" component={NotFound} />
     </Switch>
+   
   </BrowserRouter>
+  </CSSTransition>
+</TransitionGroup>
 ), document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

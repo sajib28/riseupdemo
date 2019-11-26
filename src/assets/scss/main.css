@@ -10934,7 +10934,7 @@ button:focus {
 }
 
 #mainMenu .nav-item .nav-link {
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: 400;
   font-family: "rawlinebold";
   font-size: 16px;
@@ -10943,6 +10943,26 @@ button:focus {
   -ms-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.59);
   -o-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.59);
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.59);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+#mainMenu .nav-item .nav-link.active {
+  position: relative;
+}
+
+#mainMenu .nav-item .nav-link.active:before {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  content: "";
+  background-image: url("../img/icon/rectangle.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 30px;
+  height: 21px;
+  left: -4px;
+  z-index: -9;
+  top: 12px;
 }
 
 #mainMenu .openMenu {
@@ -11708,7 +11728,7 @@ button:focus {
   width: 0.5px;
   height: 25px;
   position: absolute;
-  background: #221f1f;
+  background: #7d7d7d;
   top: 45px;
   left: 3px;
 }
@@ -11718,6 +11738,7 @@ button:focus {
   font-family: "rawlinebold";
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  color: #000000 !important;
 }
 
 .home-sidebar .service-menu ul li a.active:before {
@@ -11765,6 +11786,7 @@ button:focus {
   margin-bottom: -25px;
   position: relative;
   z-index: 9;
+  margin-left: 40px;
 }
 
 .service-block figure img {
@@ -12409,6 +12431,11 @@ button:focus {
   -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3) !important;
   -o-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3) !important;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3) !important;
+}
+
+.application-form .career-form .invalid-feedback {
+  font-family: "proxima_novaregular";
+  font-size: 16px;
 }
 
 .application-form .career-form hr {
@@ -13603,10 +13630,6 @@ button:focus {
 
 /* ----------- End Contact Page css----------- */
 /* ----------- Work Page css----------- */
-.grid {
-  background: #ddd;
-}
-
 /* clear fix */
 .grid:after {
   content: "";
@@ -13618,21 +13641,18 @@ button:focus {
 /* 5 columns, percentage width */
 .grid-item,
 .grid-sizer {
-  width: 20%;
-}
-
-.grid-item img {
-  width: 100%;
+  width: 33.33333%;
 }
 
 .grid-item {
   float: left;
-  width: 40%;
+  width: 33.33333%;
   height: 460px;
+  margin-bottom: 30px;
 }
 
 .grid-item--width2 {
-  width: 60%;
+  width: 66.66667%;
 }
 
 .work .banner {
@@ -13655,10 +13675,10 @@ button:focus {
 }
 
 .work .project button {
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  -ms-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+  -ms-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+  -o-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
   border: none;
   background: #fff;
   padding: 8px 50px;
@@ -13708,6 +13728,58 @@ button:focus {
 }
 
 /* ----------- End Work page css----------- */
+/* ----------- Not Found page css----------- */
+#notfound .notfound-inner {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+#notfound .notfound-inner h1 {
+  font-size: 220px;
+  color: #f26a11;
+  -webkit-text-shadow: 0 2px 18px rgba(0, 0, 0, 0.56);
+  -moz-text-shadow: 0 2px 18px rgba(0, 0, 0, 0.56);
+  -ms-text-shadow: 0 2px 18px rgba(0, 0, 0, 0.56);
+  -o-text-shadow: 0 2px 18px rgba(0, 0, 0, 0.56);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.56);
+}
+
+#notfound .notfound-inner p {
+  color: #221f1f;
+  font-family: "rawlinebold";
+  font-size: 25px;
+}
+
+#notfound .notfound-inner a {
+  -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  font-family: "proxima_novabold";
+  font-size: 24px;
+  padding: 10px 35px;
+  margin-top: 20px;
+}
+
+/* ----------- End Not Found page css----------- */
 /* ----------- Footer css----------- */
 footer {
   padding: 80px 0;
@@ -13826,6 +13898,45 @@ footer .term-condition ul li a {
   font-size: 14px;
 }
 
+/* appear - on page load */
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
+}
+
+/* enter */
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 5000ms linear 5000ms;
+  transition: opacity 5000ms linear 5000ms;
+}
+
+/* exit */
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  -webkit-transition: opacity 5000ms linear;
+  transition: opacity 5000ms linear;
+}
+
+.fade-exit-done {
+  opacity: 0;
+}
+
 /* ----------- End Footer css----------- */
 /* ----------- Suppoted Maximum mobile, Tablet and Desktop ----------- */
 @media (min-width: 1601px) and (max-width: 1800px) {
@@ -13849,6 +13960,14 @@ footer .term-condition ul li a {
     left: 100px;
   }
   /*End Common css for whole site*/
+  /*Home Page Css*/
+  .home-sidebar {
+    left: 50px;
+  }
+  .home-sidebar .service-menu ul li a.active {
+    font-size: 20px;
+  }
+  /*End Home Page Css*/
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details .app-development .double-img {
     right: -75px;
@@ -13897,6 +14016,14 @@ footer .term-condition ul li a {
     margin-left: 0;
   }
   /*End Navigation Css*/
+  /*Home Page Css*/
+  .home-sidebar {
+    left: 50px;
+  }
+  .home-sidebar .service-menu ul li a.active span {
+    display: none;
+  }
+  /*End Home Page Css*/
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details .app-development .double-img {
     right: -75px;
@@ -13915,6 +14042,15 @@ footer .term-condition ul li a {
     line-height: 65px;
   }
   /*----------------------End Iets Page Css-----------------------------*/
+}
+
+@media (min-width: 1300px) and (max-width: 1366px) {
+  .home-sidebar {
+    left: 30px;
+  }
+  .home-sidebar .service-menu ul li a.active span {
+    display: none;
+  }
 }
 
 @media (min-width: 1201px) and (max-width: 1366px) {
@@ -14897,6 +15033,14 @@ footer .term-condition ul li a {
     margin-bottom: 80px;
   }
   /*----------------------End Contact Page Css-----------------------------*/
+  /*----------------------Not Found Page Css-----------------------------*/
+  #notfound .notfound-inner h1 {
+    font-size: 130px;
+  }
+  #notfound .notfound-inner a {
+    padding: 5px 35px;
+  }
+  /*----------------------End Not Found Page Css-----------------------------*/
   /*footer css*/
   footer {
     padding: 40px 0;
@@ -15363,6 +15507,14 @@ footer .term-condition ul li a {
     line-height: 45px;
   }
   /*----------------------End Contact Page Css-----------------------------*/
+  /*----------------------Not Found Page Css-----------------------------*/
+  #notfound .notfound-inner h1 {
+    font-size: 130px;
+  }
+  #notfound .notfound-inner a {
+    padding: 5px 35px;
+  }
+  /*----------------------End Not Found Page Css-----------------------------*/
   /*footer css*/
   footer {
     padding: 40px 0;

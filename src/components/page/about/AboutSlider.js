@@ -1,8 +1,38 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
-import slid1 from '../../../assets/img/about-slider/about-slide-1.png';
-import slid2 from '../../../assets/img/about-slider/about-slide-2.png';
-import slid3 from '../../../assets/img/about-slider/about-slide-3.png';
+// import slid1 from '../../../assets/img/about-slider/about-slide-1.png';
+// import slid2 from '../../../assets/img/about-slider/about-slide-2.png';
+// import slid3 from '../../../assets/img/about-slider/about-slide-3.png';
+
+const aboutSlider =[
+{
+    about_img:require('../../../assets/img/about-slider/about-slide-1.png'),
+    alt_img:'demo1'
+},
+{
+    about_img:require('../../../assets/img/about-slider/about-slide-2.png'),
+    alt_img:'demo2'  
+},
+{
+    about_img:require('../../../assets/img/about-slider/about-slide-3.png'),
+    alt_img:'demo3'
+},
+{
+    about_img:require('../../../assets/img/about-slider/about-slide-1.png'),
+    alt_img:'demo3'
+}
+]
+
+const getSlider = aboutSlider.map( (singleSlider,i)=>{
+return(
+    <div className="image" key={i}>
+            <img src={singleSlider.about_img} alt={singleSlider.alt_img} />
+    </div>
+)
+})
+
+
+
 class AboutSlider extends Component {
     render() {
         const settings = {
@@ -16,24 +46,7 @@ class AboutSlider extends Component {
         return (
             <div>
                 <Slider {...settings}>
-                    <div className="image">
-                        <img src={slid1} alt="" />
-                    </div>
-                    <div className="image">
-                        <img src={slid2} alt="" />
-                    </div>
-                    <div className="image">
-                        <img src={slid3} alt="" />
-                    </div>
-                    <div className="image">
-                        <img src={slid1} alt="" />
-                    </div>
-                    <div className="image">
-                        <img src={slid2} alt="" />
-                    </div>
-                    <div className="image">
-                        <img src={slid3} alt="" />
-                    </div>
+                    {getSlider}
                 </Slider>
             </div>
         )

@@ -162,7 +162,6 @@ each project Riseup assign a single team to maintain a quality work. And each te
                                                     Mobile Frameworks <i className="fas fa-chevron-down"></i></button>
                                             </h2>
                                         </div>
-
                                         <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div className="card-body">
                                                 <div className="card-body-inner">
