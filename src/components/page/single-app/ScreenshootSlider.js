@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Slider from "react-slick";
 // import 'slick-carousel'
-import $ from 'jquery';
+// import $ from 'jquery';
 class ScreenshootSlider extends Component {
     componentDidMount() {
         // $(function () {

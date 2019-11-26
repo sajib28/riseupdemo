@@ -34,6 +34,16 @@ class Home extends Component {
         //     mobile: false,
         //   }).init();
         // End Activated WoW Js
+        $(document).ready(function () {
+            var Menuheight = $("#mainMenu").height();
+            $('a[href^="#"]').bind('click', function (e) {
+                e.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: $($(this).attr('href')).offset().top - Menuheight
+                }, 500);
+                return false;
+            });
+        });
         $(window).scroll(function () {
             var Menuheight = $("#mainMenu").height();
             var scrollDistance = $(window).scrollTop() + Menuheight;
@@ -51,19 +61,22 @@ class Home extends Component {
         $(".service-block:even").addClass('reverse-items');
         $(".swap-items:odd").addClass('reverse-items');
         //End  Add Class for Odd/Even items
-
-
         $(window).scroll(function () {
             var a = $(window).scrollTop();
             var serviceMenu = $('.service-menu').height();
             var screenmiddle = ($(window).height() / 2) - (serviceMenu / 2);
             var pos = $('#mainMenu').height();
-            var b = $('.wrap').offset().top - pos - screenmiddle - 50;
 
+            if ($('.wrap').length) {
+                var b = $('.wrap').offset().top - pos - screenmiddle - 50;
+            }
             var m = $('.sticky-menu').outerHeight() + $('#mainMenu').outerHeight();
 
             var fixtop = $('#mainMenu').outerHeight();
-            var y = $('.home-project').offset().top - screenmiddle * 2 - 50;
+            if ($('.home-project').length) {
+                var y = $('.home-project').offset().top - screenmiddle * 2 - 50;
+            }
+
             if (a > b) {
                 $('.sticky-menu').addClass('fixed').css({ 'top': screenmiddle + 50 + 'px' });
                 $('.wrap').height($('.sticky-menu').outerHeight());
@@ -81,8 +94,8 @@ class Home extends Component {
                 $('.sticky-menu').removeClass('footstick');
             }
         });
-
     }
+
     render() {
         let alt = "";
         return (
@@ -136,8 +149,8 @@ class Home extends Component {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="apps-wrapper">
-                                        <div class="simpleParallax">
-                                            <h2 class="content-text">Apps Development</h2>
+                                        <div className="simpleParallax">
+                                            <h2 className="content-text">Apps Development</h2>
                                         </div>
                                         <figure>
                                             <img className="parallax-content" src={appdev1} alt="" />
@@ -160,7 +173,7 @@ class Home extends Component {
                                                             <p>We offer design, development, and solution for apps across a range of devices. We have developed many commercially successful apps for Apple App Store, Google Play Store and for some other platform.<br /><br />
                                                                 We have millions of active users on those mobile apps. Some of our apps were also being featured by Apple for our unique creativity, design innovation & user feedback.
                                                         </p>
-                                                            <a href="/app-details" className="see-more">See More<i className="fas fa-arrow-right"></i></a>
+                                                            <a href="/apps-development" className="see-more">See More<i className="fas fa-arrow-right"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>

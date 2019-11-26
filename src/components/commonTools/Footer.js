@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link} from "react-router-dom";
 import BackTop from './BackToTop';
 import Swal from 'sweetalert2';
 import $ from 'jquery';
@@ -8,7 +9,7 @@ class Footer extends Component {
         this.state = {
             subscribe_email: '',
             emailError: ''
-            
+
         };
     }
     handleEmailChange = (event) => {
@@ -70,33 +71,32 @@ class Footer extends Component {
                         <div className="col-lg-2 col-md-4">
                             <h3>Goto</h3>
                             <ul className="list-unstyled">
-                                <li><a href="/" rel="noopener noreferrer">Home</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Our Work</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Our Process</a></li>
-                                <li><a href="/" rel="noopener noreferrer">About Us</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Blog</a></li>
-                                <li><a href="/career" rel="noopener noreferrer">Career</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Press Kit</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Contact</a></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/`} exact="true">Home</Link></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/work`}>Our Work</Link></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/process`}>Our Process</Link></li>
+                                <li><a href="http://www.riseuplabs.com/blog/">Blog</a></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/career`}>Career</Link></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/press-kit`}>Press Kit</Link></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/contact`}>Contact</Link></li>
                             </ul>
                         </div>
                         <div className="col-lg-3 col-md-4">
                             <h3>Our Services</h3>
                             <ul className="list-unstyled">
-                                <li><a href="/" rel="noopener noreferrer">Apps Development</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Game Development</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Web System</a></li>
-                                <li><a href="/" rel="noopener noreferrer">XR Solution</a></li>
-                                <li><a href="/iets" rel="noopener noreferrer">IETS</a></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/apps-development`}>Apps Development</Link></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/game-development`}>Game Development</Link></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/web-system`}>Web System</Link></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/x-r-solution`}>XR Solution</Link></li>
+                                <li><Link to={`${process.env.PUBLIC_URL}/iets`}>IETS</Link></li>
                             </ul>
                         </div>
                         <div className="col-lg-3 col-md-4">
                             <h3>Our Enterprise</h3>
                             <ul className="list-unstyled">
-                                <li><a href="/" rel="noopener noreferrer">Appilian</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Riseup Game</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Xtreme Tech</a></li>
-                                <li><a href="/" rel="noopener noreferrer">Riseup Web System</a></li>
+                            <li><Link to={`${process.env.PUBLIC_URL}/appilian`}>Appilian</Link></li>
+                            <li><Link to={`${process.env.PUBLIC_URL}/riseup-game`}>Riseup Game</Link></li>
+                            <li><Link to={`${process.env.PUBLIC_URL}/xtreme-tech`}>Xtreme Tech</Link></li>
+                            <li><Link to={`${process.env.PUBLIC_URL}/riseup-web-system`}>Riseup Web System</Link></li>
                             </ul>
                             <div className="footer-contact">
                                 <h3>Contact Us</h3>

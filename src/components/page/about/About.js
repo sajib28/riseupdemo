@@ -6,10 +6,6 @@ import Footer from '../../commonTools/Footer';
 import aboutintro from '../../../assets/img/about-partner.png';
 import award from '../../../assets/img/award.png';
 import ictAward from '../../../assets/img/ict-award.png';
-import teamMember2 from '../../../assets/img/team/team-member-2.png';
-import teamMember3 from '../../../assets/img/team/team-member-3.png';
-import teamMember4 from '../../../assets/img/team/team-member-4.png';
-import teamMember5 from '../../../assets/img/team/team-member-5.png';
 import processImg from '../../../assets/img/our-process.png';
 import Scrollspy from 'react-scrollspy';
 import { Link } from "react-router-dom";
@@ -17,22 +13,22 @@ import $ from 'jquery';
 class About extends Component {
     componentDidMount() {
 
-        // $(document).ready(function () {
-        //     $('a[href*="#"]').bind('click', function (e) {
-        //         e.preventDefault(); // prevent hard jump, the default behavior
+        $(document).ready(function () {
+            $('a[href*="#"]').bind('click', function (e) {
+                e.preventDefault(); // prevent hard jump, the default behavior
 
-        //         var target = $(this).attr("href"); // Set the target as variable
+                var target = $(this).attr("href"); // Set the target as variable
 
-        //         // perform animated scrolling by getting top-position of target-element and set it as scroll target
-        //         $('html, body').stop().animate({
-        //             scrollTop: $(target).offset().top
-        //         }, 600, function () {
-        //             window.location.hash = target; //attach the hash (#jumptarget) to the pageurl
-        //         });
+                // perform animated scrolling by getting top-position of target-element and set it as scroll target
+                $('html, body').stop().animate({
+                    scrollTop: $(target).offset().top-200
+                }, 600, function () {
+                    window.location.hash = target; //attach the hash (#jumptarget) to the pageurl
+                });
 
-        //         return false;
-        //     });
-        // });
+                return false;
+            });
+        });
 
         // $(window).scroll(function () {
         //     var aboutWindow = $(window).scrollTop();
@@ -211,7 +207,7 @@ class About extends Component {
                                     <div className="team-member">
                                         <figure className="team-member-img">
                                             <a rel="noopener noreferrer" href="/">
-                                                <img src={teamMember2} alt="" />
+                                                <img src={require('../../../assets/img/team/team-member-1.png')} alt="" />
                                             </a>
                                         </figure>
                                         <div className="team-member-meta">
@@ -247,7 +243,7 @@ class About extends Component {
                                     <div className="team-member">
                                         <figure className="team-member-img">
                                             <a rel="noopener noreferrer" href="/">
-                                                <img src={teamMember2} alt="" />
+                                                <img src={require('../../../assets/img/team/team-member-2.png')} alt="" />
                                             </a>
                                         </figure>
                                         <div className="team-member-meta">
@@ -283,7 +279,7 @@ class About extends Component {
                                     <div className="team-member">
                                         <figure className="team-member-img">
                                             <a rel="noopener noreferrer" href="/">
-                                                <img src={teamMember3} alt="" />
+                                                <img src={require('../../../assets/img/team/team-member-3.png')} alt="" />
                                             </a>
                                         </figure>
                                         <div className="team-member-meta">
@@ -319,7 +315,7 @@ class About extends Component {
                                     <div className="team-member">
                                         <figure className="team-member-img">
                                             <a rel="noopener noreferrer" href="/">
-                                                <img src={teamMember4} alt="" />
+                                                <img src={require('../../../assets/img/team/team-member-4.png')} alt="" />
                                             </a>
                                         </figure>
                                         <div className="team-member-meta">
@@ -355,7 +351,7 @@ class About extends Component {
                                     <div className="team-member">
                                         <figure className="team-member-img">
                                             <a rel="noopener noreferrer" href="/">
-                                                <img src={teamMember5} alt="" />
+                                                <img src={require('../../../assets/img/team/team-member-5.png')} alt="" />
                                             </a>
                                         </figure>
                                         <div className="team-member-meta">
@@ -391,7 +387,7 @@ class About extends Component {
                                     <div className="team-member">
                                         <figure className="team-member-img">
                                             <a rel="noopener noreferrer" href="/">
-                                                <img src={teamMember5} alt="" />
+                                                <img src={require('../../../assets/img/team/team-member-5.png')} alt="" />
                                             </a>
                                         </figure>
                                         <div className="team-member-meta">
@@ -427,7 +423,7 @@ class About extends Component {
                                     <div className="team-member">
                                         <figure className="team-member-img">
                                             <a rel="noopener noreferrer" href="/">
-                                                <img src={teamMember5} alt="" />
+                                                <img src={require('../../../assets/img/team/team-member-5.png')} alt="" />
                                             </a>
                                         </figure>
                                         <div className="team-member-meta">
@@ -463,7 +459,7 @@ class About extends Component {
                                     <div className="team-member">
                                         <figure className="team-member-img">
                                             <a rel="noopener noreferrer" href="/">
-                                                <img src={teamMember5} alt="" />
+                                                <img src={require('../../../assets/img/team/team-member-5.png')} alt="" />
                                             </a>
                                         </figure>
                                         <div className="team-member-meta">

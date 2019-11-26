@@ -15,13 +15,16 @@ class Nav extends Component {
     $(window).scroll(function () {
       headerFixed();
       function headerFixed() {
-        let mainMenu = document.getElementById("mainMenu");
-        let mainMenuSticky = mainMenu.offsetTop;
-        if (window.pageYOffset > mainMenuSticky) {
-          mainMenu.classList.add("sticky-header");
-        } else {
-          mainMenu.classList.remove("sticky-header");
+        var mainMenu = document.getElementById("mainMenu");
+        if ($('#mainMenu').length) {
+          var mainMenuSticky = mainMenu.offsetTop;
+          if (window.pageYOffset > mainMenuSticky) {
+            mainMenu.classList.add("sticky-header");
+          } else {
+            mainMenu.classList.remove("sticky-header");
+          }
         }
+
       }
     });
     // dropdown menu
@@ -36,8 +39,20 @@ class Nav extends Component {
       });
       //dropdown menu
 
-      $('#fullscreenMenu').scroll(function (){
-     
+      $('.fullscreen-menu .navbar-nav li').click(function () {
+        if(!$(this).hasClass('dropdown')){
+         $('.modal-backdrop').fadeOut();
+         $('body').removeClass('modal-open');
+         $('body').css('padding',0);
+        }
+      })
+      // if ($(".fullscreen-menu .navbar-nav li").hasClass("dropdown")) {
+      //   alert()
+      //   // $('.modal-backdrop').hide();
+      // };
+
+      $('#fullscreenMenu').scroll(function () {
+
         // close button fixed
         let fullscreenMenu = document.getElementById("fullscreenMenu");
         if ($(fullscreenMenu).scrollTop() > 0) {
@@ -55,30 +70,30 @@ class Nav extends Component {
       <header>
         <nav id="mainMenu" className={this.props.className}>
           <div className="container">
-            <a className="navbar-brand" href="/"><img src={riseuplogo} alt="" /></a>
+            <Link className="navbar-brand" to={`${process.env.PUBLIC_URL}/`} exact="true"><img src={riseuplogo} alt="Rise Up Labs" /></Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="/#homeService">Service</a>
+                  <NavLink activeClassName='active' className="nav-link" to={`${process.env.PUBLIC_URL}/`} exact>Service</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/work">Work</a>
+                  <NavLink activeClassName='active' className="nav-link" to={`${process.env.PUBLIC_URL}/work`}>Work</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/process">Process</a>
+                  <NavLink activeClassName='active' className="nav-link" to={`${process.env.PUBLIC_URL}/process`}>Process</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/about">About Us</a>
+                  <NavLink activeClassName='active' className="nav-link" to={`${process.env.PUBLIC_URL}/about`}>About Us</NavLink>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="http://www.riseuplabs.com/blog/">Blog</a>
                 </li>
 
                 <li className="nav-item">
-                  <a href="/contact" className="nav-link">Contact</a>
+                  <NavLink activeClassName='active' to={`${process.env.PUBLIC_URL}/contact`} className="nav-link">Contact</NavLink>
                 </li>
               </ul>
             </div>
@@ -106,25 +121,22 @@ class Nav extends Component {
                       <div className="navbar">
                         <ul className="list-unstyled left-menu navbar-nav">
                           <li className="nav-item">
-                            <NavLink className="nav-link" to="/">Home</NavLink>
+                            <NavLink activeClassName='active' className="nav-link" to={`${process.env.PUBLIC_URL}/`} exact>Home</NavLink>
                           </li>
-                          {/* <li className="nav-item">
-                          <NavLink activeClassName="active" className="nav-link" to="/service">Our Services</NavLink>
-                        </li> */}
                           <li className="nav-item dropdown">
                             <Link to="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Services <i className="fas fa-chevron-down"></i></Link>
                             <ul className="dropdown-menu">
                               <li className="nav-item">
-                                <NavLink activeClassName="active" className="nav-link" to="/iets">Apps Development</NavLink>
+                                <NavLink activeClassName="active" className="nav-link" to="/apps-development">Apps Development</NavLink>
                               </li>
                               <li className="nav-item">
-                                <NavLink activeClassName="active" className="nav-link" to="/iets">Game Development</NavLink>
+                                <NavLink className="nav-link" to="/">Game Development</NavLink>
                               </li>
                               <li className="nav-item">
-                                <NavLink activeClassName="active" className="nav-link" to="/iets">Web System</NavLink>
+                                <NavLink className="nav-link" to="/">Web System</NavLink>
                               </li>
                               <li className="nav-item">
-                                <NavLink activeClassName="active" className="nav-link" to="/iets">XR Solution</NavLink>
+                                <Link className="nav-link" to="/">XR Solution</Link>
                               </li>
                               <li className="nav-item">
                                 <NavLink activeClassName="active" className="nav-link" to="/iets">Iets</NavLink>
@@ -132,7 +144,7 @@ class Nav extends Component {
                             </ul>
                           </li>
                           <li className="nav-item">
-                            <NavLink activeClassName="active" className="nav-link" to="/service">Our Process</NavLink>
+                            <NavLink activeClassName="active" className="nav-link" to="/process">Our Process</NavLink>
                           </li>
 
                           <li className="nav-item">
@@ -142,22 +154,22 @@ class Nav extends Component {
                             <NavLink activeClassName="active" className="nav-link" to="/about">About Us</NavLink>
                           </li>
                           <li className="nav-item">
-                            <NavLink activeClassName="active" className="nav-link" to="/about">Our clients</NavLink>
+                            <Link className="nav-link" to="/">Our clients</Link>
                           </li>
                           <li className="nav-item">
-                            <NavLink activeClassName="active" className="nav-link" to="/blog">Blog</NavLink>
+                            <a className="nav-link" href="http://www.riseuplabs.com/blog/">Blog</a>
                           </li>
                           <li className="nav-item">
-                            <a className="nav-link" href="/career">Career</a>
+                            <NavLink activeClassName="active" className="nav-link" to="/career">Career</NavLink>
                           </li>
                           <li className="nav-item">
-                            <NavLink activeClassName="active" className="nav-link" to="/press">Press Kit</NavLink>
+                            <Link className="nav-link" to="/">Press Kit</Link>
                           </li>
                           <li className="nav-item">
-                            <NavLink activeClassName="active" className="nav-link" to="/press">Contact</NavLink>
+                            <NavLink activeClassName="active" className="nav-link" to="/contact">Contact</NavLink>
                           </li>
                           <li className="nav-item">
-                            <NavLink activeClassName="active" className="nav-link" to="/apps">Apps</NavLink>
+                            <Link className="nav-link" to="/">Apps</Link>
                           </li>
                         </ul>
                       </div>

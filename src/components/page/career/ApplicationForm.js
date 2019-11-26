@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import Nav from '../../commonTools/Nav';
 import Footer from '../../commonTools/Footer';
-import Banner from '../../commonTools/Banner';
-import BackgroundImage from '../../../assets/img/event.jpg';
 // import { Link } from "react-router-dom";
 import Swal from 'sweetalert2';
 import $ from 'jquery';
@@ -16,12 +14,14 @@ class ApplicationForm extends Component {
             name: '',
             email: '',
             phone: '',
-            cv:'',
+            cvFile: 'null',
+            cvPreviewUrl: 'nill',
+            cvValue:'',
             nameError: '',
             emailError: '',
             phoneError: '',
-            cvError:''
-           
+            cvError: ''
+
 
         };
     }
@@ -32,7 +32,8 @@ class ApplicationForm extends Component {
         });
     }
     handleEmailChange = (event) => {
-        this.setState({ email: event.target.value }, () => {
+        this.setState({ 
+            email: event.target.value }, () => {
             this.validateEmail();
         });
     }
@@ -42,9 +43,20 @@ class ApplicationForm extends Component {
         });
     }
     handleCvChange = (event) => {
-        this.setState({ cv: event.target.value }, () => {
+        this.setState({ 
+            cvFile: event.target.files[0],
+            cvValue: event.target.value}, () => {
             this.validateCv();
         });
+        let reader = new FileReader();
+     
+        reader.onloadend = () => {
+          this.setState({
+            cvPreviewUrl: reader.result
+          });
+        }
+     
+        reader.readAsDataURL(event.target.files[0])
     }
     validateName = () => {
         const { name } = this.state;
@@ -126,15 +138,15 @@ class ApplicationForm extends Component {
         }
     }
     validateCv = () => {
-        const { cv } = this.state;
+        const { cvValue } = this.state;
         var allowedExtensions = /(\.pdf|\.doc|\.docx|\.jpg|\.png)$/i;
-        if (cv === '') {
+        if (cvValue === '') {
             this.setState({
                 cvError: 'Please Upload your CV'
             });
             return true
         }
-        else if(!allowedExtensions.exec(cv)){
+        else if (!allowedExtensions.exec(cvValue)) {
             this.setState({
                 cvError: 'Please Upload your Cv with Valid Extension'
             });
@@ -180,12 +192,19 @@ class ApplicationForm extends Component {
     }
 
     render() {
+        let $cvPreview = '';
+        if (this.state.cvPreviewUrl) {
+           $cvPreview = (<div className="image-container" ><a href={this.state.cvPreviewUrl}>Click link to view file</a></div>);
+          }
+          else{
+            $cvPreview = '';
+          }
         return (
             <div className="page application-form">
-                <Nav className="navbar navbar-expand-lg"/>
+                <Nav className="navbar navbar-expand-lg" />
                 {/* Banner */}
                 <section id="careerForm" className="banner middle-content" style={{ backgroundImage: `url(${require('../../../assets/img/banner/career-banner.png')})` }}>
-                <div className="container">
+                    <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="introText">
@@ -243,9 +262,9 @@ class ApplicationForm extends Component {
                                         <div className="col-lg-12">
                                             <div className="form-group file-upload">
                                                 <label htmlFor="cv" className="cv">Add File</label>
-                                                <input type="file" className={`form-control ${this.state.cvError ? 'is-invalid' : ''}`} name="cv" id="cv" value={this.state.cv} onChange={this.handleCvChange} onBlur={this.validateCv} />
+                                                <input type="file" className={`form-control ${this.state.cvError ? 'is-invalid' : ''}`} name="cv" id="cv" value={this.state.cvValue} onChange={this.handleCvChange} />
                                                 <span>We accept PDF, DOC, DOCX, JPG and PNG files</span>
-                                                <div id="imagePreview"></div>
+                                                { $cvPreview }
                                                 <div className='invalid-feedback'>{this.state.cvError}</div>
                                             </div>
                                         </div>

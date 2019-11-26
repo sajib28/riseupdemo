@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Nav from '../../commonTools/Nav';
 import Footer from '../../commonTools/Footer';
-class AppDetails extends Component {
+class AppsDevelopment extends Component {
     componentDidMount() {
         var bottomImg = document.getElementsByClassName("bottom-img")[0];
         var TopImg = document.getElementsByClassName("top-img")[0];
@@ -9,7 +9,6 @@ class AppDetails extends Component {
             bottomImg.classList.add("show-top");
             TopImg.classList.remove("show-top");
         });
-        var TopImg = document.getElementsByClassName("top-img")[0];
         TopImg.addEventListener("click", function (event) {
             TopImg.classList.add("show-top");
             bottomImg.classList.remove("show-top");
@@ -162,4 +161,4 @@ class AppDetails extends Component {
         )
     }
 }
-export default AppDetails;
+export default AppsDevelopment;

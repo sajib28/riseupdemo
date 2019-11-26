@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Nav from '../../commonTools/Nav';
 import ScreenshootSlider from './ScreenshootSlider';
-import AboutSlider from '../about/AboutSlider';
 import Footer from '../../commonTools/Footer';
 class SingleApp extends Component {
 
@@ -58,9 +57,9 @@ class SingleApp extends Component {
                                 <div className="market-place">
                                     <h2 className="rawline-semibold">Available on:</h2>
                                     <ul className="list-unstyled">
-                                        <li><a href=""><img src={require('../../../assets/img/apple-app-store.png')} alt="" /></a></li>
-                                        <li><a href=""><img src={require('../../../assets/img/google-play-store.png')} alt="" /></a></li>
-                                        <li><a href=""><img src={require('../../../assets/img/amazon-store.png')} alt="" /></a></li>
+                                        <li><a rel="noopener noreferrer" href="/"><img src={require('../../../assets/img/apple-app-store.png')} alt="/" /></a></li>
+                                        <li><a rel="noopener noreferrer" href="/"><img src={require('../../../assets/img/google-play-store.png')} alt="" /></a></li>
+                                        <li><a rel="noopener noreferrer" href="/"><img src={require('../../../assets/img/amazon-store.png')} alt="" /></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -147,17 +146,17 @@ class SingleApp extends Component {
                                         <div className="social-media">
                                             <h5>Share: </h5>
                                             <ul className="list-unstyled list-inline">
-                                                <li><a href="/"><i className="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="/"><i className="fab fa-twitter"></i></a></li>
-                                                <li><a href="/"><i className="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="/"><i className="fas fa-meh-blank"></i></a></li>
+                                                <li><a rel="noopener noreferrer" href="/"><i className="fab fa-facebook-f"></i></a></li>
+                                                <li><a rel="noopener noreferrer" href="/"><i className="fab fa-twitter"></i></a></li>
+                                                <li><a rel="noopener noreferrer" href="/"><i className="fab fa-linkedin-in"></i></a></li>
+                                                <li><a rel="noopener noreferrer" href="/"><i className="fas fa-meh-blank"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-8">
                                     <div className="video-block">
-                                        <iframe width="100%" height="444" src="https://www.youtube.com/embed/lyKYkPECtjc"></iframe>
+                                        <iframe title="Apps Video" width="100%" height="444" src="https://www.youtube.com/embed/lyKYkPECtjc"></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -174,43 +173,43 @@ class SingleApp extends Component {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="technology-wrap">
-                                    <a href="/" className="border-shadow">
+                                    <a rel="noopener noreferrer" href="/" className="border-shadow">
                                         <div className="img-inner">
                                             <img src={require('../../../assets/img/tools-technology/android.png')} alt="" />
                                         </div>
                                         <span>Android</span>
                                     </a>
-                                    <a href="/" className="border-shadow">
+                                    <a rel="noopener noreferrer" href="/" className="border-shadow">
                                         <div className="img-inner">
                                             <img src={require('../../../assets/img/tools-technology/unity.png')} alt="" />
                                         </div>
                                         <span>Unity 2D/3D</span>
                                     </a>
-                                    <a href="/" className="border-shadow">
+                                    <a rel="noopener noreferrer" href="/" className="border-shadow">
                                         <div className="img-inner">
                                             <img src={require('../../../assets/img/tools-technology/csharp.png')} alt="" />
                                         </div>
                                         <span>C#</span>
                                     </a>
-                                    <a href="/" className="border-shadow">
+                                    <a rel="noopener noreferrer" href="/" className="border-shadow">
                                         <div className="img-inner">
                                             <img src={require('../../../assets/img/tools-technology/asp-net.png')} alt="" />
                                         </div>
                                         <span>ASP.NET MVC</span>
                                     </a>
-                                    <a href="/" className="border-shadow">
+                                    <a rel="noopener noreferrer" href="/" className="border-shadow">
                                         <div className="img-inner">
                                             <img src={require('../../../assets/img/tools-technology/react.png')} alt="" />
                                         </div>
                                         <span>ReactJs</span>
                                     </a>
-                                    <a href="/" className="border-shadow">
+                                    <a rel="noopener noreferrer" href="/" className="border-shadow">
                                         <div className="img-inner">
                                             <img src={require('../../../assets/img/tools-technology/c-plus-plus.png')} alt="" />
                                         </div>
                                         <span>Android</span>
                                     </a>
-                                    <a href="/" className="border-shadow">
+                                    <a rel="noopener noreferrer" href="/" className="border-shadow">
                                         <div className="img-inner">
                                             <img src={require('../../../assets/img/tools-technology/laravel.png')} alt="" />
                                         </div>
@@ -224,7 +223,7 @@ class SingleApp extends Component {
                                 <div className="build-story">
                                     <h2 className="rawline-semibold">We can build your story</h2>
                                     <p>Through the years we have partnered with great companies and entrepreneurs all over the world.</p>
-                                    <a href="/" className="cus-btn details">Get free to Contact<i className="fas fa-arrow-right"></i></a>
+                                    <a rel="noopener noreferrer" href="/" className="cus-btn details">Get free to Contact<i className="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>

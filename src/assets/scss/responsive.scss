@@ -31,6 +31,23 @@
   }
   /*End Common css for whole site*/
 
+  /*Home Page Css*/
+  .home-sidebar {
+    left: 50px;
+    .service-menu {
+      ul{
+        li{
+          a{
+            &.active{
+             font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+}
+/*End Home Page Css*/
+
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details {
     .banner {
@@ -109,7 +126,24 @@
     }
   }
   /*End Navigation Css*/
-
+/*Home Page Css*/
+  .home-sidebar {
+    left: 50px;
+    .service-menu {
+      ul{
+        li{
+          a{
+            &.active{
+              span{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+}
+/*End Home Page Css*/
   /*----------------------Apps Details Page Css-----------------------------*/
   .app-details {
     .banner {
@@ -146,6 +180,24 @@
   }
 
   /*----------------------End Iets Page Css-----------------------------*/
+}
+@media (min-width: 1300px) and (max-width: 1366px) {
+  .home-sidebar {
+    left: 30px;
+    .service-menu {
+      ul{
+        li{
+          a{
+            &.active{
+              span{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+}
 }
 
 @media (min-width: 1201px) and (max-width: 1366px) {
@@ -1546,7 +1598,18 @@
     }
   }
   /*----------------------End Contact Page Css-----------------------------*/
-
+   /*----------------------Not Found Page Css-----------------------------*/
+   #notfound{
+    .notfound-inner{
+      h1{
+        font-size: 130px;
+      }
+      a{
+        padding: 5px 35px;
+      }
+    }
+   }
+    /*----------------------End Not Found Page Css-----------------------------*/
   /*footer css*/
   footer {
     padding: 40px 0;
@@ -2147,6 +2210,18 @@
     }
   }
   /*----------------------End Contact Page Css-----------------------------*/
+   /*----------------------Not Found Page Css-----------------------------*/
+   #notfound{
+    .notfound-inner{
+      h1{
+        font-size: 130px;
+      }
+      a{
+        padding: 5px 35px;
+      }
+    }
+   }
+    /*----------------------End Not Found Page Css-----------------------------*/
   /*footer css*/
   footer {
     h3 {

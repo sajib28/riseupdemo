@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Nav from '../../commonTools/Nav';
 import Footer from '../../commonTools/Footer';
-import Banner from '../../commonTools/Banner';
-import BackgroundImage from '../../../assets/img/event.jpg';
+// import Banner from '../../commonTools/Banner';
+// import BackgroundImage from '../../../assets/img/event.jpg';
 class Career extends Component {
     render() {
         return (

@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
 import Nav from '../../commonTools/Nav';
 import Footer from '../../commonTools/Footer';
-import Banner from '../../commonTools/Banner';
-import BackgroundImage from '../../../assets/img/event.jpg';
-import apps1 from '../../../assets/img/Valrhona-Chocolate.jpg';
-import apps2 from '../../../assets/img/rent-lion-image-2.jpg';
 import mixitup from 'mixitup';
 import $ from 'jquery';
-import {
-    Link
-} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 class Work extends Component {
     componentDidMount() {
         mixitup('.projectfilter');
-        $(".mix:odd").addClass('reverse-items');
+        $(".mix:odd").addClass('reverse-items'); 
     }
 
     render() {
-        let alt = "Demo";
+        let alt = "Rise Up Labs Some Of Our Software Solutions";
         return (
             <div className="page work">
                 <Nav className="navbar navbar-expand-lg dark-color" />
@@ -58,9 +52,9 @@ class Work extends Component {
                                         </div>
                                         <div className="item-body">
                                             <h3>Meena Game</h3>
-                                            <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" />
+                                            <img src={require('../../../assets/img/project/unicef-logo.png')} alt={alt} />
                                             <p>Another mobile oriented channel that UNICEF intends to use to execute its Meena Communication Initiative (MCI) aimed at changing perceptions and behavior that hamper the survival</p>
-                                            <a href="/apps-details" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <a rel="noopener noreferrer" href="/apps-details" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +67,7 @@ class Work extends Component {
                                             <h3>Adolescent App</h3>
                                             <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" />
                                             <p>A digital application for adolescent club members to connect, share knowledge and have access information.</p>
-                                            <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <a rel="noopener noreferrer" href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -87,7 +81,7 @@ class Work extends Component {
                                             {/* <h3>Meena Game</h3> */}
                                             <img src={require('../../../assets/img/project/grido-logo.png')} alt="" />
                                             <p>Another mobile oriented channel that UNICEF intends to use to execute its Meena Communication Initiative (MCI) aimed at changing perceptions and behavior that hamper the survival</p>
-                                            <a href="/apps-details" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <a rel="noopener noreferrer" href="/apps-details" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +94,7 @@ class Work extends Component {
                                             {/* <h3>Adolescent App</h3> */}
                                             <img src={require('../../../assets/img/project/vimory-logo.png')} alt="" />
                                             <p>Fun and fast, Vimory will help your social media posts stand out from the crowd; perfect forFacebook Profile video and Instagram video moments.</p>
-                                            <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <a rel="noopener noreferrer" href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +107,7 @@ class Work extends Component {
                                             <h3>Tap Tap Ants: Battlefield</h3>
                                             {/* <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" /> */}
                                             <p>Are you looking for ant games for kids or your own? Do you have enough tapping skills to protect your food?</p>
-                                            <a href="/apps-details" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <a rel="noopener noreferrer" href="/apps-details" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +120,7 @@ class Work extends Component {
                                             <h3>Rooftop Frenzy</h3>
                                             {/* <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" /> */}
                                             <p>A digital application for adolescent club members to connect, share knowledge and have access information.</p>
-                                            <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <a rel="noopener noreferrer" href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +134,7 @@ class Work extends Component {
                                             <h3>Meena Game</h3>
                                             <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" />
                                             <p>Another mobile oriented channel that UNICEF intends to use to execute its Meena Communication Initiative (MCI) aimed at changing perceptions and behavior that hamper the survival</p>
-                                            <a href="/apps-details" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <a rel="noopener noreferrer" href="/apps-details" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +147,7 @@ class Work extends Component {
                                             <h3>Adolescent App</h3>
                                             <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" />
                                             <p>A digital application for adolescent club members to connect, share knowledge and have access information.</p>
-                                            <a href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <a rel="noopener noreferrer" href="/" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>

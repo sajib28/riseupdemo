@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from "react-router-dom";
 import Nav from '../../commonTools/Nav';
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import CompanySummary from '../../commonTools/CompanySummary';
 import Footer from '../../commonTools/Footer';
 class Iets extends Component {
@@ -12,7 +12,6 @@ class Iets extends Component {
         bottomImg.classList.add("show-top");
         TopImg.classList.remove("show-top");
     });
-    var TopImg = document.getElementsByClassName("top-img")[0];
     TopImg.addEventListener("click", function (event) {
         TopImg.classList.add("show-top");
         bottomImg.classList.remove("show-top");
