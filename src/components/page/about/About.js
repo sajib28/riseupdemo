@@ -14,6 +14,8 @@ import $ from 'jquery';
 class About extends Component {
     componentDidMount() {
 
+        window.scrollTo(0, 0);
+
         $(document).ready(function () {
             $('a[href*="#"]').bind('click', function (e) {
                 e.preventDefault(); // prevent hard jump, the default behavior

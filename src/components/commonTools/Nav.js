@@ -12,6 +12,12 @@ import menuClose from '../../assets/img/close.png';
 
 class Nav extends Component {
   componentDidMount() {
+    const myId = window.location.hash.slice(1)
+    const elem = document.getElementById("homeService")
+    if (elem) {
+      elem.scrollIntoView()
+    }
+
     $(window).scroll(function () {
       headerFixed();
       function headerFixed() {

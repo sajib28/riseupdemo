@@ -355,7 +355,7 @@ class Home extends Component {
                                             <h3>Meena Game</h3>
                                             <img src={require('../../../assets/img/project/unicef-logo.png')} alt="" />
                                             <p>Another mobile oriented channel that UNICEF intends to use to execute its Meena Communication Initiative (MCI) aimed at changing perceptions and behavior that hamper the survival</p>
-                                            <a href="/single-app" className="cus-btn">See more<i className="fas fa-arrow-right"></i></a>
+                                            <Link to="/single-app" className="cus-btn">See more<i className="fas fa-arrow-right"></i></Link>
                                         </div>
                                     </div>
                                 </div>

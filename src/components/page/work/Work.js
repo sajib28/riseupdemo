@@ -7,6 +7,7 @@ import $ from 'jquery';
 
 class Work extends Component {
     componentDidMount() {
+        window.scrollTo(0, 0);
         mixitup('.projectfilter');
         $(".mix:odd").addClass('reverse-items'); 
     }
